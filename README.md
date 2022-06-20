@@ -1,8 +1,18 @@
 # GemVer
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gem_ver`. To experiment with that code, run `bin/console` for an interactive prompt.
+Give your next library an introspectable `Version` module.
 
-TODO: Delete this and the text above, and describe your gem
+```ruby
+MyLib::Version.to_s # => "1.2.3.rc3"
+MyLib::Version.major # => 1
+MyLib::Version.minor # => 2
+MyLib::Version.patch # => 3
+MyLib::Version.pre # => "rc3"
+MyLib::Version.to_a # => [1, 2, 3, "rc3"]
+MyLib::Version.to_h # => { major: 1, minor: 2, patch: 3, pre: "rc3" }
+```
+
+This library was extracted from the gem [`oauth2`](https://github.com/oauth-xx/oauth2).
 
 ## Installation
 
@@ -53,12 +63,12 @@ And now you have some version introspection methods available:
 
 ```ruby
 MyLib::Version.to_s # => "0.1.0"
-MyLib::Version.major # => 1
-MyLib::Version.minor # => 0
+MyLib::Version.major # => 0
+MyLib::Version.minor # => 1
 MyLib::Version.patch # => 0
 MyLib::Version.pre # => ""
-MyLib::Version.to_a # => [1, 0, 0]
-MyLib::Version.to_h # => { major: 1, minor: 0, patch: 0, pre: "" }
+MyLib::Version.to_a # => [0, 1, 0]
+MyLib::Version.to_h # => { major: 0, minor: 1, patch: 0, pre: "" }
 ```
 
 ### Side benefit
