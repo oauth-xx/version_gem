@@ -24,14 +24,28 @@ module MyLib
 end
 ```
 
-Change it to:
+Add a Version namespace (the one implied by the path => namespace convention):
 
 ```ruby
 module MyLib
   module Version
     VERSION = "0.1.0"
-    extend GemVer::Basic
   end
+end
+```
+
+Now add the following near the top of the file the manages requiring external libraries.
+Using the same example of `bundle gem my_lib`, this would be `lib/my_lib.rb`.
+
+```ruby
+require "gem_ver"
+```
+
+Then, add the following wherever you want in the same file (recommend the bottom).
+
+```ruby
+MyLib::Version.class_eval do
+  extend GemVer::Basic
 end
 ```
 
