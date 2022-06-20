@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'gem_ver'
+require 'version_gem'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

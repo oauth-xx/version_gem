@@ -34,9 +34,9 @@ Style/Documentation:
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
-    - 'lib/gem_ver.rb'
-    - 'lib/gem_ver/api.rb'
-    - 'lib/gem_ver/version.rb'
+    - 'lib/version_gem.rb'
+    - 'lib/version_gem/api.rb'
+    - 'lib/version_gem/version.rb'
 
 # Offense count: 18
 # Cop supports --auto-correct.

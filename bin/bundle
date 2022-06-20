@@ -71,13 +71,13 @@ m = Module.new do
   def bundler_requirement_for(version)
     return "#{Gem::Requirement.default}.a" unless version
 
-    bundler_gem_version = Gem::Version.new(version)
+    bundler_version_gemsion = Gem::Version.new(version)
 
-    requirement = bundler_gem_version.approximate_recommendation
+    requirement = bundler_version_gemsion.approximate_recommendation
 
     return requirement unless Gem.rubygems_version < Gem::Version.new('2.7.0')
 
-    requirement += '.a' if bundler_gem_version.prerelease?
+    requirement += '.a' if bundler_version_gemsion.prerelease?
 
     requirement
   end

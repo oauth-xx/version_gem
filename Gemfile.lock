@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gem_ver (1.0.0)
+    version_gem (1.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -57,7 +57,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  gem_ver!
   pry
   rake
   rspec
@@ -65,6 +64,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rake
   rubocop-rspec
+  version_gem!
 
 BUNDLED WITH
    2.3.16

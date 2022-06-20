@@ -3,7 +3,7 @@
 require_relative 'error'
 require_relative 'api'
 
-module GemVer
+module VersionGem
   # This is a very *basic* version parser. Others could be built based on this pattern!
   module Basic
     def self.extended(base)

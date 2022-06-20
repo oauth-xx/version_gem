@@ -1,4 +1,4 @@
-module GemVer
+module VersionGem
   module Api
     # The version number as a string
     #

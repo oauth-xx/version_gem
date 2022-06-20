@@ -1,4 +1,4 @@
-# GemVer
+# VersionGem
 
 Give your next library an introspectable `Version` module.
 
@@ -18,11 +18,11 @@ This library was extracted from the gem [`oauth2`](https://github.com/oauth-xx/o
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add gem_ver
+    $ bundle add version_gem
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install gem_ver
+    $ gem install version_gem
 
 ## Usage
 
@@ -48,14 +48,14 @@ Now add the following near the top of the file the manages requiring external li
 Using the same example of `bundle gem my_lib`, this would be `lib/my_lib.rb`.
 
 ```ruby
-require "gem_ver"
+require "version_gem"
 ```
 
 Then, add the following wherever you want in the same file (recommend the bottom).
 
 ```ruby
 MyLib::Version.class_eval do
-  extend GemVer::Basic
+  extend VersionGem::Basic
 end
 ```
 
@@ -83,7 +83,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/pboling/gem_ver. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/pboling/gem_ver/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/pboling/version_gem. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/pboling/version_gem/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -91,4 +91,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the GemVer project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/pboling/gem_ver/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the VersionGem project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/pboling/version_gem/blob/main/CODE_OF_CONDUCT.md).

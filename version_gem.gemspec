@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative 'lib/gem_ver/version'
+require_relative 'lib/version_gem/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'gem_ver'
-  spec.version = GemVer::Version::VERSION
+  spec.name = 'version_gem'
+  spec.version = VersionGem::Version::VERSION
   spec.authors = ['Peter Boling']
   spec.email = ['peter.boling@gmail.com']
 
-  spec.summary = 'Enhance your VERSION! Sugar for Version classes.'
+  spec.summary = 'Enhance your VERSION! Sugar for Version modules.'
   spec.description = 'Versions are good. Versions are cool. Versions will win.'
-  spec.homepage = 'https://github.com/pboling/gem_ver'
+  spec.homepage = 'https://github.com/pboling/version_gem'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.2'
 
