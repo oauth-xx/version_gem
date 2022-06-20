@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   spec.files = Dir['lib/**/*.rb', 'sig/**/*.rbs', 'CHANGELOG.md', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md',
-                   'LICENSE.txt', 'README.md', 'rubocop.yml', 'SECURITY.md']
+                   'LICENSE.txt', 'README.md', 'SECURITY.md']
   spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
