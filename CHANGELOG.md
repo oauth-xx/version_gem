@@ -13,15 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-## [1.0.2] - 2022-06-20
-### Added
-- Better documentation
-
-## [1.0.1] - 2022-06-20
-### Added
-- SECURITY.md
-
-## [1.0.0] - 2022-06-20
+s## [1.0.0] - 2022-06-20
 ### Added
 - Initial release, with basic version parsing API
 
