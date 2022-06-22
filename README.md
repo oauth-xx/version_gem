@@ -75,6 +75,12 @@ MyLib::Version.to_h # => { major: 0, minor: 1, patch: 0, pre: "" }
 
 Your `version.rb` file now abides the Ruby convention of directory / path matching the namespace / class!
 
+### Caveat
+
+This design keeps your `version.rb` file compatible with the way `gemspec` files use them.
+This means that the introspection is _not_ available within the gemspec.
+The enhancement from this gem is only available at runtime.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
