@@ -26,7 +26,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-In the standard `bundle gem my_lib` code you get the following in `lib/my_lib/version.rb:
+In the standard `bundle gem my_lib` code you get the following in `lib/my_lib/version.rb`:
 
 ```ruby
 module MyLib
@@ -34,7 +34,7 @@ module MyLib
 end
 ```
 
-Add a Version namespace (the one implied by the path => namespace convention):
+Change it to a nested `Version` namespace (the one implied by the path => namespace convention):
 
 ```ruby
 module MyLib
