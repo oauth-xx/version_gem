@@ -83,7 +83,7 @@ The link tokens in the following sections should be kept ordered by the row and 
 
 <!-- 3️⃣ maintanence & linting -->
 [⛳cclim-maint]: https://codeclimate.com/github/pboling/version_gem/maintainability
-[⛳cclim-maint-img♻️]: https://api.codeclimate.com/v1/badges/f32e1d1148e8bad58197/maintainability
+[⛳cclim-maint-img♻️]: https://api.codeclimate.com/v1/badges/b504d61c4ed1d46aec02/maintainability
 [🖇triage-help]: https://www.codetriage.com/pboling/version_gem
 [🖇triage-help-img]: https://www.codetriage.com/pboling/version_gem/badges/users.svg
 [🏘depfu♻️]: https://depfu.com/github/pboling/version_gem?project_id=34924
@@ -113,8 +113,8 @@ The link tokens in the following sections should be kept ordered by the row and 
 
 <!-- 5️⃣ coverage & security -->
 [⛳cclim-cov]: https://codeclimate.com/github/pboling/version_gem/test_coverage
-[⛳cclim-cov-img♻️]: https://api.codeclimate.com/v1/badges/f32e1d1148e8bad58197/test_coverage
-[🖇codecov-img♻️]: https://codecov.io/gh/pboling/version_gem/branch/main/graph/badge.svg?token=EJCOr0hsPq
+[⛳cclim-cov-img♻️]: https://api.codeclimate.com/v1/badges/b504d61c4ed1d46aec02/test_coverage
+[🖇codecov-img♻️]: https://codecov.io/gh/pboling/version_gem/branch/main/graph/badge.svg?token=79c3X4vtfO
 [🖇codecov]: https://codecov.io/gh/pboling/version_gem
 [🏘coveralls]: https://coveralls.io/github/pboling/version_gem?branch=main
 [🏘coveralls-img]: https://coveralls.io/repos/github/pboling/version_gem/badge.svg?branch=main
