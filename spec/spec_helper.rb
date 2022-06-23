@@ -42,7 +42,7 @@ if RUN_COVERAGE
     ]
   end
 else
-  raise("NO #{minimum_version.call('2.7')}")
+  puts "Not running coverage on #{RUBY_ENGINE} #{RUBY_VERSION}"
 end
 
 require 'version_gem'
