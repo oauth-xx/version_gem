@@ -6,6 +6,6 @@ RSpec.describe VersionGem::Error do
   end
 
   it 'can be raised' do
-    expect { raise(described_class, "moo") }.to raise_error(described_class, "moo")
+    expect { raise(described_class, 'moo') }.to raise_error(described_class, 'moo')
   end
 end

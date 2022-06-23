@@ -4,10 +4,10 @@
 
 RSpec.describe VersionGem::Basic do
   it 'raises when no VERSION' do
-    expect {
+    expect do
       Module.new do
         extend VersionGem::Basic
       end
-    }.to raise_error(VersionGem::Error, "VERSION must be defined before 'extend VersionGem::Basic'")
+    end.to raise_error(VersionGem::Error, "VERSION must be defined before 'extend VersionGem::Basic'")
   end
 end
