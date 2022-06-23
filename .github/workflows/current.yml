@@ -50,7 +50,5 @@ jobs:
           rubygems: ${{ matrix.rubygems }}
           bundler: ${{ matrix.bundler }}
           bundler-cache: true
-      - name: Run RuboCop
-        run: bundle exec rubocop -DESP
       - name: Run tests
         run: bundle exec rake test
