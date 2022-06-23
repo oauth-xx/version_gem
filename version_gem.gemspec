@@ -46,9 +46,6 @@ Gem::Specification.new do |spec|
   # Lint RSpec code
   spec.add_development_dependency 'rubocop-rspec'
 
-  # Lint Rake tasks
-  spec.add_development_dependency 'rubocop-rake'
-
   # Add performance linting
   spec.add_development_dependency 'rubocop-performance'
 end
