@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'basic'
-
 module VersionGem
   module Version
     VERSION = '1.0.1'.freeze

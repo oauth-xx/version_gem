@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'version_gem/version'
+require_relative 'version_gem/basic'
 
 module VersionGem
 end

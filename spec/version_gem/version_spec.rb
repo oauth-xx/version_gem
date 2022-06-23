@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
 RSpec.describe VersionGem::Version do
+  it 'is a module' do
+    expect(described_class).is_a?(Module)
+  end
+
+  it 'has a VERSION' do
+    expect(described_class.const_defined?('VERSION')).to eq(true)
+  end
+
   it 'has a version number' do
     expect(described_class::VERSION).not_to be_nil
   end
@@ -15,6 +23,10 @@ RSpec.describe VersionGem::Version do
 
   it 'is greater than 0.1.0' do
     expect(Gem::Version.new(described_class) > Gem::Version.new('0.1.0')).to be(true)
+  end
+
+  it 'is greater than 1.0.0' do
+    expect(Gem::Version.new(described_class) > Gem::Version.new('1.0.0')).to be(true)
   end
 
   it 'major version is an integer' do
