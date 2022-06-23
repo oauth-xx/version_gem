@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - 'main'
-      - 'master'
       - '*-maintenance'
       - '*-dev'
       - '*-stable'
@@ -22,10 +21,6 @@ jobs:
       fail-fast: false
       matrix:
         experimental: [false]
-        rubygems:
-          - latest
-        bundler:
-          - latest
         ruby:
           - "2.2"
     runs-on: ubuntu-20.04
