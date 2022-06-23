@@ -15,7 +15,7 @@ if RUN_COVERAGE
   SimpleCov.start do
     enable_coverage :branch
     primary_coverage :branch
-    add_filter "test"
+    add_filter "spec"
     track_files "**/*.rb"
 
     if ALL_FORMATTERS
