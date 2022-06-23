@@ -16,10 +16,6 @@ minimum_version = ->(version, engine = 'ruby') { ruby_version >= Gem::Version.ne
 coverage = minimum_version.call('2.7')
 debugging = minimum_version.call('2.7')
 
-gem 'overcommit', '~> 0.58'
-
-gem 'pry', platforms: %i[mri jruby]
-
 platforms :mri do
   if coverage
     gem 'codecov', '~> 0.6' # For CodeCov
