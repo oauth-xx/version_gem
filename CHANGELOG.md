@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [1.0.2] - 2022-06-23
+### Added
+- Delay loading of library code until after code coverage tool is loaded
+
 ## [1.0.1] - 2022-06-23
 ### Added
 - CI Build improvements
@@ -24,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release, with basic version parsing API
 
-[Unreleased]: https://github.com/pboling/version_gem/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/pboling/version_gem/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/pboling/version_gem/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/pboling/version_gem/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/pboling/version_gem/compare/a3055964517c159bf214712940982034b75264be...v1.0.0
