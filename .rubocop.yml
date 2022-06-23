@@ -2,3 +2,14 @@ inherit_from: .rubocop_todo.yml
 
 inherit_gem:
   rubocop-lts: rubocop-lts.yml
+
+Metrics/BlockLength:
+  ExcludedMethods:
+    - context
+    - describe
+    - it
+    - shared_context
+    - shared_examples
+    - shared_examples_for
+    - namespace
+    - draw
