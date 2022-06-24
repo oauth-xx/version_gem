@@ -86,8 +86,8 @@ The link tokens in the following sections should be kept ordered by the row and 
 [⛳cclim-maint-img♻️]: https://api.codeclimate.com/v1/badges/b504d61c4ed1d46aec02/maintainability
 [🖇triage-help]: https://www.codetriage.com/pboling/version_gem
 [🖇triage-help-img]: https://www.codetriage.com/pboling/version_gem/badges/users.svg
-[🏘depfu♻️]: https://depfu.com/github/pboling/version_gem?project_id=34924
-[🏘depfu-img♻️]: https://badges.depfu.com/badges/300630ab4b7c2efea20806d13d1ef41f/count.svg
+[🏘depfu♻️]: https://depfu.com/github/pboling/version_gem?project_id=35803
+[🏘depfu-img♻️]: https://badges.depfu.com/badges/5d8943de6cfdf1ee048ad6d907f3e35b/count.svg
 [🚎contributors]: https://github.com/pboling/version_gem/graphs/contributors
 [🚎contributors-img]: https://img.shields.io/github/contributors-anon/pboling/version_gem
 [🖐style-wf]: https://github.com/pboling/version_gem/actions/workflows/style.yml
