@@ -11,28 +11,28 @@ module VersionGem
     #
     # @return [Integer]
     def major
-      to_a[0].to_i
+      _to_a[0].to_i
     end
 
     # The minor version
     #
     # @return [Integer]
     def minor
-      to_a[1].to_i
+      _to_a[1].to_i
     end
 
     # The patch version
     #
     # @return [Integer]
     def patch
-      to_a[2].to_i
+      _to_a[2].to_i
     end
 
     # The pre-release version, if any
     #
     # @return [String, NilClass]
     def pre
-      to_a[3]
+      _to_a[3]
     end
 
     # The version number as a hash
@@ -47,10 +47,19 @@ module VersionGem
       }
     end
 
-    # The version number as an array
+    # The version number as an array of cast values
     #
-    # @return [Array]
+    # @return [Array<[Integer, String, NilClass]>]
     def to_a
+      [major, minor, patch, pre]
+    end
+
+    private
+
+    # The version number as an array of strings
+    #
+    # @return [Array<String>]
+    def _to_a
       self::VERSION.split('.')
     end
   end
