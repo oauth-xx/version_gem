@@ -291,7 +291,7 @@ the [Pessimistic Version Constraint][pvc] with two digits of precision.
 For example:
 
 ```ruby
-spec.add_dependency "version_gem", "~> 1.0"
+spec.add_dependency "version_gem", "~> 1.1"
 ```
 
 ## Security
