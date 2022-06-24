@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+require 'version_gem/rspec'
+# RSpec Configs
+require 'config/rspec/rspec_core'
+
 DEBUG = ENV['DEBUG'] == 'true'
 
 ruby_version = Gem::Version.new(RUBY_VERSION)
@@ -46,6 +50,3 @@ else
 end
 
 require 'version_gem'
-
-# RSpec Configs
-require 'config/rspec/rspec_core'

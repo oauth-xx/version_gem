@@ -219,13 +219,42 @@ This design keeps your `version.rb` file compatible with the way `gemspec` files
 This means that the introspection is _not_ available within the gemspec.
 The enhancement from this gem is only available at runtime.
 
+### RSpec Matchers
+
+In `spec_helper.rb`:
+```ruby
+require 'version_gem/rspec'
+```
+
+Then you can write a test like:
+
+```ruby
+RSpec.describe MyLib::Version do
+  it_behaves_like 'a Version module', described_class
+end
+
+# Or, if you want to write your own, here is the a la carte menu:
+RSpec.describe MyLib::Version do
+  it "is a Version module" do
+    expect(described_class).is_a?(Module)
+    expect(described_class).to have_version_constant
+    expect(described_class).to have_version_as_string
+    expect(described_class.to_s).to be_a(String)
+    expect(described_class).to have_major_as_integer
+    expect(described_class).to have_minor_as_integer
+    expect(described_class).to have_patch_as_integer
+    expect(described_class).to have_pre_as_nil_or_string
+    expect(described_class.to_h.keys).to match_array(%i[major minor patch pre])
+    expect(described_class.to_a).to be_a(Array)
+  end
+end
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
 
 ## Contributing
 
