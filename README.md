@@ -40,7 +40,7 @@ badge #s:
 📗
 
 appended indicators:
-♻️ - URL needs to be updated from SASS integration. Find / Replace is insufficient.
+♻️ - URL needs to be updated from SAAS integration. Find / Replace is insufficient.
 -->
 
 |     | Project                        | bundle add version_gem                                                                                                                                                                                                                                                                        |
@@ -315,10 +315,6 @@ See [SECURITY.md](https://github.com/pboling/version_gem/blob/main/SECURITY.md).
 [semver]: http://semver.org/
 
 [pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
-
-[railsbling]: http://www.railsbling.com
-
-[peterboling]: http://www.peterboling.com
 
 [aboutme]: https://about.me/peter.boling
 
