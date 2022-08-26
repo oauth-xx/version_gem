@@ -1,6 +1,21 @@
 # VersionGem
 
-Give your next library an introspectable `Version` module.
+## Alternatives
+
+This gem has a very niche purpose, which is:
+
+1. providing introspection of a `Version` module based on a `Version::VERSION` constant string,
+2. while not interfering with `gemspec` parsing where the `VERSION` string is traditionally used.
+
+If this isn't **precisely** your use case you may be better off looking at
+[`Versionaire`](https://www.alchemists.io/projects/versionaire), a wonderful, performant, well-maintained,
+gem from the Alchemists.
+
+For more discussion about this [see issue #2](https://github.com/pboling/version_gem/issues/2)
+
+## Still here?
+
+Give your next library an introspectable `Version` module without breaking your Gemspec.
 
 ```ruby
 MyLib::Version.to_s # => "1.2.3.rc3"
