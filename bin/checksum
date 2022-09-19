@@ -4,9 +4,10 @@
 require 'digest/sha2'
 gems = Dir['*.gem']
 puts "Found: #{gems.inspect}"
-raise "Too Many Gems" if gems.length > 1
+raise 'Too Many Gems' if gems.length > 1
+
 built_gem_path = gems.first
 checksum = Digest::SHA512.new.hexdigest(File.read(built_gem_path))
 checksum_path = "checksum/#{built_gem_path}.sha512"
-File.open(checksum_path, 'w' ) {|f| f.write(checksum) }
+File.open(checksum_path, 'w') { |f| f.write(checksum) }
 puts "You must now git add and commit '#{checksum_path}'"
