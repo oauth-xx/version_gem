@@ -7,7 +7,12 @@ puts "Found: #{gems.inspect}"
 raise 'Too Many Gems' if gems.length > 1
 
 built_gem_path = gems.first
-checksum = Digest::SHA512.new.hexdigest(File.read(built_gem_path))
-checksum_path = "checksum/#{built_gem_path}.sha512"
-File.open(checksum_path, 'w') { |f| f.write(checksum) }
-puts "You must now git add and commit '#{checksum_path}'"
+checksum_512 = Digest::SHA512.new.hexdigest(File.read(built_gem_path))
+checksum_512_path = "checksum/#{built_gem_path}.sha512"
+File.open(checksum_512_path, 'w') { |f| f.write(checksum_512) }
+
+checksum_256 = Digest::SHA256.new.hexdigest(File.read(built_gem_path))
+checksum_256_path = "checksum/#{built_gem_path}.sha256"
+File.open(checksum_256_path, 'w') { |f| f.write(checksum_256) }
+
+puts "You must now git add and commit '#{checksum_256_path}' and '#{checksum_512_path}'"
