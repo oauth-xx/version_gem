@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.name = 'version_gem'
   spec.version = VersionGem::Version::VERSION
   spec.authors = ['Peter Boling']
-  spec.email = ['peter.boling@gmail.com']
+  spec.email = ['peter.boling@gmail.com', 'oauth-ruby@googlegroups.com']
 
   spec.summary = 'Enhance your VERSION! Sugar for Version modules.'
   spec.description = 'Versions are good. Versions are cool. Versions will win.'
