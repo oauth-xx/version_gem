@@ -3,6 +3,9 @@
 require_relative 'lib/version_gem/version'
 
 Gem::Specification.new do |spec|
+  spec.cert_chain  = ['certs/pboling.pem']
+  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
+
   spec.name = 'version_gem'
   spec.version = VersionGem::Version::VERSION
   spec.authors = ['Peter Boling']
