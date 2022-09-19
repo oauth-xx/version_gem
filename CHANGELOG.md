@@ -10,14 +10,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [1.1.1] - 2022-06-24 ([tag][1.1.1t])
+## [1.1.1] - 2022-09-19 ([tag][1.1.1t])
 ### Added
 - Alternatives section to README.md (@pboling)
 - Signing cert for gem releases (@pboling)
 - Mailing List and other metadata URIs (@pboling)
+- Checksums for released gems (@pboling)
 ### Changed
 - SECURITY.md policy (@pboling)
 - Version methods are now memoized (||=) on initial call for performance (@pboling)
+- Gem releases are now cryptographically signed (@pboling)
 
 ## [1.1.0] - 2022-06-24 ([tag][1.1.0t])
 ### Fixed
