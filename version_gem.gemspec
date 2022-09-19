@@ -4,7 +4,7 @@ require_relative 'lib/version_gem/version'
 
 Gem::Specification.new do |spec|
   spec.cert_chain  = ['certs/pboling.pem']
-  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
+  spec.signing_key = File.expand_path('~/.ssh/gem-private_key.pem') if $PROGRAM_NAME =~ /gem\z/
 
   spec.name = 'version_gem'
   spec.version = VersionGem::Version::VERSION
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.metadata['bug_tracker_uri'] = "#{spec.homepage}/-/issues"
   spec.metadata['documentation_uri'] = "https://www.rubydoc.info/gems/#{spec.name}/#{spec.version}"
   spec.metadata['wiki_uri'] = "#{spec.homepage}/-/wiki"
-  spec.metadata['mailing_list_uri'] = "https://groups.google.com/g/oauth-ruby"
+  spec.metadata['mailing_list_uri'] = 'https://groups.google.com/g/oauth-ruby'
   spec.metadata['funding_uri'] = 'https://liberapay.com/pboling'
   spec.metadata['rubygems_mfa_required'] = 'true'
 
