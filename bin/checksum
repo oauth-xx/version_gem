@@ -1,18 +1,19 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'digest/sha2'
-gems = Dir['*.gem']
+require "digest/sha2"
+gems = Dir["*.gem"]
 puts "Found: #{gems.inspect}"
-raise 'Too Many Gems' if gems.length > 1
+raise "No Gems" if gems.length.zero?
+raise "Too Many Gems" if gems.length > 1
 
 built_gem_path = gems.first
-checksum_512 = Digest::SHA512.new.hexdigest(File.read(built_gem_path))
-checksum_512_path = "checksum/#{built_gem_path}.sha512"
-File.open(checksum_512_path, 'w') { |f| f.write(checksum_512) }
+checksum512 = Digest::SHA512.new.hexdigest(File.read(built_gem_path))
+checksum512_path = "checksums/#{built_gem_path}.sha512"
+File.write(checksum512_path, checksum512)
 
-checksum_256 = Digest::SHA256.new.hexdigest(File.read(built_gem_path))
-checksum_256_path = "checksum/#{built_gem_path}.sha256"
-File.open(checksum_256_path, 'w') { |f| f.write(checksum_256) }
+checksum256 = Digest::SHA256.new.hexdigest(File.read(built_gem_path))
+checksum256_path = "checksums/#{built_gem_path}.sha256"
+File.write(checksum256_path, checksum256)
 
-puts "You must now git add and commit '#{checksum_256_path}' and '#{checksum_512_path}'"
+puts "You must now git add and commit '#{checksum256_path}' and '#{checksum512_path}'"
