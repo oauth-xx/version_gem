@@ -8,8 +8,8 @@ This gem has a very niche purpose, which is:
 2. while not interfering with `gemspec` parsing where the `VERSION` string is traditionally used.
 
 If this isn't **precisely** your use case you may be better off looking at
-[`Versionaire`](https://www.alchemists.io/projects/versionaire), a wonderful, performant, well-maintained,
-gem from the Alchemists.
+[`versionaire`](https://www.alchemists.io/projects/versionaire), a wonderful, performant, well-maintained,
+gem from the Alchemists, or [`version_sorter`](https://rubygems.org/gems/version_sorter) from GitHub.
 
 For more discussion about this [see issue #2](https://gitlab.com/oauth-xx/version_gem/-/issues/2)
 
