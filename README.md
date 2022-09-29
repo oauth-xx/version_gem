@@ -11,7 +11,7 @@ If this isn't **precisely** your use case you may be better off looking at
 [`Versionaire`](https://www.alchemists.io/projects/versionaire), a wonderful, performant, well-maintained,
 gem from the Alchemists.
 
-For more discussion about this [see issue #2](https://github.com/pboling/version_gem/issues/2)
+For more discussion about this [see issue #2](https://gitlab.com/oauth-xx/version_gem/-/issues/2)
 
 ## Still here?
 
@@ -27,7 +27,7 @@ MyLib::Version.to_a # => [1, 2, 3, "rc3"]
 MyLib::Version.to_h # => { major: 1, minor: 2, patch: 3, pre: "rc3" }
 ```
 
-This library was extracted from the gem [`oauth2`](https://github.com/oauth-xx/oauth2).
+This library was extracted from the gem [`oauth2`](https://gitlab.com/oauth-xx/oauth2).
 
 This gem has no runtime dependencies.
 
@@ -60,7 +60,7 @@ appended indicators:
 
 |     | Project                        | bundle add version_gem                                                                                                                                                                                                                                                                        |
 |:----|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1️⃣ | name, license, docs, standards | [![RubyGems.org][⛳️name-img]][⛳️gem] [![License: MIT][🖇src-license-img]][🖇src-license] [![RubyDoc.info][🚎yard-img]][🚎yard] [![SemVer 2.0.0][🧮semver-img]][semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]               |
+| 1️⃣ | name, license, docs, standards | [![RubyGems.org][⛳️name-img]][⛳️gem] [![License: MIT][🖇src-license-img]][🖇src-license] [![RubyDoc.info][🚎yard-img]][🚎yard] [![SemVer 2.0.0][🧮semver-img]][🧮semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]               |
 | 2️⃣ | version & activity             | [![Gem Version][⛳️version-img]][⛳️gem] [![Total Downloads][🖇DL-total-img]][⛳️gem] [![Download Rank][🏘DL-rank-img]][⛳️gem] [![Source Code][🚎src-home-img]][🚎src-home] [![Open PRs][🖐prs-o-img]][🖐prs-o] [![Closed PRs][🧮prs-c-img]][🧮prs-c] <!--[![Next Version][📗next-img]][📗next]--> |
 | 3️⃣ | maintanence & linting          | [![Maintainability][⛳cclim-maint-img♻️]][⛳cclim-maint] [![Helpers][🖇triage-help-img]][🖇triage-help] [![Depfu][🏘depfu-img♻️]][🏘depfu♻️] [![Contributors][🚎contributors-img]][🚎contributors] [![Style][🖐style-wf-img]][🖐style-wf] [![Kloc Roll][🧮kloc-img]][🧮kloc]                      |
 | 4️⃣ | testing                        | [![Open Issues][⛳iss-o-img]][⛳iss-o] [![Closed Issues][🖇iss-c-img]][🖇iss-c] [![Supported][🏘sup-wf-img]][🏘sup-wf] [![Heads][🚎heads-wf-img]][🚎heads-wf] [![Unofficial Support][🖐uns-wf-img]][🖐uns-wf] <!--[![MacOS][🧮mac-wf-img]][🧮mac-wf] [![Windows][📗win-wf-img]][📗win-wf]-->      |
@@ -77,8 +77,9 @@ The link tokens in the following sections should be kept ordered by the row and 
 [⛳️name-img]: https://img.shields.io/badge/name-version_gem-brightgreen.svg?style=flat
 [🖇src-license]: https://opensource.org/licenses/MIT
 [🖇src-license-img]: https://img.shields.io/badge/License-MIT-green.svg
-[🚎yard]: https://www.rubydoc.info/github/pboling/version_gem
+[🚎yard]: https://www.rubydoc.info/gems/version_gem
 [🚎yard-img]: https://img.shields.io/badge/documentation-rubydoc-brightgreen.svg?style=flat
+[🧮semver]: http://semver.org/
 [🧮semver-img]: https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
@@ -87,14 +88,12 @@ The link tokens in the following sections should be kept ordered by the row and 
 [⛳️version-img]: http://img.shields.io/gem/v/version_gem.svg
 [🖇DL-total-img]: https://img.shields.io/gem/dt/version_gem.svg
 [🏘DL-rank-img]: https://img.shields.io/gem/rt/version_gem.svg
-[🚎src-home]: https://github.com/pboling/version_gem
-[🚎src-home-img]: https://img.shields.io/badge/source-github-brightgreen.svg?style=flat
-[🖐prs-o]: https://github.com/pboling/version_gem/pulls
+[🚎src-home]: https://gitlab.com/oauth-xx/version_gem
+[🚎src-home-img]: https://img.shields.io/badge/source-gitlab-brightgreen.svg?style=flat
+[🖐prs-o]: https://gitlab.com/oauth-xx/version_gem/-/merge_requests
 [🖐prs-o-img]: https://img.shields.io/github/issues-pr/pboling/version_gem
 [🧮prs-c]: https://github.com/pboling/version_gem/pulls?q=is%3Apr+is%3Aclosed
 [🧮prs-c-img]: https://img.shields.io/github/issues-pr-closed/pboling/version_gem
-[📗next]: https://github.com/pboling/version_gem/milestone/1
-[📗next-img]: https://img.shields.io/github/milestones/progress/pboling/version_gem/1?label=Next%20Version
 
 <!-- 3️⃣ maintanence & linting -->
 [⛳cclim-maint]: https://codeclimate.com/github/pboling/version_gem/maintainability
@@ -103,28 +102,24 @@ The link tokens in the following sections should be kept ordered by the row and 
 [🖇triage-help-img]: https://www.codetriage.com/pboling/version_gem/badges/users.svg
 [🏘depfu♻️]: https://depfu.com/github/pboling/version_gem?project_id=35803
 [🏘depfu-img♻️]: https://badges.depfu.com/badges/5d8943de6cfdf1ee048ad6d907f3e35b/count.svg
-[🚎contributors]: https://github.com/pboling/version_gem/graphs/contributors
+[🚎contributors]: https://gitlab.com/oauth-xx/version_gem/-/graphs/main
 [🚎contributors-img]: https://img.shields.io/github/contributors-anon/pboling/version_gem
-[🖐style-wf]: https://github.com/pboling/version_gem/actions/workflows/style.yml
-[🖐style-wf-img]: https://github.com/pboling/version_gem/actions/workflows/style.yml/badge.svg
+[🖐style-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/style.yml
+[🖐style-wf-img]: https://github.com/oauth-xx/version_gem/actions/workflows/style.yml/badge.svg
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 [🧮kloc-img]: https://img.shields.io/tokei/lines/github.com/pboling/version_gem
 
 <!-- 4️⃣ testing -->
-[⛳iss-o]: https://github.com/pboling/version_gem/issues
-[⛳iss-o-img]: https://img.shields.io/github/issues-raw/pboling/version_gem
-[🖇iss-c]: https://github.com/pboling/version_gem/issues?q=is%3Aissue+is%3Aclosed
-[🖇iss-c-img]: https://img.shields.io/github/issues-closed-raw/pboling/version_gem
-[🏘sup-wf]: https://github.com/pboling/version_gem/actions/workflows/supported.yml
-[🏘sup-wf-img]: https://github.com/pboling/version_gem/actions/workflows/supported.yml/badge.svg
-[🚎heads-wf]: https://github.com/pboling/version_gem/actions/workflows/heads.yml
-[🚎heads-wf-img]: https://github.com/pboling/version_gem/actions/workflows/heads.yml/badge.svg
-[🖐uns-wf]: https://github.com/pboling/version_gem/actions/workflows/unsupported.yml
-[🖐uns-wf-img]: https://github.com/pboling/version_gem/actions/workflows/unsupported.yml/badge.svg
-[🧮mac-wf]: https://github.com/pboling/version_gem/actions/workflows/macos.yml
-[🧮mac-wf-img]: https://github.com/pboling/version_gem/actions/workflows/macos.yml/badge.svg
-[📗win-wf]: https://github.com/pboling/version_gem/actions/workflows/windows.yml
-[📗win-wf-img]: https://github.com/pboling/version_gem/actions/workflows/windows.yml/badge.svg
+[🏘sup-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/supported.yml
+[🏘sup-wf-img]: https://github.com/oauth-xx/version_gem/actions/workflows/supported.yml/badge.svg
+[🚎heads-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/heads.yml
+[🚎heads-wf-img]: https://github.com/oauth-xx/version_gem/actions/workflows/heads.yml/badge.svg
+[🖐uns-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/unsupported.yml
+[🖐uns-wf-img]: https://github.com/oauth-xx/version_gem/actions/workflows/unsupported.yml/badge.svg
+[🧮mac-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/macos.yml
+[🧮mac-wf-img]: https://github.com/oauth-xx/version_gem/actions/workflows/macos.yml/badge.svg
+[📗win-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/windows.yml
+[📗win-wf-img]: https://github.com/oauth-xx/version_gem/actions/workflows/windows.yml/badge.svg
 
 <!-- 5️⃣ coverage & security -->
 [⛳cclim-cov]: https://codeclimate.com/github/pboling/version_gem/test_coverage
@@ -133,23 +128,21 @@ The link tokens in the following sections should be kept ordered by the row and 
 [🖇codecov]: https://codecov.io/gh/pboling/version_gem
 [🏘coveralls]: https://coveralls.io/github/pboling/version_gem?branch=main
 [🏘coveralls-img]: https://coveralls.io/repos/github/pboling/version_gem/badge.svg?branch=main
-[🚎sec-pol]: https://github.com/pboling/version_gem/blob/main/SECURITY.md
+[🚎sec-pol]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/SECURITY.md
 [🚎sec-pol-img]: https://img.shields.io/badge/security-policy-brightgreen.svg?style=flat
 [🖐codeQL]: https://github.com/pboling/version_gem/security/code-scanning
-[🖐codeQL-img]: https://github.com/pboling/version_gem/actions/workflows/codeql-analysis.yml/badge.svg
-[🧮cov-wf]: https://github.com/pboling/version_gem/actions/workflows/coverage.yml
-[🧮cov-wf-img]: https://github.com/pboling/version_gem/actions/workflows/coverage.yml/badge.svg
+[🖐codeQL-img]: https://github.com/oauth-xx/version_gem/actions/workflows/codeql-analysis.yml/badge.svg
+[🧮cov-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/coverage.yml
+[🧮cov-wf-img]: https://github.com/oauth-xx/version_gem/actions/workflows/coverage.yml/badge.svg
 
 <!-- 6️⃣ resources -->
-[⛳gh-discussions]: https://github.com/pboling/version_gem/discussions
-[⛳gh-discussions-img]: https://img.shields.io/github/discussions/pboling/version_gem
 [🖇codementor]: https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github
 [🖇codementor-img]: https://cdn.codementor.io/badges/get_help_github.svg
-[🏘chat]: https://gitter.im/pboling/version_gem
-[🏘chat-img]: https://img.shields.io/gitter/room/pboling/version_gem.svg
+[🏘chat]: https://gitter.im/oauth-xx/version_gem
+[🏘chat-img]: https://img.shields.io/gitter/room/oauth-xx/version_gem.svg
 [🚎blog]: http://www.railsbling.com/tags/version_gem/
 [🚎blog-img]: https://img.shields.io/badge/blog-railsbling-brightgreen.svg?style=flat
-[🖐wiki]: https://github.com/pboling/version_gem/wiki
+[🖐wiki]: https://gitlab.com/oauth-xx/version_gem/-/wikis/home
 [🖐wiki-img]: https://img.shields.io/badge/wiki-examples-brightgreen.svg?style=flat
 
 <!-- 7️⃣ spread 💖 -->
@@ -277,7 +270,7 @@ See [CONTRIBUTING.md][contributing]
 
 ## Contributors
 
-[![Contributors](https://contrib.rocks/image?repo=pboling/version_gem)]("https://github.com/pboling/version_gem/graphs/contributors")
+[![Contributors](https://contrib.rocks/image?repo=pboling/version_gem)]("https://gitlab.com/oauth-xx/version_gem/-/graphs/main")
 
 Made with [contributors-img](https://contrib.rocks).
 
@@ -291,7 +284,7 @@ See [LICENSE][license] for the official [Copyright Notice][copyright-notice-expl
 
 ## Code of Conduct
 
-Everyone interacting in the VersionGem project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/pboling/version_gem/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the VersionGem project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://gitlab.com/oauth-xx/version_gem/-/blob/main/CODE_OF_CONDUCT.md).
 
 ## Versioning
 
@@ -311,23 +304,19 @@ spec.add_dependency "version_gem", "~> 1.1"
 
 ## Security
 
-See [SECURITY.md](https://github.com/pboling/version_gem/blob/main/SECURITY.md).
+See [SECURITY.md](https://gitlab.com/oauth-xx/version_gem/-/blob/main/SECURITY.md).
 
 [copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
 
-[gh_discussions]: https://github.com/pboling/version_gem/discussions
+[conduct]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/CODE_OF_CONDUCT.md
 
-[conduct]: https://github.com/pboling/version_gem/blob/main/CODE_OF_CONDUCT.md
+[contributing]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/CONTRIBUTING.md
 
-[contributing]: https://github.com/pboling/version_gem/blob/main/CONTRIBUTING.md
+[security]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/SECURITY.md
 
-[security]: https://github.com/pboling/version_gem/blob/main/SECURITY.md
-
-[license]: https://github.com/pboling/version_gem/blob/main/LICENSE.txt
+[license]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/LICENSE.txt
 
 [license-ref]: https://opensource.org/licenses/MIT
-
-[semver]: http://semver.org/
 
 [pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
 
@@ -341,15 +330,11 @@ See [SECURITY.md](https://github.com/pboling/version_gem/blob/main/SECURITY.md).
 
 [tweetme]: http://twitter.com/galtzo
 
-[politicme]: https://nationalprogressiveparty.org
+[source]: https://gitlab.com/oauth-xx/version_gem/
 
-[documentation]: https://rubydoc.info/github/pboling/version_gem/main
+[actions]: https://github.com/oauth-xx/version_gem/actions
 
-[source]: https://github.com/pboling/version_gem/
-
-[actions]: https://github.com/pboling/version_gem/actions
-
-[issues]: https://github.com/pboling/version_gem/issues
+[issues]: https://gitlab.com/oauth-xx/version_gem/-/issues
 
 [climate_maintainability]: https://codeclimate.com/github/pboling/version_gem/maintainability
 
@@ -362,8 +347,6 @@ See [SECURITY.md](https://github.com/pboling/version_gem/blob/main/SECURITY.md).
 [blogpage]: http://www.railsbling.com/tags/version_gem/
 
 [rubygems]: https://rubygems.org/gems/version_gem
-
-[chat]: https://gitter.im/pboling/version_gem?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 [maintenancee_policy]: https://guides.rubyonrails.org/maintenance_policy.html#security-issues
 
