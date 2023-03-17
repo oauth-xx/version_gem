@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.1.2] - 2023-03-17 ([tag][1.1.2t])
+### Added
+- `VersionGem::Ruby` to help library CI integration against many different versions of Ruby (@pboling)
+  - Experimental, optional, require (not loaded by default, which is why this can be in a patch)
+- Spec coverage is now 100%, lines and branches, including the fabled `version.rb`
+
 ## [1.1.1] - 2022-09-19 ([tag][1.1.1t])
 ### Added
 - Alternatives section to README.md (@pboling)

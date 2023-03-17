@@ -1,13 +1,17 @@
 # frozen_string_literal: true
 
-require_relative 'lib/version_gem/version'
+# Get the GEMFILE_VERSION without *require* "my_gem/version", for code coverage accuracy
+# See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-825171399
+load "lib/version_gem/version.rb"
+gem_version = VersionGem::Version::VERSION
+VersionGem::Version.send(:remove_const, :VERSION)
 
 Gem::Specification.new do |spec|
   spec.cert_chain  = ['certs/pboling.pem']
   spec.signing_key = File.expand_path('~/.ssh/gem-private_key.pem') if $PROGRAM_NAME =~ /gem\z/
 
   spec.name = 'version_gem'
-  spec.version = VersionGem::Version::VERSION
+  spec.version = gem_version
   spec.authors = ['Peter Boling']
   spec.email = ['peter.boling@gmail.com', 'oauth-ruby@googlegroups.com']
 
@@ -40,6 +44,7 @@ Gem::Specification.new do |spec|
 
   # Tests
   spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rspec-block_is_expected'
 
   # Development Tasks
   spec.add_development_dependency 'rake'

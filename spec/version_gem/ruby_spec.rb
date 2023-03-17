@@ -1,0 +1,36 @@
+# frozen_string_literal: true
+
+# Not loaded by the gem by default, so loaded here:
+require "version_gem/ruby"
+
+RSpec.describe VersionGem::Ruby do
+  it 'is a module' do
+    expect(described_class).is_a?(Module)
+  end
+
+  let(:engine) { "ruby" }
+
+  describe "#gte_minimum_version?" do
+    let(:version) { "2.7.7" }
+    subject(:gte_minimum_version) { described_class.gte_minimum_version?(version, engine) }
+    it 'returns true when current ruby greater than minimum' do
+      expect(gte_minimum_version).to eq(true)
+    end
+  end
+
+  describe "#actual_minor_version?" do
+    let(:major) { "3" }
+    let(:minor) { "1" }
+    subject(:actual_minor_version) { described_class.actual_minor_version?(major, minor, engine) }
+    it 'returns false when actual ruby not same' do
+      expect(actual_minor_version).to eq(false)
+    end
+
+    context "when actual" do
+      let(:minor) { "2" }
+      it 'returns true' do
+        expect(actual_minor_version).to eq(true)
+      end
+    end
+  end
+end

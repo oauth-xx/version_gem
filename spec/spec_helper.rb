@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
+# external gems
+require 'rspec/block_is_expected'
+
+# RSpec Helpers from this gem
 require 'version_gem/rspec'
+
 # RSpec Configs
 require 'config/rspec/rspec_core'
 

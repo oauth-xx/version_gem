@@ -221,6 +221,32 @@ MyLib::Version.to_h # => { major: 0, minor: 1, patch: 0, pre: "" }
 
 Your `version.rb` file now abides the Ruby convention of directory / path matching the namespace / class!
 
+#### Query Ruby Version (as of version 1.2.0)
+
+In Continuous Integration environments for libraries that run against many versions of Ruby,
+I often need to configure things discretely per Ruby version, and doing so forced me to repeat
+a significant amount of boilerplate code across each project.
+
+Thus `VersionGem::Ruby` was born.  It has the two optimized methods I always need:
+
+```ruby
+engine = 'ruby'
+version = "2.7.7"
+gte_minimum_version?(version, engine)  # Is the current version of Ruby greater than or equal to some minimum?
+
+major = 3
+minor = 2
+actual_minor_version?(major, minor, engine) # Is the current version of Ruby precisely a specific minor version of Ruby?
+```
+
+`Version::Ruby` is *not loaded* by default.  If you want to use it, you must require it as:
+```ruby
+require "version_gem/ruby"
+```
+
+Normally I do this in my `spec/spec_helper.rb`, and/or `.simplecov` files.
+Occasionally in my `Rakefile`.
+
 ### Caveat
 
 This design keeps your `version.rb` file compatible with the way `gemspec` files use them.
