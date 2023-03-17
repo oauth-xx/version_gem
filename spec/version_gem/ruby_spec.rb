@@ -11,17 +11,28 @@ RSpec.describe VersionGem::Ruby do
   let(:engine) { 'ruby' }
 
   describe '#gte_minimum_version?' do
-    let(:version) { '2.7.7' }
+    let(:version) { ::RUBY_VERSION }
+
     subject(:gte_minimum_version) { described_class.gte_minimum_version?(version, engine) }
+
     it 'returns true when current ruby greater than minimum' do
       expect(gte_minimum_version).to eq(true)
+    end
+
+    context 'when not gte minimum' do
+      let(:version) { '99.0.0' }
+      it 'returns false when current ruby not greater than minimum' do
+        expect(gte_minimum_version).to eq(false)
+      end
     end
   end
 
   describe '#actual_minor_version?' do
     let(:major) { '1' }
     let(:minor) { '8' }
+
     subject(:actual_minor_version) { described_class.actual_minor_version?(major, minor, engine) }
+
     it 'returns false when actual ruby not same' do
       expect(actual_minor_version).to eq(false)
     end
