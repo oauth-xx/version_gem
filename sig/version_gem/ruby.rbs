@@ -1,0 +1,9 @@
+module VersionGem
+  module Ruby
+    RUBY_VER: Gem::Version
+
+    def actual_minor_version?: -> bool
+
+    def gte_minimum_version?: -> bool
+  end
+end

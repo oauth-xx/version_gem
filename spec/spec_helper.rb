@@ -5,21 +5,18 @@ require 'rspec/block_is_expected'
 
 # RSpec Helpers from this gem
 require 'version_gem/rspec'
+# Ruby Helpers from this gem (use load because we want line coverage)
+load 'version_gem/ruby.rb'
 
 # RSpec Configs
 require 'config/rspec/rspec_core'
 
 DEBUG = ENV['DEBUG'] == 'true'
 
-ruby_version = Gem::Version.new(RUBY_VERSION)
-minimum_version = ->(version, engine = 'ruby') { ruby_version >= Gem::Version.new(version) && RUBY_ENGINE == engine }
-actual_version = lambda do |major, minor|
-  actual = Gem::Version.new(ruby_version)
-  major == actual.segments[0] && minor == actual.segments[1] && RUBY_ENGINE == 'ruby'
-end
-debugging = minimum_version.call('2.7') && DEBUG
-RUN_COVERAGE = minimum_version.call('2.6') && (ENV['COVER_ALL'] || ENV['CI_CODECOV'] || ENV['CI'].nil?)
-ALL_FORMATTERS = actual_version.call(2, 7) && (ENV['COVER_ALL'] || ENV['CI_CODECOV'] || ENV['CI'])
+debugging = VersionGem::Ruby.gte_minimum_version?('2.7') && DEBUG
+RUN_COVERAGE = VersionGem::Ruby.gte_minimum_version?('2.6') && (ENV['COVER_ALL'] || ENV['CI_CODECOV'] || ENV['CI'].nil?)
+ALL_FORMATTERS = VersionGem::Ruby.actual_minor_version?(2, 7) && (ENV['COVER_ALL'] || ENV['CI_CODECOV'] || ENV['CI'])
+VersionGem::Ruby.send(:remove_const, :RUBY_VER)
 
 if DEBUG
   if debugging

@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "digest/sha2"
-gems = Dir["*.gem"]
+require 'digest/sha2'
+gems = Dir['*.gem']
 puts "Found: #{gems.inspect}"
-raise "No Gems" if gems.length.zero?
-raise "Too Many Gems" if gems.length > 1
+raise 'No Gems' if gems.length.zero?
+raise 'Too Many Gems' if gems.length > 1
 
 built_gem_path = gems.first
 checksum512 = Digest::SHA512.new.hexdigest(File.read(built_gem_path))

@@ -1,4 +1,5 @@
 module VersionGem
+  # Helpers for library CI integration against many different versions of Ruby
   module Ruby
     RUBY_VER = ::Gem::Version.new(RUBY_VERSION)
 

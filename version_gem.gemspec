@@ -2,7 +2,7 @@
 
 # Get the GEMFILE_VERSION without *require* "my_gem/version", for code coverage accuracy
 # See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-825171399
-load "lib/version_gem/version.rb"
+load 'lib/version_gem/version.rb'
 gem_version = VersionGem::Version::VERSION
 VersionGem::Version.send(:remove_const, :VERSION)
 

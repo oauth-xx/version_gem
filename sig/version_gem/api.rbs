@@ -1,0 +1,33 @@
+module VersionGem
+  module Api
+    @_to_a: Array[String]
+
+    @major: Integer
+
+    @minor: Integer
+
+    @patch: Integer
+
+    @pre: String?
+
+    @to_a: Array
+
+    @to_h: Hash
+
+    def major: -> Integer
+
+    def minor: -> Integer
+
+    def patch: -> Integer
+
+    def pre: -> String?
+
+    def to_a: -> Array
+
+    def to_h: -> Hash
+
+    private
+
+    def _to_a: -> Array[String]
+  end
+end

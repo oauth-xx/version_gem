@@ -1,0 +1,5 @@
+module VersionGem
+  module Version
+    VERSION: String
+  end
+end
