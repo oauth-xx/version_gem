@@ -29,10 +29,6 @@ jobs:
       fail-fast: false
       matrix:
         experimental: [false]
-        rubygems:
-          - latest
-        bundler:
-          - latest
         ruby:
           - "2.7"
           - "3.0"
