@@ -2,7 +2,7 @@
 
 module VersionGem
   module Version
-    VERSION = '1.1.2'
+    VERSION = '2.0.0'
     # This would work in this gem, but not in external libraries,
     #   because version files are loaded in Gemspecs before bundler
     #   has a chance to load dependencies.

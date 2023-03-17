@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [2.0.0] - 2023-03-17 ([tag][2.0.0t])
+### Removed
+- Drop Ruby 2.2 support
+
 ## [1.1.2] - 2023-03-17 ([tag][1.1.2t])
 ### Added
 - `VersionGem::Ruby` to help library CI integration against many different versions of Ruby (@pboling)
@@ -49,7 +53,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release, with basic version parsing API (@pboling)
 
-[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.2...HEAD
+[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v2.0.0...HEAD
+[2.0.0]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.2...v2.0.0
+[2.0.0t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v2.0.0
 [1.1.2]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.1...v1.1.2
 [1.1.2t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.2
 [1.1.1]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.0...v1.1.1
