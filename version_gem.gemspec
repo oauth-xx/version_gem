@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Versions are good. Versions are cool. Versions will win.'
   spec.homepage = 'https://gitlab.com/oauth-xx/version_gem'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 2.2'
+  spec.required_ruby_version = '>= 2.3'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = "#{spec.homepage}/-/tree/v#{spec.version}"
@@ -52,10 +52,10 @@ Gem::Specification.new do |spec|
   # Debugger
   spec.add_development_dependency 'pry'
 
-  # Linting - rubocop-lts v8 is a rubocop wrapper for Ruby >= 2.2,
+  # Linting - rubocop-lts v10 is a rubocop wrapper for Ruby >= 2.3,
   #   and should only be bumped when dropping old Ruby support
   # see: https://dev.to/pboling/rubocop-lts-1e31
-  spec.add_development_dependency 'rubocop-lts', ['~> 8.0', '>= 8.0.2']
+  spec.add_development_dependency 'rubocop-lts', ['~> 10.0', '>= 10.0.1']
 
   # Lint RSpec code
   spec.add_development_dependency 'rubocop-rspec'

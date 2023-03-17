@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module VersionGem
   module Api
     # The version number as a string

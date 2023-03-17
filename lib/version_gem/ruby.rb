@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module VersionGem
   # Helpers for library CI integration against many different versions of Ruby
   module Ruby
