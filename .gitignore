@@ -11,9 +11,4 @@
 .rspec_status
 /.idea/
 
-# Gemfile Lock files
-Gemfile.lock
-
-.ruby-version
-.tool-versions
 *.gem
