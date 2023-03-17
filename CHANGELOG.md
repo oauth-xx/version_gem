@@ -14,8 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - `VersionGem::Ruby` to help library CI integration against many different versions of Ruby (@pboling)
   - Experimental, optional, require (not loaded by default, which is why this can be in a patch)
-- Spec coverage is now 100%, lines and branches, including the fabled `version.rb`
-- Full RBS Signatures
+- Spec coverage is now 100%, lines and branches, including the fabled `version.rb` (@pboling)
+- Full RBS Signatures (@pboling)
 
 ## [1.1.1] - 2022-09-19 ([tag][1.1.1t])
 ### Added
@@ -49,7 +49,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release, with basic version parsing API (@pboling)
 
-[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.1...HEAD
+[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.2...HEAD
+[1.1.2]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.1...v1.1.2
+[1.1.2t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.2
 [1.1.1]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.0...v1.1.1
 [1.1.1t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.1
 [1.1.0]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.0.2...v1.1.0
