@@ -38,8 +38,9 @@ RSpec.describe VersionGem::Ruby do
     end
 
     context 'when actual' do
-      let(:major) { '2' }
-      let(:minor) { '7' }
+      let(:ruby_ver) { VersionGem::Ruby::RUBY_VER }
+      let(:major) { ruby_ver.segments[0] }
+      let(:minor) { ruby_ver.segments[1] }
       it 'returns true' do
         expect(actual_minor_version).to eq(true)
       end
