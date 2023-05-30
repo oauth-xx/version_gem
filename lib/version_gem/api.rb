@@ -1,4 +1,5 @@
 module VersionGem
+  # Public API of this library
   module Api
     # The version number as a string
     #
