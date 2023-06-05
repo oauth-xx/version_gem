@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.3] 2023-06-05 ([tag][1.1.3t])
 ### Added
 - More test coverage (now 100% 🎉) (@pboling)
-- Improved documentation (@pboling)
+- Improved documentation (now 77% 🎉) (@pboling)
 - Gemfile context pattern (@pboling)
 - Improved linting (via rubocop-lts) (@pboling)
 - More robust GHA config (@pboling)
