@@ -27,9 +27,11 @@ jobs:
           - latest
         bundler:
           - latest
+        gemfile:
+          - style
         ruby:
-          - "2.2"
-    runs-on: ubuntu-20.04
+          - "3.2"
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3

@@ -43,14 +43,14 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Tests
-  spec.add_development_dependency("rspec", "~> 3.12")
-  spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")
+  spec.add_development_dependency("rspec", "~> 3.12")                   # ruby >= 0
+  spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")  # ruby >= 1.8.7
 
   # Development Tasks
-  spec.add_development_dependency("rake", "~> 13.0")
+  spec.add_development_dependency("rake", "~> 13.0")                    # ruby >= 2.2
 
-  # Dev Console
-  spec.add_development_dependency("pry")
+  # Dev Console - Binding.pry - Irb replacement
+  spec.add_development_dependency("pry", "~> 0.14")                     # ruby >= 2.0
 
   # Linting - rubocop-lts v8 is a rubocop wrapper for Ruby >= 2.2,
   #   and should only be bumped when dropping old Ruby support

@@ -1,7 +1,3 @@
 # frozen_string_literal: true
 
-# Dev
-gem "rake", "~> 13.0"
-
-# Binding.pry - Irb replacement
-gem "pry", "~> 0.14"
+# All core gems are managed by gemspec

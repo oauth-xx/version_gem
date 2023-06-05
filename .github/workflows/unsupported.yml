@@ -32,9 +32,9 @@ jobs:
       matrix:
         experimental: [false]
         rubygems:
-          - latest
+          - "2.7.11"
         bundler:
-          - latest
+          - none
         gemfile:
           - vanilla
         ruby:

@@ -34,6 +34,8 @@ jobs:
           - latest
         bundler:
           - latest
+        gemfile:
+          - vanilla
         ruby:
           # rubocop supports JRuby, but I can't get it to work on jruby-head (and the problem might be in JRuby!)
           - "ruby-head"
