@@ -10,17 +10,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [1.1.3] 2023-06-05
+## [1.1.3] 2023-06-05 ([tag][1.1.3t])
 ### Added
-- (dev) Dependencies
+- More test coverage (now 100% 🎉) (@pboling)
+- Improved documentation (@pboling)
+- Gemfile context pattern (@pboling)
+- Improved linting (via rubocop-lts) (@pboling)
+- More robust GHA config (@pboling)
+- (dev) Dependencies (@pboling)
   - yard-junk
   - redcarpet
   - pry, IRB alternative
   - pry-suite
   - debase,  for IDE debugging
-- (dev) Rake task for rubocop_gradual
+- (dev) Rake task for rubocop_gradual (@pboling)
 ### Fixed
-- (dev) `yard` documentation task
+- (dev) `yard` documentation task (@pboling)
 
 ## [1.1.2] - 2023-03-17 ([tag][1.1.2t])
 ### Added
@@ -61,7 +66,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release, with basic version parsing API (@pboling)
 
-[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.2...HEAD
+[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.3...HEAD
+[1.1.3]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.2...v1.1.3
+[1.1.3t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.3
 [1.1.2]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.1...v1.1.2
 [1.1.2t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.2
 [1.1.1]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.0...v1.1.1
