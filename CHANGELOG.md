@@ -12,20 +12,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.3] 2023-06-05
 ### Added
-- Dependencies
+- (dev) Dependencies
   - yard-junk
   - redcarpet
   - pry, IRB alternative
   - pry-suite
   - debase,  for IDE debugging
-- Some rules should ignore specs/tests
-  - Style/MethodCallWithArgsParentheses
-  - Style/ClassAndModuleChildren
+- (dev) Rake task for rubocop_gradual
 ### Fixed
-- `yard` documentation task
-### Changed
-- Added Include to inherit_mode: merge
-- Updated dependency on standard-rubocop-lts
+- (dev) `yard` documentation task
 
 ## [1.1.2] - 2023-03-17 ([tag][1.1.2t])
 ### Added

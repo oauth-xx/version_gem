@@ -33,10 +33,15 @@ rescue LoadError
   end
 end
 
-require "rubocop/lts"
+begin
+  require "rubocop/lts"
 
-Rubocop::Lts.install_tasks
-
-defaults << :rubocop_gradual
+  Rubocop::Lts.install_tasks
+  defaults << :rubocop_gradual
+rescue LoadError
+  task(:rubocop_gradual) do
+    warn("NOTE: rubocop-lts isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  end
+end
 
 task default: defaults
