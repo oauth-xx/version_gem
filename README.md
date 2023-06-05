@@ -8,8 +8,8 @@ This gem has a very niche purpose, which is:
 2. while not interfering with `gemspec` parsing where the `VERSION` string is traditionally used.
 
 If this isn't **precisely** your use case you may be better off looking at
-[`versionaire`](https://www.alchemists.io/projects/versionaire), a wonderful, performant, well-maintained,
-gem from the Alchemists, or [`version_sorter`](https://rubygems.org/gems/version_sorter) from GitHub.
+_[versionaire](https://www.alchemists.io/projects/versionaire)_, a wonderful, performant, well-maintained,
+gem from the Alchemists, or _[version_sorter](https://rubygems.org/gems/version_sorter)_ from GitHub.
 
 For more discussion about this [see issue #2](https://gitlab.com/oauth-xx/version_gem/-/issues/2)
 
@@ -27,7 +27,7 @@ MyLib::Version.to_a # => [1, 2, 3, "rc3"]
 MyLib::Version.to_h # => { major: 1, minor: 2, patch: 3, pre: "rc3" }
 ```
 
-This library was extracted from the gem [`oauth2`](https://gitlab.com/oauth-xx/oauth2).
+This library was extracted from the gem _[oauth2](https://gitlab.com/oauth-xx/oauth2)_.
 
 This gem has no runtime dependencies.
 
@@ -58,15 +58,15 @@ appended indicators:
 ♻️ - URL needs to be updated from SAAS integration. Find / Replace is insufficient.
 -->
 
-|     | Project                        | bundle add version_gem                                                                                                                                                                                                                                                                          |
-|:----|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1️⃣ | name, license, docs, standards | [![RubyGems.org][⛳️name-img]][⛳️gem] [![License: MIT][🖇src-license-img]][🖇src-license] [![RubyDoc.info][🚎yard-img]][🚎yard] [![SemVer 2.0.0][🧮semver-img]][🧮semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]                                                    |
-| 2️⃣ | version & activity             | [![Gem Version][⛳️version-img]][⛳️gem] [![Total Downloads][🖇DL-total-img]][⛳️gem] [![Download Rank][🏘DL-rank-img]][⛳️gem] [![Source Code][🚎src-main-img]][🚎src-main] [![Open PRs][🖐prs-o-img]][🖐prs-o] [![Closed PRs][🧮prs-c-img]][🧮prs-c] <!--[![Next Version][📗next-img]][📗next]--> |
-| 3️⃣ | maintanence & linting          | [![Maintainability][⛳cclim-maint-img♻️]][⛳cclim-maint] [![Helpers][🖇triage-help-img]][🖇triage-help] [![Depfu][🏘depfu-img♻️]][🏘depfu♻️] [![Contributors][🚎contributors-img]][🚎contributors] [![Style][🖐style-wf-img]][🖐style-wf] [![Kloc Roll][🧮kloc-img]][🧮kloc]                      |
-| 4️⃣ | testing                        | [![Supported][🏘sup-wf-img]][🏘sup-wf] [![Heads][🚎heads-wf-img]][🚎heads-wf] [![Unofficial Support][🖐uns-wf-img]][🖐uns-wf] <!--[![MacOS][🧮mac-wf-img]][🧮mac-wf] [![Windows][📗win-wf-img]][📗win-wf]-->                                                                                    |
-| 5️⃣ | coverage & security            | [![CodeClimate][⛳cclim-cov-img♻️]][⛳cclim-cov] [![CodeCov][🖇codecov-img♻️]][🖇codecov] [![Coveralls][🏘coveralls-img]][🏘coveralls] [![Security Policy][🚎sec-pol-img]][🚎sec-pol] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Code Coverage][🧮cov-wf-img]][🧮cov-wf]                              |
-| 6️⃣ | resources                      | [![Get help on Codementor][🖇codementor-img]][🖇codementor] [![Chat][🏘chat-img]][🏘chat] [![Blog][🚎blog-img]][🚎blog] [![Wiki][🖐wiki-img]][🖐wiki]                                                                                     |
-| 7️⃣ | spread 💖                      | [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay] [![Sponsor Me][🖇sponsor-img]][🖇sponsor] [![Tweet @ Peter][🏘tweet-img]][🏘tweet] [🌏][aboutme] [👼][angelme] [💻][coderme]                                                                                                                 |
+|     | Project                        | bundle add version_gem                                                                                                                                                                                                                                                     |
+|:----|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1️⃣ | name, license, docs, standards | [![RubyGems.org][⛳️name-img]][⛳️gem] [![License: MIT][🖇src-license-img]][🖇src-license] [![RubyDoc.info][🚎yard-img]][🚎yard] [![SemVer 2.0.0][🧮semver-img]][🧮semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]                               |
+| 2️⃣ | version & activity             | [![Gem Version][⛳️version-img]][⛳️gem] [![Total Downloads][🖇DL-total-img]][⛳️gem] [![Download Rank][🏘DL-rank-img]][⛳️gem] [![Source Code][🚎src-main-img]][🚎src-main] [![Open PRs][🖐prs-o-img]][🖐prs-o] [![Closed PRs][🧮prs-c-img]][🧮prs-c]                         |
+| 3️⃣ | maintanence & linting          | [![Maintainability][⛳cclim-maint-img♻️]][⛳cclim-maint] [![Helpers][🖇triage-help-img]][🖇triage-help] [![Depfu][🏘depfu-img♻️]][🏘depfu♻️] [![Contributors][🚎contributors-img]][🚎contributors] [![Style][🖐style-wf-img]][🖐style-wf] [![Kloc Roll][🧮kloc-img]][🧮kloc] |
+| 4️⃣ | testing                        | [![Supported][🏘sup-wf-img]][🏘sup-wf] [![Heads][🚎heads-wf-img]][🚎heads-wf] [![Unofficial Support][🖐uns-wf-img]][🖐uns-wf] <!--[![MacOS][🧮mac-wf-img]][🧮mac-wf] [![Windows][📗win-wf-img]][📗win-wf]-->                                                               |
+| 5️⃣ | coverage & security            | [![CodeClimate][⛳cclim-cov-img♻️]][⛳cclim-cov] [![CodeCov][🖇codecov-img♻️]][🖇codecov] [![Coveralls][🏘coveralls-img]][🏘coveralls] [![Security Policy][🚎sec-pol-img]][🚎sec-pol] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Code Coverage][🧮cov-wf-img]][🧮cov-wf]         |
+| 6️⃣ | resources                      | [![Get help on Codementor][🖇codementor-img]][🖇codementor] [![Chat][🏘chat-img]][🏘chat] [![Blog][🚎blog-img]][🚎blog] [![Wiki][🖐wiki-img]][🖐wiki]                                                                                                                      |
+| 7️⃣ | spread 💖                      | [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay] [![Sponsor Me][🖇sponsor-img]][🖇sponsor] [![Tweet @ Peter][🏘tweet-img]][🏘tweet] [🌏][aboutme] [👼][angelme] [💻][coderme]                                                                                            |
 
 <!--
 The link tokens in the following sections should be kept ordered by the row and badge numbering scheme
@@ -221,6 +221,49 @@ MyLib::Version.to_h # => { major: 0, minor: 1, patch: 0, pre: "" }
 
 Your `version.rb` file now abides the Ruby convention of directory / path matching the namespace / class!
 
+### Zietwerk
+
+The pattern of `version.rb` breaking the ruby convention of directory / path matching the namespace / class
+is so entrenched that the `zeitwerk` library has a special carve-out for it.
+RubyGems using this "bad is actually good" pattern are encouraged to use `Zeitwerk.for_gem`.
+
+**Do not do that ^** if you use this gem.
+
+#### Simple Zeitwerk Example
+
+Create a gem like this (keeping with the `MyLib` theme):
+
+```shell
+bundle gem my_lib
+```
+
+Then following the usage instructions above, you edit your primary namespace file @ `lib/my_lib.rb`,
+but inject the Zeitwerk loader.
+
+```ruby
+# frozen_string_literal: true
+
+require_relative "my_lib/version"
+
+module MyLib
+  class Error < StandardError; end
+  # Your code goes here...
+end
+
+loader = Zeitwerk::Loader.new
+loader.tag = File.basename(__FILE__, ".rb")
+loader.push_dir("lib/my_lib", namespace: MyLib)
+loader.setup # ready!
+loader.eager_load(force: true) # optional!
+
+MyLib::Version.class_eval do
+  extend VersionGem::Basic
+end
+```
+
+#### Complex Zeitwerk Example
+
+
 #### Query Ruby Version (as of version 1.2.0)
 
 In Continuous Integration environments for libraries that run against many versions of Ruby,
@@ -230,7 +273,7 @@ a significant amount of boilerplate code across each project.
 Thus `VersionGem::Ruby` was born.  It has the two optimized methods I always need:
 
 ```ruby
-engine = 'ruby'
+engine = "ruby"
 version = "2.7.7"
 gte_minimum_version?(version, engine)  # Is the current version of Ruby greater than or equal to some minimum?
 
@@ -257,29 +300,29 @@ The enhancement from this gem is only available at runtime.
 
 In `spec_helper.rb`:
 ```ruby
-require 'version_gem/rspec'
+require "version_gem/rspec"
 ```
 
 Then you can write a test like:
 
 ```ruby
-RSpec.describe MyLib::Version do
-  it_behaves_like 'a Version module', described_class
+RSpec.describe(MyLib::Version) do
+  it_behaves_like "a Version module", described_class
 end
 
 # Or, if you want to write your own, here is the a la carte menu:
-RSpec.describe MyLib::Version do
+RSpec.describe(MyLib::Version) do
   it "is a Version module" do
     expect(described_class).is_a?(Module)
-    expect(described_class).to have_version_constant
-    expect(described_class).to have_version_as_string
-    expect(described_class.to_s).to be_a(String)
-    expect(described_class).to have_major_as_integer
-    expect(described_class).to have_minor_as_integer
-    expect(described_class).to have_patch_as_integer
-    expect(described_class).to have_pre_as_nil_or_string
-    expect(described_class.to_h.keys).to match_array(%i[major minor patch pre])
-    expect(described_class.to_a).to be_a(Array)
+    expect(described_class).to(have_version_constant)
+    expect(described_class).to(have_version_as_string)
+    expect(described_class.to_s).to(be_a(String))
+    expect(described_class).to(have_major_as_integer)
+    expect(described_class).to(have_minor_as_integer)
+    expect(described_class).to(have_patch_as_integer)
+    expect(described_class).to(have_pre_as_nil_or_string)
+    expect(described_class.to_h.keys).to(match_array(%i[major minor patch pre]))
+    expect(described_class.to_a).to(be_a(Array))
   end
 end
 ```
@@ -325,57 +368,39 @@ the [Pessimistic Version Constraint][pvc] with two digits of precision.
 For example:
 
 ```ruby
-spec.add_dependency "version_gem", "~> 1.1"
+spec.add_dependency("version_gem", "~> 1.1")
 ```
 
 ## Security
 
 See [SECURITY.md](https://gitlab.com/oauth-xx/version_gem/-/blob/main/SECURITY.md).
 
-[copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
-
-[conduct]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/CODE_OF_CONDUCT.md
-
-[contributing]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/CONTRIBUTING.md
-
-[security]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/SECURITY.md
-
-[license]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/LICENSE.txt
-
-[license-ref]: https://opensource.org/licenses/MIT
-
-[pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
-
 [aboutme]: https://about.me/peter.boling
-
-[angelme]: https://angel.co/peter-boling
-
-[coderme]:http://coderwall.com/pboling
-
-[followme-img]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow
-
-[tweetme]: http://twitter.com/galtzo
-
-[source]: https://gitlab.com/oauth-xx/version_gem/
-
 [actions]: https://github.com/oauth-xx/version_gem/actions
-
-[issues]: https://gitlab.com/oauth-xx/version_gem/-/issues
-
-[climate_maintainability]: https://codeclimate.com/github/pboling/version_gem/maintainability
-
-[climate_coverage]: https://codeclimate.com/github/pboling/version_gem/test_coverage
-
-[codecov_coverage]: https://codecov.io/gh/pboling/version_gem
-
-[code_triage]: https://www.codetriage.com/pboling/version_gem
-
+[angelme]: https://angel.co/peter-boling
 [blogpage]: http://www.railsbling.com/tags/version_gem/
-
-[rubygems]: https://rubygems.org/gems/version_gem
-
-[maintenancee_policy]: https://guides.rubyonrails.org/maintenance_policy.html#security-issues
-
-[liberapay_donate]: https://liberapay.com/pboling/donate
-
+[codecov_coverage]: https://codecov.io/gh/oauth-xx/version_gem
+[code_triage]: https://www.codetriage.com/oauth-xx/version_gem
+[chat]: https://gitter.im/oauth-xx/version_gem?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[climate_coverage]: https://codeclimate.com/github/oauth-xx/version_gem/test_coverage
+[climate_maintainability]: https://codeclimate.com/github/oauth-xx/version_gem/maintainability
+[copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
+[conduct]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/CODE_OF_CONDUCT.md
+[contributing]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/CONTRIBUTING.md
+[devto]: https://dev.to/galtzo
+[documentation]: https://rubydoc.info/github/oauth-xx/version_gem/main
+[followme]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow
 [gh_sponsors]: https://github.com/sponsors/pboling
+[issues]: https://github.com/oauth-xx/version_gem/issues
+[liberapay_donate]: https://liberapay.com/pboling/donate
+[license]: LICENSE.txt
+[license-ref]: https://opensource.org/licenses/MIT
+[license-img]: https://img.shields.io/badge/License-MIT-green.svg
+[peterboling]: http://www.peterboling.com
+[pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
+[railsbling]: http://www.railsbling.com
+[rubygems]: https://rubygems.org/gems/version_gem
+[security]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/SECURITY.md
+[semver]: http://semver.org/
+[source]: https://gitlab.com/oauth-xx/version_gem
+[tweetme]: http://twitter.com/galtzo
