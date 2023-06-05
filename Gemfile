@@ -1,37 +1,41 @@
 # frozen_string_literal: true
 
-source 'https://rubygems.org'
-
-# Specify your gem's dependencies in gitmoji-regex.gemspec
-gemspec
+source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
-gem 'rake', '~> 13.0'
+# Include dependencies from <gem name>.gemspec
+gemspec
 
-gem 'rspec', '~> 3.0'
+# rubocop:disable Layout/LeadingCommentSpace
+#noinspection RbsMissingTypeSignature
+RUBY_VER = Gem::Version.new(RUBY_VERSION)
+#noinspection RbsMissingTypeSignature
+IS_CI = ENV.fetch("CI", "false") == "true"
+#noinspection RbsMissingTypeSignature
+DEBUG_IDE = ENV.fetch("DEBUG_IDE", "false") == "true"
+#noinspection RbsMissingTypeSignature
+LOCAL_SUPPORTED = !IS_CI && Gem::Version.new("2.7") <= RUBY_VER && RUBY_ENGINE == "ruby"
+# rubocop:enable Layout/LeadingCommentSpace
 
-ruby_version = Gem::Version.new(RUBY_VERSION)
-minimum_version = ->(version, engine = 'ruby') { ruby_version >= Gem::Version.new(version) && RUBY_ENGINE == engine }
-coverage = minimum_version.call('2.6')
-debugging = minimum_version.call('2.7')
+if LOCAL_SUPPORTED || IS_CI
+  # Coverage
+  eval_gemfile "./gemfiles/contexts/coverage.gemfile"
 
-platforms :mri do
-  if coverage
-    gem 'codecov', '~> 0.6' # For CodeCov
-    gem 'simplecov', '~> 0.21', require: false
-    gem 'simplecov-cobertura' # XML for Jenkins
-    gem 'simplecov-json' # For CodeClimate
-    gem 'simplecov-lcov', '~> 0.8', require: false
-  end
-  if debugging
-    # Add `byebug` to your code where you want to drop to REPL
-    gem 'byebug'
-    gem 'pry-byebug'
-  end
+  # Linting
+  eval_gemfile "./gemfiles/contexts/style.gemfile"
+
+  # Testing
+  eval_gemfile "./gemfiles/contexts/testing.gemfile"
+
+  # Documentation
+  eval_gemfile "./gemfiles/contexts/docs.gemfile"
 end
 
-platforms :jruby do
-  # Add `binding.pry` to your code where you want to drop to REPL
-  gem 'pry-debugger-jruby'
+# Debugging code should never run in CI
+unless IS_CI
+  eval_gemfile "./gemfiles/contexts/debug.gemfile"
 end
+
+eval_gemfile "./gemfiles/contexts/core.gemfile"
