@@ -27,6 +27,10 @@ jobs:
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
     strategy:
       fail-fast: false
+      rubygems:
+        - latest
+      bundler:
+        - latest
       matrix:
         experimental: [false]
         ruby:

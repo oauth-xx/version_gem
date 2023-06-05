@@ -30,9 +30,9 @@ jobs:
       matrix:
         experimental: [false]
         rubygems:
-          - "2.7.11"
+          - latest
         bundler:
-          - none
+          - latest
         ruby:
           - "2.6"
           - "2.5"
