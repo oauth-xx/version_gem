@@ -221,7 +221,7 @@ MyLib::Version.to_h # => { major: 0, minor: 1, patch: 0, pre: "" }
 
 Your `version.rb` file now abides the Ruby convention of directory / path matching the namespace / class!
 
-#### Query Ruby Version (as of version 1.2.0)
+#### Query Ruby Version (as of version 1.1.2)
 
 In Continuous Integration environments for libraries that run against many versions of Ruby,
 I often need to configure things discretely per Ruby version, and doing so forced me to repeat
