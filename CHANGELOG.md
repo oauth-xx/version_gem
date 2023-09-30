@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [1.1.3] - 2023-03-17 ([tag][1.1.3t])
+## [1.1.3] - 2023-06-05 ([tag][1.1.3t])
 ### Removed
 - Formally drop Ruby 2.2 support
   - Ruby 2.2 was already de facto minimum version supported, which is why this wasn't a 2.0 release.
