@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.1.4] 2024-03-21 ([tag][1.1.4t])
+### Fixed
+- Remove the executable bit from non-executable files (@Fryguy)
+
 ## [1.1.3] 2023-06-05 ([tag][1.1.3t])
 ### Added
 - More test coverage (now 100% 🎉) (@pboling)
@@ -66,7 +70,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release, with basic version parsing API (@pboling)
 
-[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.3...HEAD
+[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.4...HEAD
+[1.1.4]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.3...v1.1.4
+[1.1.4t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.4
 [1.1.3]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.2...v1.1.3
 [1.1.3t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.3
 [1.1.2]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.1...v1.1.2
