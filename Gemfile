@@ -8,34 +8,15 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from <gem name>.gemspec
 gemspec
 
-# rubocop:disable Layout/LeadingCommentSpace
-#noinspection RbsMissingTypeSignature
-RUBY_VER = Gem::Version.new(RUBY_VERSION)
-#noinspection RbsMissingTypeSignature
-IS_CI = ENV.fetch("CI", "false") == "true"
-#noinspection RbsMissingTypeSignature
-DEBUG_IDE = ENV.fetch("DEBUG_IDE", "false") == "true"
-#noinspection RbsMissingTypeSignature
-LOCAL_SUPPORTED = !IS_CI && Gem::Version.new("2.7") <= RUBY_VER && RUBY_ENGINE == "ruby"
-# rubocop:enable Layout/LeadingCommentSpace
-
-if LOCAL_SUPPORTED || IS_CI
-  # Coverage
-  eval_gemfile "./gemfiles/contexts/coverage.gemfile"
-
-  # Linting
-  eval_gemfile "./gemfiles/contexts/style.gemfile"
-
-  # Testing
-  eval_gemfile "./gemfiles/contexts/testing.gemfile"
-
-  # Documentation
-  eval_gemfile "./gemfiles/contexts/docs.gemfile"
+platform :mri do
+  # Debugging
+  gem "byebug", ">= 11"
 end
 
-# Debugging code should never run in CI
-unless IS_CI
-  eval_gemfile "./gemfiles/contexts/debug.gemfile"
-end
+# Coverage
+gem "kettle-soup-cover", "~> 1.0", ">= 1.0.2"
 
-eval_gemfile "./gemfiles/contexts/core.gemfile"
+# Linting
+gem "rubocop-lts", "~> 8.1", ">= 8.1.1" # Linting for Ruby >= 2.2
+gem "rubocop-packaging", "~> 0.5", ">= 0.5.2"
+gem "rubocop-rspec", "~> 2.10"

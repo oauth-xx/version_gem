@@ -1,7 +1,0 @@
-# frozen_string_literal: true
-
-gem "rubocop-lts", "~> 8.1", require: false
-gem "rubocop-rspec", "~> 2.22", require: false
-gem "rubocop-packaging", "~> 0.5", require: false
-gem "rubocop-ruby2_2", "~> 2.0", require: false
-gem "standard-rubocop-lts", "~> 1.0", require: false
