@@ -1,7 +1,4 @@
-name: Ruby Legacy Matrix
-
-env:
-  K_SOUP_COV_DO: false
+name: Unofficial Support
 
 on:
   push:
@@ -17,42 +14,36 @@ on:
   # Allow manually triggering the workflow.
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 # Cancels all previous workflow runs for the same branch that have not yet completed.
 concurrency:
   # The concurrency group contains the workflow name and the branch name.
   group: "${{ github.workflow }}-${{ github.ref }}"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   test:
-    name: Specs - Ruby ${{ matrix.ruby }} ${{ matrix.name_extra || '' }}
+    name: Ruby ${{ matrix.ruby }} ${{matrix.gemfile}} ${{ matrix.name_extra || '' }}
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
-    runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        rubygems:
-          - "2.7.11"
-        bundler:
-          - none
+        experimental: [true]
         gemfile:
           - vanilla
         ruby:
-          - '2.2'
+          - "2.2"
 
+    runs-on: ubuntu-20.04
+    continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Ruby & Bundle
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "${{ matrix.ruby }}"
+          ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-
       - name: Run tests
         run: bundle exec rake test
