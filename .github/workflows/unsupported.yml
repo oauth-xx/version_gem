@@ -36,19 +36,13 @@ jobs:
     strategy:
       matrix:
         rubygems:
-          - latest
+          - "2.7.11"
         bundler:
-          - latest
+          - none
         gemfile:
           - vanilla
         ruby:
           - '2.2'
-          - '2.3'
-          - '2.4'
-          - '2.5'
-          - '2.6'
-          - '2.7'
-          - '3.0'
 
     steps:
       - name: Checkout
