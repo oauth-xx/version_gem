@@ -8,7 +8,7 @@ on:
   push:
     branches:
       - 'main'
-      - '*-maintenance'
+      - '*-stable'
       - '*-dev'
     tags:
       - '!*' # Do not execute on tags
