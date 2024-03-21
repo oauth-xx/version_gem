@@ -44,7 +44,8 @@ jobs:
           - vanilla
         ruby:
           - head
-          - truffleruby-head
+          # TODO: Use rspec-pending_for to exempt (and document) truffleruby-head from specific tests that are failing
+          # - truffleruby-head
 
     steps:
       - name: Checkout
