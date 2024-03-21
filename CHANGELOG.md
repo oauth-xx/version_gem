@@ -13,7 +13,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.4] 2024-03-21 ([tag][1.1.4t])
 ### Added
 - Ruby 3.3 to CI (@pboling)
-- Improved test coverage (via `kettle-soup-cover` 🎉) (@pboling)
 ### Fixed
 - Remove the executable bit from non-executable files (@Fryguy)
 
