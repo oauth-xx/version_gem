@@ -1,12 +1,14 @@
 name: Unofficial Support
 
+env:
+  K_SOUP_COV_DO: false
+
 on:
   push:
     branches:
       - 'main'
-      - '*-maintenance'
-      - '*-dev'
       - '*-stable'
+      - '*-dev'
     tags:
       - '!*' # Do not execute on tags
   pull_request:
@@ -18,17 +20,21 @@ on:
 # Cancels all previous workflow runs for the same branch that have not yet completed.
 concurrency:
   # The concurrency group contains the workflow name and the branch name.
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: false
 
 jobs:
   test:
-    name: Specs - Ruby ${{ matrix.ruby }} ${{ matrix.name_extra || '' }}
+    name: Ruby ${{ matrix.ruby }} ${{matrix.gemfile}} ${{ matrix.name_extra || '' }}
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
+    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     strategy:
       fail-fast: false
       matrix:
-        experimental: [false]
+        experimental: [true]
+        gemfile:
+          - vanilla
         ruby:
           - "2.3"
 
@@ -36,7 +42,7 @@ jobs:
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Ruby & Bundle
         uses: ruby/setup-ruby@v1
         with:

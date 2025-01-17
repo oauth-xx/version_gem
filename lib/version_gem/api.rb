@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module VersionGem
+  # Public API of this library
   module Api
     # The version number as a string
     #
@@ -45,7 +46,7 @@ module VersionGem
         major: major,
         minor: minor,
         patch: patch,
-        pre: pre
+        pre: pre,
       }
     end
 
@@ -62,7 +63,7 @@ module VersionGem
     #
     # @return [Array<String>]
     def _to_a
-      @_to_a = self::VERSION.split('.')
+      @_to_a = self::VERSION.split(".")
     end
   end
 end

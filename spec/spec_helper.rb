@@ -1,54 +1,50 @@
 # frozen_string_literal: true
 
-# external gems
-require 'rspec/block_is_expected'
+begin
+  # This does not require "simplecov",
+  #   because that has a side-effect of running `.simplecov`
+  require "kettle-soup-cover"
+rescue LoadError
+  puts "Not running code coverage"
+end
+
+DEBUG = ENV.fetch("DEBUG", nil) == "true"
+DEBUG_IDE = ENV.fetch("DEBUG_IDE", "false") == "true"
+
+# Ruby Helpers from this gem.
+# - Not requiring because we want line coverage
+# - Not loading because we don't want to manage the constant re-definition
+module VersionGem
+  # Helpers for library CI integration against many different versions of Ruby
+  module Faux
+    RUBY_VER = ::Gem::Version.new(RUBY_VERSION)
+
+    def gte_minimum_version?(version, engine = "ruby")
+      RUBY_VER >= ::Gem::Version.new(version) && ::RUBY_ENGINE == engine
+    end
+    module_function :gte_minimum_version?
+
+    def actual_minor_version?(major, minor, engine = "ruby")
+      major.to_i == RUBY_VER.segments[0] &&
+        minor.to_i == RUBY_VER.segments[1] &&
+        ::RUBY_ENGINE == engine
+    end
+    module_function :actual_minor_version?
+  end
+end
 
 # RSpec Helpers from this gem
-require 'version_gem/rspec'
-# Ruby Helpers from this gem (use load because we want line coverage)
-load 'version_gem/ruby.rb'
+require "version_gem/rspec"
 
 # RSpec Configs
-require 'config/rspec/rspec_core'
+require "config/rspec/rspec_core"
+require "config/rspec/rspec_block_is_expected"
 
-DEBUG = ENV['DEBUG'] == 'true'
+# RSpec Helpers
+require "helpers/under_test"
 
-debugging = VersionGem::Ruby.gte_minimum_version?('2.7') && DEBUG
-RUN_COVERAGE = VersionGem::Ruby.gte_minimum_version?('2.6') && (ENV['COVER_ALL'] || ENV['CI_CODECOV'] || ENV['CI'].nil?)
-ALL_FORMATTERS = VersionGem::Ruby.actual_minor_version?(2, 7) && (ENV['COVER_ALL'] || ENV['CI_CODECOV'] || ENV['CI'])
-VersionGem::Ruby.send(:remove_const, :RUBY_VER)
+# Last thing before this gem is code coverage:
+require "simplecov" if defined?(Kettle) && Kettle::Soup::Cover::DO_COV
 
-if DEBUG
-  if debugging
-    require 'byebug'
-  elsif minimum_version.call('2.7', 'jruby')
-    require 'pry-debugger-jruby'
-  end
-end
-
-if RUN_COVERAGE
-  require 'simplecov' # Config file `.simplecov` is run immediately when simplecov loads
-  require 'codecov'
-  require 'simplecov-json'
-  require 'simplecov-lcov'
-  require 'simplecov-cobertura'
-  # This will override any formatter set in .simplecov
-  if ALL_FORMATTERS
-    SimpleCov::Formatter::LcovFormatter.config do |c|
-      c.report_with_single_file = true
-      c.single_report_path = 'coverage/lcov.info'
-    end
-
-    SimpleCov.formatters = [
-      SimpleCov::Formatter::HTMLFormatter,
-      SimpleCov::Formatter::CoberturaFormatter, # XML for Jenkins
-      SimpleCov::Formatter::LcovFormatter,
-      SimpleCov::Formatter::JSONFormatter, # For CodeClimate
-      SimpleCov::Formatter::Codecov # For CodeCov
-    ]
-  end
-else
-  puts "Not running coverage on #{RUBY_ENGINE} #{RUBY_VERSION}"
-end
-
-require 'version_gem'
+# This gem
+require "version_gem"

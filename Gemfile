@@ -1,37 +1,22 @@
 # frozen_string_literal: true
 
-source 'https://rubygems.org'
-
-# Specify your gem's dependencies in gitmoji-regex.gemspec
-gemspec
+source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
-gem 'rake', '~> 13.0'
+# Include dependencies from <gem name>.gemspec
+gemspec
 
-gem 'rspec', '~> 3.0'
-
-ruby_version = Gem::Version.new(RUBY_VERSION)
-minimum_version = ->(version, engine = 'ruby') { ruby_version >= Gem::Version.new(version) && RUBY_ENGINE == engine }
-coverage = minimum_version.call('2.6')
-debugging = minimum_version.call('2.7')
-
-platforms :mri do
-  if coverage
-    gem 'codecov', '~> 0.6' # For CodeCov
-    gem 'simplecov', '~> 0.21', require: false
-    gem 'simplecov-cobertura' # XML for Jenkins
-    gem 'simplecov-json' # For CodeClimate
-    gem 'simplecov-lcov', '~> 0.8', require: false
-  end
-  if debugging
-    # Add `byebug` to your code where you want to drop to REPL
-    gem 'byebug'
-    gem 'pry-byebug'
-  end
+platform :mri do
+  # Debugging
+  gem "byebug", ">= 11"
 end
 
-platforms :jruby do
-  # Add `binding.pry` to your code where you want to drop to REPL
-  gem 'pry-debugger-jruby'
-end
+# Coverage
+gem "kettle-soup-cover", "~> 1.0", ">= 1.0.2"
+
+# Linting
+gem "rubocop-lts", "~> 8.1", ">= 8.1.1" # Linting for Ruby >= 2.2
+gem "rubocop-packaging", "~> 0.5", ">= 0.5.2"
+gem "rubocop-rspec", "~> 2.10"

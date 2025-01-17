@@ -1,11 +1,14 @@
-name: Ruby HEAD Support
+name: Ruby Heads Matrix
+
+env:
+  K_SOUP_COV_DO: false
 
 on:
   push:
     branches:
       - 'main'
-      - '*-dev'
       - '*-stable'
+      - '*-dev'
     tags:
       - '!*' # Do not execute on tags
   pull_request:
@@ -14,35 +17,48 @@ on:
   # Allow manually triggering the workflow.
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 # Cancels all previous workflow runs for the same branch that have not yet completed.
 concurrency:
   # The concurrency group contains the workflow name and the branch name.
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: "${{ github.workflow }}-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
   test:
-    name: Ruby ${{ matrix.ruby }} ${{ matrix.name_extra || '' }}
+    name: Specs - Ruby ${{ matrix.ruby }} ${{ matrix.name_extra || '' }}
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
-    strategy:
-      fail-fast: false
-      matrix:
-        experimental: [true]
-        ruby:
-          # rubocop supports JRuby, but I can't get it to work on jruby-head (and the problem might be in JRuby!)
-          - "ruby-head"
-
+    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
+    strategy:
+      fail-fast: true
+      matrix:
+        rubygems:
+          - latest
+        bundler:
+          - latest
+        gemfile:
+          - vanilla
+        ruby:
+          - "ruby-head"
+          # TODO: Use rspec-pending_for to exempt (and document) truffleruby-head from specific tests that are failing
+          # - truffleruby-head
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
       - name: Setup Ruby & Bundle
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
-          rubygems: ${{ matrix.rubygems }}
-          bundler: ${{ matrix.bundler }}
+          ruby-version: "${{ matrix.ruby }}"
+          rubygems: "${{ matrix.rubygems }}"
+          bundler: "${{ matrix.bundler }}"
           bundler-cache: true
+
       - name: Run tests
         run: bundle exec rake test
