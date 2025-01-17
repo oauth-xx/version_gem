@@ -14,7 +14,7 @@ platform :mri do
 end
 
 # Coverage
-gem "kettle-soup-cover", "~> 1.0", ">= 1.0.2"
+gem "kettle-soup-cover", "~> 1.0", ">= 1.0.4"
 
 # Linting
 gem "rubocop-lts", "~> 8.1", ">= 8.1.1" # Linting for Ruby >= 2.2

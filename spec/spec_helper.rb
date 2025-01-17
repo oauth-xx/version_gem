@@ -3,7 +3,8 @@
 begin
   # This does not require "simplecov",
   #   because that has a side-effect of running `.simplecov`
-  require "kettle-soup-cover"
+  # Avoid loading version_gem via "kettle-soup-cover":
+  require "kettle/soup/cover"
 rescue LoadError
   puts "Not running code coverage"
 end
@@ -33,9 +34,6 @@ module VersionGem
   end
 end
 
-# RSpec Helpers from this gem
-require "version_gem/rspec"
-
 # RSpec Configs
 require_relative "config/rspec/rspec_core"
 require_relative "config/rspec/rspec_block_is_expected"
@@ -48,6 +46,9 @@ require "simplecov" if defined?(Kettle) && Kettle::Soup::Cover::DO_COV
 
 # This gem
 require "version_gem"
+
+# RSpec Helpers from this gem
+require "version_gem/rspec"
 
 # RSpec Helpers which depend on gem internals
 require_relative "helpers/under_test"
