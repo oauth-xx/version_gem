@@ -217,7 +217,24 @@ MyLib::Version.to_a # => [0, 1, 0]
 MyLib::Version.to_h # => { major: 0, minor: 1, patch: 0, pre: "" }
 ```
 
-### Side benefit
+### Side benefit #1
+
+You can reference the DRY version from your gemspec, *and* still get accurate code coverage!
+
+```ruby
+# Get the GEMFILE_VERSION without *require* "my_gem/version", for code coverage accuracy
+# See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-825171399
+load 'lib/my_gem/version.rb'
+gem_version = MyGem::Version::VERSION
+MyGem::Version.send(:remove_const, :VERSION)
+
+Gem::Specification.new do |spec|
+  # ...
+  spec.version = gem_version
+end
+```
+
+### Side benefit #2
 
 Your `version.rb` file now abides the Ruby convention of directory / path matching the namespace / class!
 
