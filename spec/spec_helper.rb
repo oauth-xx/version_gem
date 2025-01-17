@@ -37,14 +37,17 @@ end
 require "version_gem/rspec"
 
 # RSpec Configs
-require "config/rspec/rspec_core"
-require "config/rspec/rspec_block_is_expected"
+require_relative "config/rspec/rspec_core"
+require_relative "config/rspec/rspec_block_is_expected"
 
-# RSpec Helpers
-require "helpers/under_test"
+# RSpec Helpers which do not depend on gem internals
+# NONE
 
 # Last thing before this gem is code coverage:
 require "simplecov" if defined?(Kettle) && Kettle::Soup::Cover::DO_COV
 
 # This gem
 require "version_gem"
+
+# RSpec Helpers which depend on gem internals
+require_relative "helpers/under_test"
