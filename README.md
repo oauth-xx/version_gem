@@ -8,8 +8,8 @@ This gem has a very niche purpose, which is:
 2. while not interfering with `gemspec` parsing where the `VERSION` string is traditionally used,
 3. allowing 100% test coverage of Ruby code, including the `Version` module.
 
-As proof in the pudding, this gem achieves 100% test coverage for lines and branches;
-enabled by the patterns from by this library.
+As proof in the pudding, this gem achieves 100% test coverage for lines and branches,
+all 77 and 2 of them, respectively; coverage enabled in part by patterns from this library.
 You can make it happen for your library too!
 
 If this isn't **precisely** your use case you may be better off looking at
