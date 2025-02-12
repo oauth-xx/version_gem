@@ -46,6 +46,15 @@ Gem::Specification.new do |spec|
     "README.md",
     "SECURITY.md",
   ]
+  spec.rdoc_options += [
+    "--title",
+    "#{spec.name} - #{spec.summary}",
+    "--main",
+    "README.md",
+    "--line-numbers",
+    "--inline-source",
+    "--quiet",
+  ]
   spec.require_paths = ["lib"]
 
   # Tests

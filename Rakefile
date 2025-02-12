@@ -2,46 +2,79 @@
 
 require "bundler/gem_tasks"
 
-defaults = []
+require "version_gem"
 
 begin
   require "rspec/core/rake_task"
+
   RSpec::Core::RakeTask.new(:spec)
-  defaults << :spec
 rescue LoadError
-  desc("spec task stub")
   task(:spec) do
-    warn("NOTE: rspec isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+    warn("RSpec is disabled")
   end
 end
+
 desc "alias test task to spec"
 task test: :spec
 
 begin
+  require "reek/rake/task"
+
+  Reek::Rake::Task.new do |t|
+    t.fail_on_error = true
+    t.verbose = false
+    t.source_files = "{spec,spec_ignored,spec_orms,lib}/**/*.rb"
+  end
+rescue LoadError
+  task(:reek) do
+    warn("reek is disabled")
+  end
+end
+
+begin
+  require "yard-junk/rake"
+
+  YardJunk::Rake.define_task
+rescue LoadError
+  task("yard:junk") do
+    warn("yard:junk is disabled")
+  end
+end
+
+begin
   require "yard"
 
-  YARD::Rake::YardocTask.new do |t|
-    t.files = [
-      # Splats (alphabetical)
-      "lib/**/*.rb",
-    ]
-  end
-  defaults << :yard
+  YARD::Rake::YardocTask.new(:yard)
 rescue LoadError
   task(:yard) do
-    warn("NOTE: yard isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+    warn("yard is disabled")
   end
 end
 
 begin
   require "rubocop/lts"
-
   Rubocop::Lts.install_tasks
-  defaults << :rubocop_gradual
 rescue LoadError
   task(:rubocop_gradual) do
-    warn("NOTE: rubocop-lts isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+    warn("RuboCop (Gradual) is disabled")
   end
 end
 
-task default: defaults
+begin
+  require "kettle-soup-cover"
+  Kettle::Soup::Cover.install_tasks
+rescue LoadError
+  desc("alias coverage task to spec (coverage unavailable)")
+  task(coverage: :spec)
+end
+
+default_tasks =
+  if ENV.fetch("CI", "false").casecmp?("false")
+    # Open coverage in browser locally
+    %i[coverage rubocop_gradual:autocorrect yard yard:junk]
+  else
+    # Run coverage, but do not open in browser, in CI
+    %i[spec rubocop_gradual:check yard yard:junk]
+  end
+
+task default: default_tasks
