@@ -33,7 +33,12 @@ Gem::Specification.new do |spec|
   spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.files = Dir[
+    # Files (alphabetical)
     "lib/**/*",
+  ]
+  # Automatically included with gem package, no need to list again in files.
+  spec.extra_rdoc_files = Dir[
+    # Files (alphabetical)
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
