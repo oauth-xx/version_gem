@@ -4,8 +4,9 @@
 
 This gem has a very niche purpose, which is:
 
-1. providing introspection of a `Version` module based on a `Version::VERSION` constant string,
-2. while not interfering with `gemspec` parsing where the `VERSION` string is traditionally used.
+1. providing introspection of a `Version` module based on a `VERSION` constant string within it,
+2. while not interfering with `gemspec` parsing where the `VERSION` string is traditionally used,
+3. allowing 100% test coverage of Ruby code, including the `Version` module.
 
 If this isn't **precisely** your use case you may be better off looking at
 _[versionaire](https://www.alchemists.io/projects/versionaire)_, a wonderful, performant, well-maintained,
@@ -239,12 +240,14 @@ MyLib::Version.to_h # => { major: 0, minor: 1, patch: 0, pre: "" }
 
 ### Side benefit #1
 
-You can reference the DRY version from your gemspec, *and* still get accurate code coverage!
+You can reference the version from your gemspec, keeping the version string DRY,
+*and* still get accurate code coverage!
 
 ```ruby
 # Get the GEMFILE_VERSION without *require* "my_gem/version", for code coverage accuracy
-# See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-825171399
-load "lib/my_gem/version.rb"
+# See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-2630782358
+# Kernel.load because load is overloaded in RubyGems during gemspec evaluation
+Kernel.load("lib/my_gem/version.rb")
 gem_version = MyGem::Version::VERSION
 MyGem::Version.send(:remove_const, :VERSION)
 
@@ -261,7 +264,7 @@ Your `version.rb` file now abides the Ruby convention of directory / path matchi
 ### Zietwerk
 
 The pattern of `version.rb` breaking the ruby convention of directory / path matching the namespace / class
-is so entrenched that the `zeitwerk` library has a special carve-out for it.
+is so entrenched that the `zeitwerk` library has a special carve-out for it. 🥺
 RubyGems using this "bad is actually good" pattern are encouraged to use `Zeitwerk.for_gem`.
 
 **Do not do that ^** if you use this gem.
@@ -300,6 +303,7 @@ end
 
 #### Complex Zeitwerk Example
 
+Maybe you would like to contribute one?
 
 #### Query Ruby Version (as of version 1.1.2)
 
