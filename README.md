@@ -8,6 +8,10 @@ This gem has a very niche purpose, which is:
 2. while not interfering with `gemspec` parsing where the `VERSION` string is traditionally used,
 3. allowing 100% test coverage of Ruby code, including the `Version` module.
 
+As proof in the pudding, this gem achieves 100% test coverage for lines and branches;
+enabled by the patterns from by this library.
+You can make it happen for your library too!
+
 If this isn't **precisely** your use case you may be better off looking at
 _[versionaire](https://www.alchemists.io/projects/versionaire)_, a wonderful, performant, well-maintained,
 gem from the Alchemists, or _[version_sorter](https://rubygems.org/gems/version_sorter)_ from GitHub.
