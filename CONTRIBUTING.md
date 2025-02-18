@@ -10,7 +10,99 @@ tests. Once you're happy with it send a pull request and post a message to the
 
 We [![Keep A Changelog][📗keep-changelog-img]][📗keep-changelog] so if you make changes, remember to update it.
 
-## Release
+## You can help!
+
+Simply follow these instructions:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Make some fixes.
+4. Commit your changes (`git commit -am 'Added some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Make sure to add tests for it. This is important, so it doesn't break in a future release.
+7. Create new Pull Request.
+
+## Appraisals
+
+From time to time the appraisal gemfiles in `gemfiles/` will need to be updated.
+They are created and updated with the commands:
+
+```shell
+BUNDLE_GEMFILE=Appraisal.root.gemfile bundle install
+BUNDLE_GEMFILE=Appraisal.root.gemfile bundle exec appraisal update
+```
+
+NOTE: Once `eval_gemfile` support is [merged into appraisal][🚎appraisal-eval-gemfile-pr]
+the above commands will be simplified to:
+
+```shell
+BUNDLE_GEMFILE=Appraisal.root.gemfile appraisal update
+```
+
+### SemVer Failure
+
+NOTE: Because [Appraisal v2.3.0](https://github.com/thoughtbot/appraisal/releases/tag/v2.3.0)
+dropped [support for Ruby v1.8 - v2.2](https://github.com/thoughtbot/appraisal/pull/158),
+thus [violating the principles of SemVer][📌semver-breaking]
+(at least according to most people including the [inventor of SemVer][📌major-versions-not-sacred]),
+we must use an alternate Gemfile and Appraisal file for those Rubies.
+
+```shell
+asdf local ruby 2.7.8
+BUNDLE_GEMFILE=Appraisal.hoary.gemfile bundle install
+cat <<EOF > Appraisals
+# frozen_string_literal: true
+appraise "ruby-2-2" do
+  gem "mutex_m", "~> 0.2"
+  gem "stringio", "~> 3.0"
+end
+EOF
+BUNDLE_GEMFILE=Appraisal.hoary.gemfile bundle exec appraisal update
+```
+
+## The Reek List
+
+Take a look at the `reek` list which is the file called `REEK` and find something to improve.
+
+To refresh the `reek` list:
+
+```bash
+bundle exec reek > REEK
+```
+
+## Run Tests
+
+To run all tests
+
+```bash
+bundle exec rake test
+```
+
+## Lint It
+
+Run all the default tasks, which includes running the gradually autocorrecting linter, `rubocop-gradual`.
+
+```bash
+bundle exec rake
+```
+
+Or just run the linter.
+
+```bash
+bundle exec rubocop_gradual:autocorrect
+```
+
+## Contributors
+
+Your picture could be here!
+
+[![Contributors][🖐contributors-img]][🖐contributors]
+
+Made with [contributors-img][🖐contrib-rocks].
+
+Also see GitLab Contributors: [https://gitlab.com/oauth-xx/version_gem/-/graphs/main][🚎contributors]
+
+## For Maintainers
 
 ### One-time, Per-maintainer, Setup
 
@@ -36,30 +128,11 @@ See: [RubyGems Security Guide][🔒️rubygems-security-guide]
    - Note that you'll need the `zsh/datetime` module, if running `zsh`.
    - In `bash` you can use `date +%s` instead, i.e. `export SOURCE_DATE_EPOCH=$(date +%s) && echo $SOURCE_DATE_EPOCH`
 10. Run `bundle exec rake build`
-11. Run `bin/checksums` (more [context][🔒️rubygems-checksums-pr]) to create SHA-256 and SHA-512 checksums
+11. Run `gem_checksums` (more context [1][🔒️rubygems-checksums-pr] and [2][🔒️rubygems-guide-pr])
+   to create SHA-256 and SHA-512 checksums
     - Checksums will be committed automatically by the script, but not pushed
 12. Run `bundle exec rake release` which will create a git tag for the version,
-    push git commits and tags, and push the `.gem` file to [rubygems.org][💎rubygems]
-
-## Contributors
-
-Your picture could be here!
-
-[![Contributors][🖐contributors-img]][🖐contributors]
-
-Made with [contributors-img][🖐contrib-rocks].
-
-Also see GitLab Contributors: [https://gitlab.com/oauth-xx/version_gem/-/graphs/main][🚎contributors]
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitLab at [https://gitlab.com/oauth-xx/version_gem][🚎src-main]
-. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to
-the [code of conduct][conduct].
-
-To submit a patch, please fork the project and create a patch with
-tests. Once you're happy with it send a pull request and post a message to the
-[google group][⛳mail-list] or on the [gitter chat][🏘chat].
+   push git commits and tags, and push the `.gem` file to [rubygems.org][💎rubygems]
 
 [🚎contributors]: https://gitlab.com/oauth-xx/version_gem/-/graphs/main
 [⛳mail-list]: http://groups.google.com/group/oauth-ruby
@@ -75,3 +148,5 @@ tests. Once you're happy with it send a pull request and post a message to the
 [🔒️rubygems-checksums-pr]: https://github.com/rubygems/guides/pull/325
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
+[📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
+[📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
