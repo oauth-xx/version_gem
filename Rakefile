@@ -68,13 +68,5 @@ rescue LoadError
   task(coverage: :spec)
 end
 
-default_tasks =
-  if ENV.fetch("CI", "false").casecmp?("false")
-    # Open coverage in browser locally
-    %i[coverage rubocop_gradual:autocorrect yard yard:junk]
-  else
-    # Run coverage, but do not open in browser, in CI
-    %i[spec rubocop_gradual:check yard yard:junk]
-  end
-
-task default: default_tasks
+# coverage task will open coverage in browser locally
+task default: %i[coverage rubocop_gradual:autocorrect yard yard:junk]
