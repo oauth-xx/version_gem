@@ -15,6 +15,9 @@ gemspec
 platform :mri do
   # Debugging
   gem "byebug", ">= 11"
+
+  # Dev Console - Binding.pry - Irb replacement
+  gem "pry", "~> 0.14"                     # ruby >= 2.0
 end
 
 # Security Audit

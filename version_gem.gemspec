@@ -64,9 +64,6 @@ Gem::Specification.new do |spec|
   # Development Tasks
   spec.add_development_dependency("rake", "~> 13.0")                    # ruby >= 2.2
 
-  # Dev Console - Binding.pry - Irb replacement
-  spec.add_development_dependency("pry", "~> 0.14")                     # ruby >= 2.0
-
   # Linting - rubocop-lts v8 is a rubocop wrapper for Ruby >= 2.2,
   #   and should only be bumped when dropping old Ruby support
   # NOTE: it can only be installed on, and run on Ruby >= 2.7, so we add the dependency in the Gemfile.
