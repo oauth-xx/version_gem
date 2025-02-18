@@ -58,7 +58,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Tests
-  spec.add_development_dependency("rspec", "~> 3.12")                   # ruby >= 0
+  spec.add_development_dependency("rspec", "~> 3.13")                   # ruby >= 0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")  # ruby >= 1.8.7
 
   # Development Tasks
