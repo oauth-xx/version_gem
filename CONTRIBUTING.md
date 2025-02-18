@@ -8,6 +8,8 @@ To submit a patch, please fork the project and create a patch with
 tests. Once you're happy with it send a pull request and post a message to the
 [google group][⛳mail-list] or on the [gitter chat][🏘chat].
 
+We [![Keep A Changelog][📗keep-changelog-img]][📗keep-changelog] so if you make changes, remember to update it.
+
 ## Release
 
 ### One-time, Per-maintainer, Setup
@@ -71,3 +73,5 @@ tests. Once you're happy with it send a pull request and post a message to the
 [💎rubygems]: https://rubygems.org
 [🔒️rubygems-security-guide]: https://guides.rubygems.org/security/#building-gems
 [🔒️rubygems-checksums-pr]: https://github.com/rubygems/guides/pull/325
+[📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
+[📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
