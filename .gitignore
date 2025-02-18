@@ -13,3 +13,4 @@
 
 *.gem
 gemfiles/*.gemfile.lock
+Appraisal.*.gemfile.lock
