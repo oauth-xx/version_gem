@@ -1,20 +1,22 @@
 # frozen_string_literal: true
 
 appraise "ruby-2-2" do
-  gem "mutex_m", "~> 0.2"
-  gem "stringio", "~> 3.0"
-  remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
+  gem "mutex_m", "~> 0.1.2"
+  gem "stringio", "~> 0.0.2"
+  # For Ruby 2.2 we have to use appraisal v2.2 as it is the last to support Ruby v2.2
+  # but it doesn't have the remove_gem feature yet.
+  # remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
 end
 
 appraise "ruby-2-3" do
-  gem "mutex_m", "~> 0.2"
-  gem "stringio", "~> 3.0"
+  gem "mutex_m", "~> 0.1.2"
+  gem "stringio", "~> 0.0.2"
   remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
 end
 
 appraise "ruby-2-4" do
-  gem "mutex_m", "~> 0.2"
-  gem "stringio", "~> 3.0"
+  gem "mutex_m", "~> 0.1.2"
+  gem "stringio", "~> 0.0.2"
   remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
 end
 

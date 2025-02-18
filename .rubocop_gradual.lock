@@ -16,5 +16,15 @@
     [55, 21, 1, "Lint/Syntax: unexpected token tCOLON\n(Using Ruby 2.2 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 177567],
     [56, 22, 4, "Lint/Syntax: unexpected token tCONSTANT\n(Using Ruby 2.2 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 2089414472],
     [57, 22, 4, "Lint/Syntax: unexpected token tCONSTANT\n(Using Ruby 2.2 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 2089414472]
+  ],
+  "spec/version_gem/error_spec.rb:3824255504": [
+    [5, 29, 5, "RSpec/MissingExpectationTargetMethod: Use `.to`, `.not_to` or `.to_not` to set an expectation.", 179970942]
+  ],
+  "spec/version_gem/ruby_spec.rb:4114481917": [
+    [10, 29, 5, "RSpec/MissingExpectationTargetMethod: Use `.to`, `.not_to` or `.to_not` to set an expectation.", 179970942]
+  ],
+  "spec/version_gem_spec.rb:482289161": [
+    [5, 29, 5, "RSpec/MissingExpectationTargetMethod: Use `.to`, `.not_to` or `.to_not` to set an expectation.", 179970942],
+    [9, 38, 5, "RSpec/MissingExpectationTargetMethod: Use `.to`, `.not_to` or `.to_not` to set an expectation.", 179970942]
   ]
 }
