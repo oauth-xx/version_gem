@@ -34,7 +34,7 @@ jobs:
           - ruby: "2.2"
             appraisal: "ruby-2-2"
             exec_cmd: "rake rspec"
-            gemfile: "Appraisal.root"
+            gemfile: "Appraisal.hoary"
             rubygems: "2.7.11"
             bundler: "1.17.3"
 
@@ -55,6 +55,15 @@ jobs:
       # NOTE: This does not use the main Gemfile at all.
       - name: Bundle install for Appraisal ${{ matrix.appraisal }}
         run: bundle
+      - name: Overwrite Appraisals
+        run: |
+          cat <<EOF > Appraisals
+          # frozen_string_literal: true
+          appraise "ruby-2-2" do
+          gem "mutex_m", "~> 0.2"
+          gem "stringio", "~> 3.0"
+          end
+          EOF
       - name: Install Appraisal ${{ matrix.appraisal }} dependencies
         run: bundle exec appraisal ${{ matrix.appraisal }} bundle
       - name: Run ${{ matrix.appraisal }} tests via ${{ matrix.exec_cmd }}

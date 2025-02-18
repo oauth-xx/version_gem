@@ -1,4 +1,4 @@
-name: Ruby Heads Matrix
+name: Heads Compat Matrix
 
 env:
   K_SOUP_COV_DO: false
@@ -7,8 +7,6 @@ on:
   push:
     branches:
       - 'main'
-      - '*-stable'
-      - '*-dev'
     tags:
       - '!*' # Do not execute on tags
   pull_request:
@@ -28,37 +26,59 @@ concurrency:
 
 jobs:
   test:
-    name: Specs - Ruby ${{ matrix.ruby }} ${{ matrix.name_extra || '' }}
+    name: Specs - Ruby ${{ matrix.ruby }} ${{ matrix.appraisal }}${{ matrix.name_extra || '' }}
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
-    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
-      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
+    env: # $BUNDLE_GEMFILE must be set at job level, so it is set for all steps
+      BUNDLE_GEMFILE: ${{ github.workspace }}/${{ matrix.gemfile }}.gemfile
     strategy:
       fail-fast: true
       matrix:
-        rubygems:
-          - latest
-        bundler:
-          - latest
-        gemfile:
-          - vanilla
-        ruby:
-          - "ruby-head"
-          # TODO: Use rspec-pending_for to exempt (and document) truffleruby-head from specific tests that are failing
-          # - truffleruby-head
+        include:
+          # ruby-head
+          - ruby: "ruby-head"
+            appraisal: "ruby-head"
+            exec_cmd: "rake rspec"
+            gemfile: "Appraisal.root"
+            rubygems: latest
+            bundler: latest
+
+          # truffleruby-head
+          - ruby: "truffleruby-head"
+            appraisal: "truffleruby-head"
+            exec_cmd: "rake rspec"
+            gemfile: "Appraisal.root"
+            rubygems: latest
+            bundler: latest
+
+          # jruby-head
+          # Error output has a significantly different format in JRuby :(
+          #  - ruby: "jruby-head"
+          #    appraisal: "jruby-head"
+          #    exec_cmd: "rake rspec"
+          #    gemfile: "Appraisal.root"
+          #    rubygems: latest
+          #    bundler: latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Ruby & Bundle
+      - name: Setup Ruby & RubyGems
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "${{ matrix.ruby }}"
-          rubygems: "${{ matrix.rubygems }}"
-          bundler: "${{ matrix.bundler }}"
-          bundler-cache: true
+          ruby-version: ${{ matrix.ruby }}
+          rubygems: ${{ matrix.rubygems }}
+          bundler: ${{ matrix.bundler }}
+          bundler-cache: false
 
-      - name: Run tests
-        run: bundle exec rake test
+      # Raw `bundle` will use the BUNDLE_GEMFILE set to matrix.gemfile (i.e. Appraisal.root)
+      # We need to do this first to get appraisal installed.
+      # NOTE: This does not use the main Gemfile at all.
+      - name: Bundle install for Appraisal ${{ matrix.appraisal }}
+        run: bundle
+      - name: Install Appraisal ${{ matrix.appraisal }} dependencies
+        run: bundle exec appraisal ${{ matrix.appraisal }} bundle
+      - name: Run ${{ matrix.appraisal }} tests via ${{ matrix.exec_cmd }}
+        run: bundle exec appraisal ${{ matrix.appraisal }} bundle exec ${{ matrix.exec_cmd }}
