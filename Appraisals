@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
+appraise "ruby-2-2" do
+  gem "mutex_m", "~> 0.2"
+  gem "stringio", "~> 3.0"
+  remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
+end
+
 appraise "ruby-2-3" do
   gem "mutex_m", "~> 0.2"
   gem "stringio", "~> 3.0"
