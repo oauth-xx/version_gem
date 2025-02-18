@@ -13,17 +13,33 @@ platform :mri do
   gem "byebug", ">= 11"
 end
 
-# Coverage
-gem "kettle-soup-cover", "~> 1.0", ">= 1.0.4"
+# Documentation
+
+
+source "https://rubygems.org"
+
+#### IMPORTANT #######################################################
+# Gemfile is for local development ONLY; Gemfile is NOT loaded in CI #
+####################################################### IMPORTANT ####
+
+# Specify your gem's general development dependencies in turbo_tests.gemspec
+gemspec
+
+# Security Audit
+if RUBY_VERSION >= "3"
+  # NOTE: Audit fails on Ruby 2.7 because nokogiri has dropped support for Ruby < 3
+  # See: https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-r95h-9x8f-r3f7
+  # We can't add upgraded nokogiri here unless we are developing on Ruby 3+
+  eval_gemfile "gemfiles/modular/audit.gemfile"
+end
+
+# Code Coverage
+eval_gemfile "gemfiles/modular/coverage.gemfile"
 
 # Linting
-gem "rubocop-lts", "~> 8.1", ">= 8.1.1" # Linting for Ruby >= 2.2
-gem "rubocop-packaging", "~> 0.5", ">= 0.5.2"
-gem "rubocop-rspec", "~> 2.10"
+eval_gemfile "gemfiles/modular/style.gemfile"
 
 # Documentation
-gem "github-markup", "~> 5.0", ">= 5.0.1"
-gem "rdoc", "~> 6.11"
-gem "redcarpet", "~> 3.6"
-gem "yard", "~> 0.9", ">= 0.9.37"
-gem "yard-junk", "~> 0.0", ">= 0.0.10"
+eval_gemfile "gemfiles/modular/documentation.gemfile"
+
+gem "appraisal", github: "pboling/appraisal", branch: "eval_gemfile"
