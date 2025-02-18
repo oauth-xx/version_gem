@@ -39,7 +39,7 @@ jobs:
           # ruby-head
           - ruby: "ruby-head"
             appraisal: "ruby-head"
-            exec_cmd: "rake rspec"
+            exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: latest
             bundler: latest
@@ -47,7 +47,7 @@ jobs:
           # truffleruby-head
           - ruby: "truffleruby-head"
             appraisal: "truffleruby-head"
-            exec_cmd: "rake rspec"
+            exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: latest
             bundler: latest
@@ -56,7 +56,7 @@ jobs:
           # Error output has a significantly different format in JRuby :(
           #  - ruby: "jruby-head"
           #    appraisal: "jruby-head"
-          #    exec_cmd: "rake rspec"
+          #    exec_cmd: "rake spec"
           #    gemfile: "Appraisal.root"
           #    rubygems: latest
           #    bundler: latest

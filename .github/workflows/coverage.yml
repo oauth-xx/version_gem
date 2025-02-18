@@ -43,7 +43,7 @@ jobs:
           # Coverage
           - ruby: "3.4"
             appraisal: "coverage"
-            exec_cmd: "rake rspec"
+            exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: latest
             bundler: latest

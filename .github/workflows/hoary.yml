@@ -33,7 +33,7 @@ jobs:
           # Ruby 2.2
           - ruby: "2.2"
             appraisal: "ruby-2-2"
-            exec_cmd: "rake rspec"
+            exec_cmd: "rake spec"
             gemfile: "Appraisal.hoary"
             rubygems: "2.7.11"
             bundler: "1.17.3"

@@ -39,7 +39,7 @@ jobs:
           # Ruby 2.6
           - ruby: "2.6"
             appraisal: "ruby-2-6"
-            exec_cmd: "rake rspec"
+            exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: '3.4.22'
             bundler: '2.4.22'
@@ -47,7 +47,7 @@ jobs:
           # Ruby 2.7
           - ruby: "2.7"
             appraisal: "ruby-2-7"
-            exec_cmd: "rake rspec"
+            exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: '3.4.22'
             bundler: '2.4.22'
