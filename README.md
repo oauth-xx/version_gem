@@ -14,6 +14,7 @@
 [![CI Unsupported Build][🚎7-us-wfi]][🚎7-us-wf]
 [![CI Heads Build][🚎3-hd-wfi]][🚎3-hd-wf]
 [![CI Ancient Build][🚎1-an-wfi]][🚎1-an-wf]
+[![CI Hoary Build][🚎8-ho-wfi]][🚎8-ho-wf]
 [![CI Coverage Build][🚎2-cov-wfi]][🚎2-cov-wf]
 [![CI Style Build][🚎5-st-wfi]][🚎5-st-wf]
 
