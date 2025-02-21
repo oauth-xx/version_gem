@@ -36,27 +36,6 @@ BUNDLE_GEMFILE=Appraisal.root.gemfile bundle
 BUNDLE_GEMFILE=Appraisal.root.gemfile bundle exec appraisal update
 ```
 
-### SemVer Failure
-
-NOTE: Because [Appraisal v2.3.0](https://github.com/thoughtbot/appraisal/releases/tag/v2.3.0)
-dropped [support for Ruby v1.8 - v2.2](https://github.com/thoughtbot/appraisal/pull/158),
-thus [violating the principles of SemVer][📌semver-breaking]
-(at least according to most people including the [inventor of SemVer][📌major-versions-not-sacred]),
-we must use an alternate Gemfile and Appraisal file for those Rubies.
-
-```shell
-asdf local ruby 2.7.8
-BUNDLE_GEMFILE=Appraisal.hoary.gemfile bundle install
-cat <<EOF > Appraisals
-# frozen_string_literal: true
-appraise "ruby-2-2" do
-  gem "mutex_m", "~> 0.2"
-  gem "stringio", "~> 3.0"
-end
-EOF
-BUNDLE_GEMFILE=Appraisal.hoary.gemfile bundle exec appraisal update
-```
-
 ## The Reek List
 
 Take a look at the `reek` list which is the file called `REEK` and find something to improve.
@@ -97,7 +76,7 @@ Your picture could be here!
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/oauth-xx/version_gem/-/graphs/main][🚎contributors]
+Also see GitLab Contributors: [https://gitlab.com/oauth-xx/version_gem/-/graphs/main][🚎contributors-gl]
 
 ## For Maintainers
 
@@ -131,7 +110,6 @@ See: [RubyGems Security Guide][🔒️rubygems-security-guide]
 12. Run `bundle exec rake release` which will create a git tag for the version,
    push git commits and tags, and push the `.gem` file to [rubygems.org][💎rubygems]
 
-[🚎contributors]: https://gitlab.com/oauth-xx/version_gem/-/graphs/main
 [⛳mail-list]: http://groups.google.com/group/oauth-ruby
 [🚎src-main]: https://gitlab.com/oauth-xx/version_gem
 [🧪build]: https://github.com/oauth-xx/version_gem/actions
@@ -139,6 +117,7 @@ See: [RubyGems Security Guide][🔒️rubygems-security-guide]
 [🤝conduct]: https://gitlab.com/oauth-xx/version_gem/-/blob/main/CODE_OF_CONDUCT.md
 [🖐contrib-rocks]: https://contrib.rocks
 [🖐contributors]: https://github.com/oauth-xx/version_gem/graphs/contributors
+[🚎contributors-gl]: https://gitlab.com/oauth-xx/version_gem/-/graphs/main
 [🖐contributors-img]: https://contrib.rocks/image?repo=oauth-xx/version_gem
 [💎rubygems]: https://rubygems.org
 [🔒️rubygems-security-guide]: https://guides.rubygems.org/security/#building-gems

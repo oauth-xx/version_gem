@@ -284,6 +284,8 @@ Also, see [CONTRIBUTING.md][🤝contributing].
 
 Made with [contributors-img][🖐contrib-rocks].
 
+Also see GitLab Contributors: [https://gitlab.com/oauth-xx/version_gem/-/graphs/main][🚎contributors-gl]
+
 ## ⭐️ Star History
 
 <a href="https://star-history.com/#oauth-xx/version_gem&Date">
@@ -454,7 +456,6 @@ or one of the others at the head of this README.
 [🖐contributors]: https://github.com/oauth-xx/version_gem/graphs/contributors
 [🖐contributors-img]: https://contrib.rocks/image?repo=oauth-xx/version_gem
 [🚎contributors-gl]: https://gitlab.com/oauth-xx/version_gem/-/graphs/main
-[🚎contributors-gl-img]: https://img.shields.io/github/contributors-anon/oauth-xx/version_gem
 [🪇conduct]: CODE_OF_CONDUCT.md
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
 [📌semver]: http://semver.org/
