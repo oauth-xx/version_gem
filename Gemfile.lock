@@ -173,6 +173,7 @@ GEM
 PLATFORMS
   arm64-darwin-22
   arm64-darwin-24
+  ruby
   x86_64-darwin-19
   x86_64-linux
 
@@ -198,4 +199,4 @@ DEPENDENCIES
   yard-junk (~> 0.0, >= 0.0.10)
 
 BUNDLED WITH
-   2.6.4
+   2.6.5

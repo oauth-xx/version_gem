@@ -4,7 +4,7 @@
 require "version_gem/ruby"
 
 RSpec.describe(VersionGem::Ruby) do
-  let(:engine) { "ruby" }
+  let(:engine) { RUBY_ENGINE }
 
   it "is a module" do
     expect(described_class).is_a?(Module)
