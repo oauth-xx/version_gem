@@ -27,18 +27,13 @@ Simply follow these instructions:
 From time to time the appraisal gemfiles in `gemfiles/` will need to be updated.
 They are created and updated with the commands:
 
+NOTE: We run on a fork of Appraisal.
+
+Please upvote the PR for `eval_gemfile` [support][🚎appraisal-eval-gemfile-pr]
+
 ```shell
-# Switch to a Ruby v2.x installation with your ruby version manager, e.g.:
-asdf local ruby 2.7.8
-BUNDLE_GEMFILE=Appraisal.root.gemfile bundle install
+BUNDLE_GEMFILE=Appraisal.root.gemfile bundle
 BUNDLE_GEMFILE=Appraisal.root.gemfile bundle exec appraisal update
-```
-
-NOTE: Once `eval_gemfile` support is [merged into appraisal][🚎appraisal-eval-gemfile-pr]
-the above commands will be simplified to:
-
-```shell
-BUNDLE_GEMFILE=Appraisal.root.gemfile appraisal update
 ```
 
 ### SemVer Failure
