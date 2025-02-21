@@ -1,5 +1,5 @@
 # NOTE: Hoary is a synonym of ancient
-name: Hoary Compat (EOL, Ruby 2.2) Matrix
+name: Ruby 2.2 (EOL)
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
           - ruby: "2.2"
             appraisal: "ruby-2-2"
             exec_cmd: "rake spec"
-            gemfile: "Appraisal.hoary"
+            gemfile: "Appraisal.root"
             rubygems: default
             bundler: default
 

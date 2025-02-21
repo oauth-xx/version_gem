@@ -28,6 +28,8 @@ From time to time the appraisal gemfiles in `gemfiles/` will need to be updated.
 They are created and updated with the commands:
 
 ```shell
+# Switch to a Ruby v2.x installation with your ruby version manager, e.g.:
+asdf local ruby 2.7.8
 BUNDLE_GEMFILE=Appraisal.root.gemfile bundle install
 BUNDLE_GEMFILE=Appraisal.root.gemfile bundle exec appraisal update
 ```

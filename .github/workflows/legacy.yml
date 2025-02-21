@@ -1,4 +1,4 @@
-name: Legacy Compat (EOL, Ruby 3.0) Matrix
+name: Ruby 3.0 (EOL)
 
 env:
   K_SOUP_COV_DO: false
