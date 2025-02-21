@@ -10,6 +10,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.1.5] 2025-02-21 ([tag][1.1.5t])
+- Line Coverage: 100.0% (77 / 77)
+- Branch Coverage: 100.0% (2 / 2)
+- 77.78% documented
+### Added
+- Document approach to get code coverage on your gem's version.rb file
+- More documentation, and yard task for documentation
+- Documentation of Ruby version and SemVer support
+### Fixed
+- Code coverage tracking
+- Documentation of usage in gemspec via `Kernel.load`
+- Improved gemspec config
+
 ## [1.1.4] 2024-03-21 ([tag][1.1.4t])
 ### Added
 - Ruby 3.3 to CI (@pboling)
@@ -75,7 +88,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release, with basic version parsing API (@pboling)
 
-[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.4...HEAD
+[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.5...main
+[1.1.5]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.4...v1.1.5
+[1.1.5t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.5
 [1.1.4]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.3...v1.1.4
 [1.1.4t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.4
 [1.1.3]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.2...v1.1.3
