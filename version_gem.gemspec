@@ -8,8 +8,17 @@ gem_version = VersionGem::Version::VERSION
 VersionGem::Version.send(:remove_const, :VERSION)
 
 Gem::Specification.new do |spec|
-  spec.cert_chain = ["certs/pboling.pem"]
-  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
+  # Linux distros may package ruby gems differently,
+  #   and securely certify them independently via alternate package management systems.
+  # Ref: https://gitlab.com/oauth-xx/version_gem/-/issues/3
+  # Hence, only enable signing if the cert_file is present.
+  cert_file = ENV.fetch("GEM_CERT_PATH", "certs/#{ENV.fetch("GEM_CERT_USER", ENV["USER"])}.pem")
+  if cert_file && File.exist?(cert_file)
+    spec.cert_chain = [ENV.fetch("GEM_CERT_PATH", "certs/#{ENV.fetch("GEM_CERT_USER", ENV["USER"])}.pem")]
+    if $PROGRAM_NAME.end_with?("gem") && ARGV == ["build", __FILE__]
+      spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem")
+    end
+  end
 
   spec.name = "version_gem"
   spec.version = gem_version
