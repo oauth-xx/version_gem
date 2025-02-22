@@ -1,4 +1,4 @@
-## Contributing
+# Contributing
 
 Bug reports and pull requests are welcome on GitHub at [https://gitlab.com/oauth-xx/version_gem][🚎src-main]
 . This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to
