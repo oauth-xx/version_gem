@@ -1,5 +1,21 @@
 # frozen_string_literal: true
 
+# Used for head (nightly) releases of ruby, truffleruby, and jruby.
+# Split into discrete appraisals if one of them needs a dependency locked discretely.
+appraise "head" do
+  gem "mutex_m", ">= 0.2"
+  gem "stringio", ">= 3.0"
+  remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
+end
+
+# Used for current releases of ruby, truffleruby, and jruby.
+# Split into discrete appraisals if one of them needs a dependency locked discretely.
+appraise "current" do
+  gem "mutex_m", ">= 0.2"
+  gem "stringio", ">= 3.0"
+  remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
+end
+
 appraise "ruby-2-2" do
   remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
 end
@@ -52,12 +68,6 @@ appraise "ruby-3-3" do
   remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
 end
 
-appraise "ruby-current" do
-  gem "mutex_m", ">= 0.2"
-  gem "stringio", ">= 3.0"
-  remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
-end
-
 # Only run security audit on latest Ruby version
 appraise "audit" do
   gem "mutex_m", "~> 0.2"
@@ -79,23 +89,5 @@ appraise "style" do
   gem "mutex_m", "~> 0.2"
   gem "stringio", "~> 3.0"
   eval_gemfile "modular/style.gemfile"
-  remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
-end
-
-appraise "ruby-head" do
-  gem "mutex_m", ">= 0.2"
-  gem "stringio", ">= 3.0"
-  remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
-end
-
-appraise "truffleruby-head" do
-  gem "mutex_m", ">= 0.2"
-  gem "stringio", ">= 3.0"
-  remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
-end
-
-appraise "jruby-head" do
-  gem "mutex_m", ">= 0.2"
-  gem "stringio", ">= 3.0"
   remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
 end
