@@ -1,4 +1,4 @@
-name: MRI Current
+name: MRI Non-EOL
 
 env:
   K_SOUP_COV_DO: false
@@ -54,14 +54,6 @@ jobs:
           # Ruby 3.3
           - ruby: "3.3"
             appraisal: "ruby-3-3"
-            exec_cmd: "rake spec"
-            gemfile: "Appraisal.root"
-            rubygems: latest
-            bundler: latest
-
-          # Ruby 3.4
-          - ruby: "3.4"
-            appraisal: "ruby-3-4"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: latest

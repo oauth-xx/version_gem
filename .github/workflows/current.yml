@@ -1,4 +1,5 @@
-name: JRuby
+# Targets the evergreen latest release of ruby, truffleruby, and jruby
+name: Current
 
 env:
   K_SOUP_COV_DO: false
@@ -28,41 +29,30 @@ jobs:
   test:
     name: Specs - Ruby ${{ matrix.ruby }} ${{ matrix.appraisal }}${{ matrix.name_extra || '' }}
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     env: # $BUNDLE_GEMFILE must be set at job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/${{ matrix.gemfile }}.gemfile
     strategy:
       matrix:
         include:
-          # TODO: truffleruby does not support upgrading rubygems; VALIDATE ASSUMPTION that same applies to JRuby
-          # jruby-9.1 (targets Ruby 2.3 compatibility)
-          - ruby: "jruby-9.1"
-            appraisal: "ruby-2-3"
+
+          - ruby: "ruby"
+            appraisal: "ruby-current"
+            exec_cmd: "rake spec"
+            gemfile: "Appraisal.root"
+            rubygems: latest
+            bundler: latest
+
+          - ruby: "truffleruby"
+            appraisal: "ruby-current"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: default
             bundler: default
 
-          # jruby-9.2 (targets Ruby 2.5 compatibility)
-          - ruby: "jruby-9.2"
-            appraisal: "ruby-2-5"
-            exec_cmd: "rake spec"
-            gemfile: "Appraisal.root"
-            rubygems: default
-            bundler: default
-
-          # jruby-9.3 (targets Ruby 2.6 compatibility)
-          - ruby: "jruby-9.3"
-            appraisal: "ruby-2-6"
-            exec_cmd: "rake spec"
-            gemfile: "Appraisal.root"
-            rubygems: default
-            bundler: default
-
-          # jruby-9.4 (targets Ruby 3.1 compatibility)
-          - ruby: "jruby-9.4"
-            appraisal: "ruby-3-1"
+          - ruby: "jruby"
+            appraisal: "ruby-current"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: default
