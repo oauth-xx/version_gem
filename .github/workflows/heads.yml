@@ -55,12 +55,12 @@ jobs:
 
           # jruby-head
           # Error output has a significantly different format in JRuby :(
-          #  - ruby: "jruby-head"
-          #    appraisal: "jruby-head"
-          #    exec_cmd: "rake spec"
-          #    gemfile: "Appraisal.root"
-          #    rubygems: default
-          #    bundler: default
+          - ruby: "jruby-head"
+            appraisal: "jruby-head"
+            exec_cmd: "rake spec"
+            gemfile: "Appraisal.root"
+            rubygems: default
+            bundler: default
 
     steps:
       - name: Checkout
