@@ -90,7 +90,7 @@ See: [RubyGems Security Guide][🔒️rubygems-security-guide]
 ### To release a new version:
 
 1. Run `bin/setup && bin/rake` as a tests, coverage, & linting sanity check
-2. Update the version number in `version.rb`
+2. Update the version number in `version.rb`, and ensure `CHANGELOG.md` reflects changes
 3. Run `bin/setup && bin/rake` again as a secondary check, and to update `Gemfile.lock`
 4. Run `git commit -am "🔖 Prepare release v<VERSION>"` to commit the changes
 5. Run `git push` to trigger the final CI pipeline before release, & merge PRs
