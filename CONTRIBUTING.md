@@ -104,7 +104,7 @@ See: [RubyGems Security Guide][🔒️rubygems-security-guide]
    - Note that you'll need the `zsh/datetime` module, if running `zsh`.
    - In `bash` you can use `date +%s` instead, i.e. `export SOURCE_DATE_EPOCH=$(date +%s) && echo $SOURCE_DATE_EPOCH`
 10. Run `bundle exec rake build`
-11. Run `gem_checksums` (more context [1][🔒️rubygems-checksums-pr] and [2][🔒️rubygems-guide-pr])
+11. Run `bin/checksums` (more context [1][🔒️rubygems-checksums-pr] and [2][🔒️rubygems-guides-pr])
    to create SHA-256 and SHA-512 checksums
     - Checksums will be committed automatically by the script, but not pushed
 12. Run `bundle exec rake release` which will create a git tag for the version,
@@ -121,7 +121,8 @@ See: [RubyGems Security Guide][🔒️rubygems-security-guide]
 [🖐contributors-img]: https://contrib.rocks/image?repo=oauth-xx/version_gem
 [💎rubygems]: https://rubygems.org
 [🔒️rubygems-security-guide]: https://guides.rubygems.org/security/#building-gems
-[🔒️rubygems-checksums-pr]: https://github.com/rubygems/guides/pull/325
+[🔒️rubygems-checksums-pr]: https://github.com/rubygems/rubygems/pull/6022
+[🔒️rubygems-guides-pr]: https://github.com/rubygems/guides/pull/325
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 [📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
