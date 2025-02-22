@@ -44,6 +44,14 @@ jobs:
             rubygems: '3.5.23'
             bundler: '2.5.23'
 
+          # truffleruby-22.3 (targets Ruby 3.0 compatibility)
+          - ruby: "truffleruby-22.3"
+            appraisal: "ruby-3-0"
+            exec_cmd: "rake spec"
+            gemfile: "Appraisal.root"
+            rubygems: default
+            bundler: default
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
