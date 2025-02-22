@@ -29,8 +29,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
-    name: Specs with Coverage ${{ matrix.ruby }}
+  coverage:
+    name: Code Coverage on ${{ matrix.ruby }}@current
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
