@@ -54,7 +54,6 @@ jobs:
             bundler: default
 
           # jruby-head
-          # Error output has a significantly different format in JRuby :(
           - ruby: "jruby-head"
             appraisal: "jruby-head"
             exec_cmd: "rake spec"
