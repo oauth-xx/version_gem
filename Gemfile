@@ -9,12 +9,21 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Gemfile is for local development ONLY; Gemfile is NOT loaded in CI #
 ####################################################### IMPORTANT ####
 
+# For Ruby version specific dependencies
+ruby_version = Gem::Version.create(RUBY_VERSION)
+
 # Include dependencies from <gem name>.gemspec
 gemspec
 
 platform :mri do
-  # Debugging
-  gem "byebug", ">= 11"
+  # Debugging - Ensure ENV["DEBUG"] == "true" to use debuggers within spec suite
+  if ruby_version < Gem::Version.new("2.7")
+    # Use byebug in code
+    gem "byebug", ">= 11"
+  else
+    # Use binding.break, binding.b, or debugger in code
+    gem "debug", ">= 1.0.0"
+  end
 
   # Dev Console - Binding.pry - Irb replacement
   gem "pry", "~> 0.14"                     # ruby >= 2.0
@@ -23,7 +32,7 @@ platform :mri do
 end
 
 # Security Audit
-if RUBY_VERSION >= "3"
+if ruby_version >= Gem::Version.create("3")
   # NOTE: Audit fails on Ruby 2.7 because nokogiri has dropped support for Ruby < 3
   # See: https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-r95h-9x8f-r3f7
   # We can't add upgraded nokogiri here unless we are developing on Ruby 3+
