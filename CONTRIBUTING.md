@@ -27,7 +27,7 @@ Simply follow these instructions:
 From time to time the appraisal gemfiles in `gemfiles/` will need to be updated.
 They are created and updated with the commands:
 
-NOTE: We run on a fork of Appraisal.
+NOTE: We run on a [fork][🚎appraisal-fork] of Appraisal.
 
 Please upvote the PR for `eval_gemfile` [support][🚎appraisal-eval-gemfile-pr]
 
@@ -126,3 +126,5 @@ See: [RubyGems Security Guide][🔒️rubygems-security-guide]
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 [📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
 [📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
+[🚎appraisal-eval-gemfile-pr]: https://github.com/thoughtbot/appraisal/pull/248
+[🚎appraisal-fork]: https://github.com/pboling/appraisal/tree/galtzo
