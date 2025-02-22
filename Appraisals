@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# HOW TO UPDATE APPRAISALS:
+#   BUNDLE_GEMFILE=Appraisal.root.gemfile bundle
+#   BUNDLE_GEMFILE=Appraisal.root.gemfile bundle exec appraisal update
+
 # Used for head (nightly) releases of ruby, truffleruby, and jruby.
 # Split into discrete appraisals if one of them needs a dependency locked discretely.
 appraise "head" do
