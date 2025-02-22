@@ -9,14 +9,16 @@
 [![Coveralls Test Coverage][🔑coveralls-img]][🔑coveralls]
 [![CodeClimate Test Coverage][🔑cc-covi♻️]][🔑cc-cov]
 [![Maintainability][🔑cc-mnti♻️]][🔑cc-mnt]
-[![CI Supported Build][🚎6-s-wfi]][🚎6-s-wf]
-[![CI Legacy Build][🚎4-lg-wfi]][🚎4-lg-wf]
-[![CI Unsupported Build][🚎7-us-wfi]][🚎7-us-wf]
-[![CI Heads Build][🚎3-hd-wfi]][🚎3-hd-wf]
-[![CI Ancient Build][🚎1-an-wfi]][🚎1-an-wf]
-[![CI Hoary Build][🚎8-ho-wfi]][🚎8-ho-wf]
-[![CI Coverage Build][🚎2-cov-wfi]][🚎2-cov-wf]
-[![CI Style Build][🚎5-st-wfi]][🚎5-st-wf]
+[![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf]
+[![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf]
+[![CI JRuby][🚎10-j-wfi]][🚎10-j-wf]
+[![CI Supported][🚎6-s-wfi]][🚎6-s-wf]
+[![CI Legacy][🚎4-lg-wfi]][🚎4-lg-wf]
+[![CI Unsupported][🚎7-us-wfi]][🚎7-us-wf]
+[![CI Ancient][🚎1-an-wfi]][🚎1-an-wf]
+[![CI Hoary][🚎8-ho-wfi]][🚎8-ho-wf]
+[![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf]
+[![CI Style][🚎5-st-wfi]][🚎5-st-wf]
 
 ---
 
@@ -63,15 +65,17 @@ This library was extracted from the gem _[oauth2](https://gitlab.com/oauth-xx/oa
 
 This gem has no runtime dependencies.
 
-| Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                                                   |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ruby 3 compat      | [![Ruby 3.0 Compat][💎ruby-3.0i]][🚎4-lg-wf] [![Ruby 3.1 Compat][💎ruby-3.1i]][🚎6-s-wf] [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-3.4i]][🚎6-s-wf]                                                                                                                                                                 |
-| ruby 2 compat      | [![Ruby 2.2 Compat][💎ruby-2.2i]][🚎8-ho-wf] [![Ruby 2.3 Compat][💎ruby-2.3i]][🚎1-an-wf] [![Ruby 2.4 Compat][💎ruby-2.4i]][🚎1-an-wf] [![Ruby 2.5 Compat][💎ruby-2.5i]][🚎1-an-wf] [![Ruby 2.6 Compat][💎ruby-2.6i]][🚎7-us-wf] [![Ruby 2.7 Compat][💎ruby-2.7i]][🚎7-us-wf]                                                                                                                |
-| documentation      | [![Documentation on Github.com][📜docs-gh-img]][homepage] `or` [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] `or` [![HEAD on RubyDoc.info][📜docs-head-rd-img]][🚎yard-head] `or` [![Wiki][📜wiki-img]][📜wiki] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                 |
-| compliance         | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]                                                                                             |
-| expert 1:1 support | [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] `or` [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                                                                                                                                                                                             |
-| enterprise support | [![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift] (for _this and all your other_ FLOSS dependencies; btw, TideLift is now part of [Sonar](https://blog.tidelift.com/tidelift-joins-sonar)!)                                                                                                                                                                      |
-| `...` 💖           | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto] [🌏][💖💁🏼‍♂️aboutme] |
+| Tokens to Remember      | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                                                                                                                        |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Works with JRuby        | [![JRuby 9.1 Compat][💎jruby-9.1i]][🚎10-j-wf] [![JRuby 9.2 Compat][💎jruby-9.2i]][🚎10-j-wf] [![JRuby 9.3 Compat][💎jruby-9.3i]][🚎10-j-wf] [![JRuby 9.4 Compat][💎jruby-9.4i]][🚎10-j-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]                                                                                                                                                                                                                      |
+| Works with Truffle Ruby | [![Truffle Ruby 22.3 Compat][💎truby-22.3i]][🚎9-t-wf] [![Truffle Ruby 23.0 Compat][💎truby-23.0i]][🚎9-t-wf] [![Truffle Ruby 23.1 Compat][💎truby-23.1i]][🚎9-t-wf] [![Truffle Ruby 24.1 Compat][💎truby-24.1i]][🚎9-t-wf] [![Truffle Ruby HEAD Compat][💎truby-headi]][🚎3-hd-wf]                                                                                                                                                                               |
+| Works with MRI Ruby 3   | [![Ruby 3.0 Compat][💎ruby-3.0i]][🚎4-lg-wf] [![Ruby 3.1 Compat][💎ruby-3.1i]][🚎6-s-wf] [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-3.4i]][🚎6-s-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]                                                                                                                                                                                       |
+| Works with MRI Ruby 2   | [![Ruby 2.2 Compat][💎ruby-2.2i]][🚎8-ho-wf] [![Ruby 2.3 Compat][💎ruby-2.3i]][🚎1-an-wf] [![Ruby 2.4 Compat][💎ruby-2.4i]][🚎1-an-wf] [![Ruby 2.5 Compat][💎ruby-2.5i]][🚎1-an-wf] [![Ruby 2.6 Compat][💎ruby-2.6i]][🚎7-us-wf] [![Ruby 2.7 Compat][💎ruby-2.7i]][🚎7-us-wf]                                                                                                                                                                                     |
+| Documentation           | [![Documentation on Github.com][📜docs-gh-img]][homepage] `or` [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] `or` [![HEAD on RubyDoc.info][📜docs-head-rd-img]][🚎yard-head] `or` [![Wiki][📜wiki-img]][📜wiki] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                                                                                      |
+| Compliance              | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]                                                                                                                                                                  |
+| Expert 1:1 Support      | [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] `or` [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                                                                                                                                                                                                                                                                  |
+| Enterprise Support      | [![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]<br/>💡Subscribe for support guarantees covering _all_ FLOSS dependencies!<br/>💡TideLift is part of [Sonar][🏙️entsup-tidelift-sonar]!<br/>💡Tidelift pays developers like me to maintain software like this!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] agreement is [never gonna let you down][🧮kloc], and *supports* open source maintainers! |
+| `...` 💖                | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto] [🌏][💖💁🏼‍♂️aboutme]                                                                      |
 
 ## Installation
 
@@ -243,7 +247,7 @@ RSpec.describe(MyLib::Version) do
   it_behaves_like "a Version module", described_class
 end
 
-# Or, if you want to write your own, here is the a la carte menu:
+# Or, if you want to write your own, here is the á la carte menu:
 RSpec.describe(MyLib::Version) do
   it "is a Version module" do
     expect(described_class).is_a?(Module)
@@ -386,6 +390,7 @@ or one of the others at the head of this README.
 [👨🏼‍🏫expsup-codementor-img]: https://img.shields.io/badge/CodeMentor-Get%20Help-1abc9c?style=for-the-badge&logo=CodeMentor&logoColor=white
 [🏙️entsup-tidelift]: https://tidelift.com/
 [🏙️entsup-tidelift-img]: https://img.shields.io/badge/TideLift-Enterprise%20Support-1abc9c?style=for-the-badge&logo=TideLift&logoColor=white
+[🏙️entsup-tidelift-sonar]: https://blog.tidelift.com/tidelift-joins-sonar
 [💁🏼‍♂️peterboling]: http://www.peterboling.com
 [💁🏼‍♂️railsbling]: http://www.railsbling.com
 [📜docs-gh-img]: https://img.shields.io/badge/Github-6FDA44?style=for-the-badge&logo=Github&logoColor=white
@@ -427,6 +432,10 @@ or one of the others at the head of this README.
 [🚎7-us-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/unsupported.yml/badge.svg
 [🚎8-ho-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/hoary.yml
 [🚎8-ho-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/hoary.yml/badge.svg
+[🚎9-t-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/truffle.yml
+[🚎9-t-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/truffle.yml/badge.svg
+[🚎10-j-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/jruby.yml
+[🚎10-j-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/jruby.yml/badge.svg
 [⛳liberapay-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
 [⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
@@ -448,6 +457,17 @@ or one of the others at the head of this README.
 [💎ruby-3.2i]: https://img.shields.io/badge/Ruby-3.2-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.3i]: https://img.shields.io/badge/Ruby-3.3-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.4i]: https://img.shields.io/badge/Ruby-3.4-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-headi]: https://img.shields.io/badge/Ruby-HEAD-CC342D?style=for-the-badge&logo=ruby&logoColor=green
+[💎truby-22.3i]: https://img.shields.io/badge/Truffle_Ruby-22.3-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-23.0i]: https://img.shields.io/badge/Truffle_Ruby-23.0-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-23.1i]: https://img.shields.io/badge/Truffle_Ruby-23.1-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-24.1i]: https://img.shields.io/badge/Truffle_Ruby-24.1-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-headi]: https://img.shields.io/badge/Truffle_Ruby-HEAD-34BCB1?style=for-the-badge&logo=ruby&logoColor=green
+[💎jruby-9.1i]: https://img.shields.io/badge/JRuby-9.1-FBE742?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-9.2i]: https://img.shields.io/badge/JRuby-9.2-FBE742?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-9.3i]: https://img.shields.io/badge/JRuby-9.3-FBE742?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-9.4i]: https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [🤝issues]: https://github.com/oauth-xx/version_gem/issues
 [🤝pulls]: https://github.com/oauth-xx/version_gem/pulls
 [🤝contributing]: CONTRIBUTING.md
