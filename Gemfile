@@ -18,6 +18,8 @@ platform :mri do
 
   # Dev Console - Binding.pry - Irb replacement
   gem "pry", "~> 0.14"                     # ruby >= 2.0
+
+  gem "reek", "~> 6.4"
 end
 
 # Security Audit
