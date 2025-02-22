@@ -1,5 +1,5 @@
 # NOTE: Hoary is a synonym of ancient
-name: Ruby 2.2 (EOL)
+name: MRI 2.2 (EOL)
 
 on:
   push:
