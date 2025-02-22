@@ -37,7 +37,7 @@ jobs:
       matrix:
         include:
           # Ruby 3.0
-          - ruby: "3.0"
+          - ruby: "ruby-3.0"
             appraisal: "ruby-3-0"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"

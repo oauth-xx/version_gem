@@ -31,7 +31,7 @@ jobs:
       matrix:
         include:
           # Ruby 2.3
-          - ruby: "2.3"
+          - ruby: "ruby-2.3"
             appraisal: "ruby-2-3"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
@@ -39,7 +39,7 @@ jobs:
             bundler: "2.3.27"
 
           # Ruby 2.4
-          - ruby: "2.4"
+          - ruby: "ruby-2.4"
             appraisal: "ruby-2-4"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
@@ -47,7 +47,7 @@ jobs:
             bundler: "2.3.27"
 
           # Ruby 2.5
-          - ruby: "2.5"
+          - ruby: "ruby-2.5"
             appraisal: "ruby-2-5"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"

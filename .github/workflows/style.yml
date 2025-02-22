@@ -34,7 +34,7 @@ jobs:
       matrix:
         include:
           # Style
-          - ruby: "3.4"
+          - ruby: "ruby-3.4"
             appraisal: "style"
             exec_cmd: "rake rubocop_gradual:check"
             gemfile: "Appraisal.root"

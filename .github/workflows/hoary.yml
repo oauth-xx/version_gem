@@ -32,7 +32,7 @@ jobs:
       matrix:
         include:
           # Ruby 2.2
-          - ruby: "2.2"
+          - ruby: "ruby-2.2"
             appraisal: "ruby-2-2"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"

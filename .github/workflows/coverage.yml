@@ -41,7 +41,7 @@ jobs:
       matrix:
         include:
           # Coverage
-          - ruby: "3.4"
+          - ruby: "ruby-3.4"
             appraisal: "coverage"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
