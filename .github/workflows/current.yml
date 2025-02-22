@@ -43,7 +43,6 @@ jobs:
             gemfile: "Appraisal.root"
             rubygems: latest
             bundler: latest
-            name_extra: "ruby-3.4" # NOTE: This will become out of date!
 
           # truffleruby-24.1 (targets Ruby 3.3.5 compatibility)
           - ruby: "truffleruby"
@@ -52,7 +51,6 @@ jobs:
             gemfile: "Appraisal.root"
             rubygems: default
             bundler: default
-            name_extra: "truffleruby-24.1" # NOTE: This will become out of date!
 
           # jruby-9.4 (targets Ruby 3.1 compatibility)
           - ruby: "jruby"
@@ -61,7 +59,6 @@ jobs:
             gemfile: "Appraisal.root"
             rubygems: default
             bundler: default
-            name_extra: "jruby-9.4" # NOTE: This will become out of date!
 
     steps:
       - name: Checkout
@@ -82,5 +79,5 @@ jobs:
         run: bundle
       - name: Appraisal for ${{ matrix.ruby }}@${{ matrix.appraisal }}
         run: bundle exec appraisal ${{ matrix.appraisal }} bundle
-      - name: Tests for ${{ matrix.ruby }}@${{ matrix.appraisal }} (${{ matrix.name_extra }}?) via ${{ matrix.exec_cmd }}
+      - name: Tests for ${{ matrix.ruby }}@${{ matrix.appraisal }} via ${{ matrix.exec_cmd }}
         run: bundle exec appraisal ${{ matrix.appraisal }} bundle exec ${{ matrix.exec_cmd }}
