@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - More documentation, and yard task for documentation
 - Documentation of Ruby version and SemVer support
 ### Fixed
+- [#3](https://gitlab.com/oauth-xx/version_gem/-/issues/3) - Allow packaging without signing
+  - to support secure linux distros which have alternate means of signing packages within their package managers
 - Code coverage tracking
 - Documentation of usage in gemspec via `Kernel.load`
 - Improved gemspec config
