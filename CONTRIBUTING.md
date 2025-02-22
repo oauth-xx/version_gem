@@ -65,7 +65,7 @@ bundle exec rake
 Or just run the linter.
 
 ```bash
-bundle exec rubocop_gradual:autocorrect
+bundle exec rake rubocop_gradual:autocorrect
 ```
 
 ## Contributors
