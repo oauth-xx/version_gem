@@ -36,6 +36,8 @@ BUNDLE_GEMFILE=Appraisal.root.gemfile bundle
 BUNDLE_GEMFILE=Appraisal.root.gemfile bundle exec appraisal update
 ```
 
+When adding an appraisal to CI check the [runner tool cache][🏃‍♂️runner-tool-cache] to see which runner to use.
+
 ## The Reek List
 
 Take a look at the `reek` list which is the file called `REEK` and find something to improve.
@@ -129,3 +131,4 @@ See: [RubyGems Security Guide][🔒️rubygems-security-guide]
 [📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
 [🚎appraisal-eval-gemfile-pr]: https://github.com/thoughtbot/appraisal/pull/248
 [🚎appraisal-fork]: https://github.com/pboling/appraisal/tree/galtzo
+[🏃‍♂️runner-tool-cache]: https://github.com/ruby/ruby-builder/releases/tag/toolcache

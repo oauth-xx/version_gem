@@ -36,27 +36,32 @@ jobs:
     strategy:
       matrix:
         include:
-
+          # Ruby 3.4
           - ruby: "ruby"
             appraisal: "ruby-current"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: latest
             bundler: latest
+            name_extra: "ruby-3.4" # NOTE: This will become out of date!
 
+          # truffleruby-24.1 (targets Ruby 3.3.5 compatibility)
           - ruby: "truffleruby"
             appraisal: "ruby-current"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: default
             bundler: default
+            name_extra: "truffleruby-24.1" # NOTE: This will become out of date!
 
+          # jruby-9.4 (targets Ruby 3.1 compatibility)
           - ruby: "jruby"
             appraisal: "ruby-current"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: default
             bundler: default
+            name_extra: "jruby-9.4" # NOTE: This will become out of date!
 
     steps:
       - name: Checkout
@@ -73,9 +78,9 @@ jobs:
       # Raw `bundle` will use the BUNDLE_GEMFILE set to matrix.gemfile (i.e. Appraisal.root)
       # We need to do this first to get appraisal installed.
       # NOTE: This does not use the main Gemfile at all.
-      - name: Bundle install for Appraisal ${{ matrix.appraisal }}
+      - name: Install Root Appraisal
         run: bundle
-      - name: Install Appraisal ${{ matrix.appraisal }} dependencies
+      - name: Appraisal for ${{ matrix.appraisal }}
         run: bundle exec appraisal ${{ matrix.appraisal }} bundle
-      - name: Run ${{ matrix.appraisal }} tests via ${{ matrix.exec_cmd }}
+      - name: Tests for ${{ matrix.ruby }}@${{ matrix.name_extra }} via ${{ matrix.exec_cmd }}
         run: bundle exec appraisal ${{ matrix.appraisal }} bundle exec ${{ matrix.exec_cmd }}
