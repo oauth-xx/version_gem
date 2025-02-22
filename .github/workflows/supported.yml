@@ -43,14 +43,6 @@ jobs:
             rubygems: latest
             bundler: latest
 
-          # truffleruby-23.0 (targets Ruby 3.1 compatibility)
-          - ruby: "truffleruby-23.0"
-            appraisal: "ruby-3-1"
-            exec_cmd: "rake spec"
-            gemfile: "Appraisal.root"
-            rubygems: default
-            bundler: default
-
           # Ruby 3.2
           - ruby: "3.2"
             appraisal: "ruby-3-2"
@@ -59,14 +51,6 @@ jobs:
             rubygems: latest
             bundler: latest
 
-          # truffleruby-23.1 (targets Ruby 3.2 compatibility)
-          - ruby: "truffleruby-23.1"
-            appraisal: "ruby-3-2"
-            exec_cmd: "rake spec"
-            gemfile: "Appraisal.root"
-            rubygems: default
-            bundler: default
-
           # Ruby 3.3
           - ruby: "3.3"
             appraisal: "ruby-3-3"
@@ -74,14 +58,6 @@ jobs:
             gemfile: "Appraisal.root"
             rubygems: latest
             bundler: latest
-
-          # truffleruby-24.1 (targets Ruby 3.3.5 compatibility)
-          - ruby: "truffleruby-24.1"
-            appraisal: "ruby-3-3"
-            exec_cmd: "rake spec"
-            gemfile: "Appraisal.root"
-            rubygems: default
-            bundler: default
 
           # Ruby 3.4
           - ruby: "3.4"

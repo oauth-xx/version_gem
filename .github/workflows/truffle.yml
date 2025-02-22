@@ -1,4 +1,4 @@
-name: Heads Compat Matrix
+name: Supported Compat Matrix
 
 env:
   K_SOUP_COV_DO: false
@@ -28,39 +28,44 @@ jobs:
   test:
     name: Specs - Ruby ${{ matrix.ruby }} ${{ matrix.appraisal }}${{ matrix.name_extra || '' }}
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     env: # $BUNDLE_GEMFILE must be set at job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/${{ matrix.gemfile }}.gemfile
     strategy:
-      fail-fast: true
       matrix:
         include:
-          # NOTE: Heads use default rubygems / bundler; their defaults are custom, unreleased, and from the future!
-          # ruby-head
-          - ruby: "ruby-head"
-            appraisal: "ruby-head"
+          # truffleruby-22.3 (targets Ruby 3.0 compatibility)
+          - ruby: "truffleruby-22.3"
+            appraisal: "ruby-3-0"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: default
             bundler: default
 
-          # truffleruby-head
-          - ruby: "truffleruby-head"
-            appraisal: "truffleruby-head"
+          # truffleruby-23.0 (targets Ruby 3.1 compatibility)
+          - ruby: "truffleruby-23.0"
+            appraisal: "ruby-3-1"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
             rubygems: default
             bundler: default
 
-          # jruby-head
-          # Error output has a significantly different format in JRuby :(
-          #  - ruby: "jruby-head"
-          #    appraisal: "jruby-head"
-          #    exec_cmd: "rake spec"
-          #    gemfile: "Appraisal.root"
-          #    rubygems: default
-          #    bundler: default
+          # truffleruby-23.1 (targets Ruby 3.2 compatibility)
+          - ruby: "truffleruby-23.1"
+            appraisal: "ruby-3-2"
+            exec_cmd: "rake spec"
+            gemfile: "Appraisal.root"
+            rubygems: default
+            bundler: default
+
+          # truffleruby-24.1 (targets Ruby 3.3.5 compatibility)
+          - ruby: "truffleruby-24.1"
+            appraisal: "ruby-3-3"
+            exec_cmd: "rake spec"
+            gemfile: "Appraisal.root"
+            rubygems: default
+            bundler: default
 
     steps:
       - name: Checkout
