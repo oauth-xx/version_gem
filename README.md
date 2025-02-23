@@ -68,17 +68,19 @@ This gem has no runtime dependencies.
 
 ## Info you can shake a stick at
 
-| Tokens to Remember      | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                                                                                                                    |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Works with JRuby        | [![JRuby 9.1 Compat][💎jruby-9.1i]][🚎10-j-wf] [![JRuby 9.2 Compat][💎jruby-9.2i]][🚎10-j-wf] [![JRuby 9.3 Compat][💎jruby-9.3i]][🚎10-j-wf] [![JRuby 9.4 Compat][💎jruby-c-i]][🚎11-c-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]                                                                                                                                                                                                                   |
-| Works with Truffle Ruby | [![Truffle Ruby 22.3 Compat][💎truby-22.3i]][🚎9-t-wf] [![Truffle Ruby 23.0 Compat][💎truby-23.0i]][🚎9-t-wf] [![Truffle Ruby 23.1 Compat][💎truby-23.1i]][🚎9-t-wf] [![Truffle Ruby 24.1 Compat][💎truby-c-i]][🚎11-c-wf] [![Truffle Ruby HEAD Compat][💎truby-headi]][🚎3-hd-wf]                                                                                                                                                                            |
-| Works with MRI Ruby 3   | [![Ruby 3.0 Compat][💎ruby-3.0i]][🚎4-lg-wf] [![Ruby 3.1 Compat][💎ruby-3.1i]][🚎6-s-wf] [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]                                                                                                                                                                                   |
-| Works with MRI Ruby 2   | [![Ruby 2.2 Compat][💎ruby-2.2i]][🚎8-ho-wf] [![Ruby 2.3 Compat][💎ruby-2.3i]][🚎1-an-wf] [![Ruby 2.4 Compat][💎ruby-2.4i]][🚎1-an-wf] [![Ruby 2.5 Compat][💎ruby-2.5i]][🚎1-an-wf] [![Ruby 2.6 Compat][💎ruby-2.6i]][🚎7-us-wf] [![Ruby 2.7 Compat][💎ruby-2.7i]][🚎7-us-wf]                                                                                                                                                                                 |
-| Documentation           | [![Documentation on Github.com][📜docs-gh-img]][homepage] `or` [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] `or` [![HEAD on RubyDoc.info][📜docs-head-rd-img]][🚎yard-head] `or` [![Wiki][📜wiki-img]][📜wiki] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                                                                                  |
-| Compliance              | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]                                                                                                                                                              |
-| Expert 1:1 Support      | [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] `or` [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                                                                                                                                                                                                                                                              |
-| Enterprise Support      | [![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]<br/>💡Subscribe for support guarantees covering _all_ FLOSS dependencies!<br/>💡TideLift is part of [Sonar][🏙️entsup-tidelift-sonar]!<br/>💡Tidelift pays developers like me to maintain software like this!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] agreement is [never gonna let you down][🧮kloc], and *supports* open source maintainers! |
-| `...` 💖                | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto] [🌏][💖💁🏼‍♂️aboutme]                                                                  |
+| Tokens to Remember      | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                                                                                                                       |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Works with JRuby        | [![JRuby 9.1 Compat][💎jruby-9.1i]][🚎10-j-wf] [![JRuby 9.2 Compat][💎jruby-9.2i]][🚎10-j-wf] [![JRuby 9.3 Compat][💎jruby-9.3i]][🚎10-j-wf] [![JRuby 9.4 Compat][💎jruby-c-i]][🚎11-c-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]                                                                                                                                                                                                                      |
+| Works with Truffle Ruby | [![Truffle Ruby 22.3 Compat][💎truby-22.3i]][🚎9-t-wf] [![Truffle Ruby 23.0 Compat][💎truby-23.0i]][🚎9-t-wf] [![Truffle Ruby 23.1 Compat][💎truby-23.1i]][🚎9-t-wf] [![Truffle Ruby 24.1 Compat][💎truby-c-i]][🚎11-c-wf] [![Truffle Ruby HEAD Compat][💎truby-headi]][🚎3-hd-wf]                                                                                                                                                                               |
+| Works with MRI Ruby 3   | [![Ruby 3.0 Compat][💎ruby-3.0i]][🚎4-lg-wf] [![Ruby 3.1 Compat][💎ruby-3.1i]][🚎6-s-wf] [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]                                                                                                                                                                                      |
+| Works with MRI Ruby 2   | [![Ruby 2.2 Compat][💎ruby-2.2i]][🚎8-ho-wf] [![Ruby 2.3 Compat][💎ruby-2.3i]][🚎1-an-wf] [![Ruby 2.4 Compat][💎ruby-2.4i]][🚎1-an-wf] [![Ruby 2.5 Compat][💎ruby-2.5i]][🚎1-an-wf] [![Ruby 2.6 Compat][💎ruby-2.6i]][🚎7-us-wf] [![Ruby 2.7 Compat][💎ruby-2.7i]][🚎7-us-wf]                                                                                                                                                                                    |
+| Source                  | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on Github.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                                                                                                                                                                                                                          |
+| Documentation           | [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] [![HEAD on RubyDoc.info][📜docs-head-rd-img]][🚎yard-head] [![BDFL Blog][🚂bdfl-blog-img]][🚂bdfl-blog] [![Wiki][📜wiki-img]][📜wiki]                                                                                                                                                                                                                                                     |
+| Compliance              | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]                                                                                                         |
+| Expert 1:1 Support      | [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] `or` [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                                                                                                                                                                                                                                                                 |
+| Enterprise Support      | [![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]<br/>💡Subscribe for support guarantees covering _all_ FLOSS dependencies!<br/>💡Tidelift is part of [Sonar][🏙️entsup-tidelift-sonar]!<br/>💡Tidelift pays maintainers to maintain the software you depend on!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] agreement is "[never gonna let you down][🧮kloc]", and *supports* open source maintainers! |
+| Comrade BDFL 🎖️        | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact BDFL][🚂bdfl-contact-img]][🚂bdfl-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto]                                                                                                                                                           |
+| `...` 💖                | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [🌏][💖💁🏼‍♂️aboutme]                                                                                                                                                                                                                                                              |
 
 ## Installation
 
@@ -279,11 +281,16 @@ or use the gem and think about how it could be better.
 
 We [![Keep A Changelog][📗keep-changelog-img]][📗keep-changelog] so if you make changes, remember to update it.
 
-Also, see [CONTRIBUTING.md][🤝contributing].
+See [CONTRIBUTING.md][🤝contributing] for more detailed instructions.
 
 ### Code Coverage
 
-[![Coverage Graph][🔑codecov-g]][🔑codecov]
+[![Coverage Graph][🔑codecov-g♻️]][🔑codecov]
+
+### 🪇 Code of Conduct
+
+Everyone interacting in this project's codebases, issue trackers,
+chat rooms and mailing lists is expected to follow the [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct].
 
 ## 🌈 Contributors
 
@@ -302,11 +309,6 @@ Also see GitLab Contributors: [https://gitlab.com/oauth-xx/version_gem/-/graphs/
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=oauth-xx/version_gem&type=Date" />
  </picture>
 </a>
-
-## 🪇 Code of Conduct
-
-Everyone interacting in this project's codebases, issue trackers,
-chat rooms and mailing lists is expected to follow the [code of conduct][🪇conduct].
 
 ## 📌 Versioning
 
@@ -353,7 +355,15 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
 
 ### © Copyright
 
-* Copyright (c) 2022 - 2025 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
+<p>
+  Copyright (c) 2022 - 2025 Peter H. Boling,
+  <a href="https://railsbling.com">
+    RailsBling.com
+    <picture>
+      <img alt="Rails Bling" height="20" src="https://railsbling.com/images/logos/RailsBling-TrainLogo.svg" />
+    </picture>
+  </a>
+</p>
 
 ## 🤑 One more thing
 
@@ -366,41 +376,49 @@ or one of the others at the head of this README.
 
 [![Buy me a latte][🖇buyme-img]][🖇buyme]
 
+[✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
 [🏘chat]: https://gitter.im/oauth-xx/version_gem
 [🏘chat-img]: https://img.shields.io/gitter/room/oauth-xx/version_gem.svg
-[⛳️gem-namespace]: https://rubygems.org/gems/version_gem
-[⛳️namespace-img]: https://img.shields.io/badge/namespace-VersionGem-brightgreen.svg?style=flat
+[⛳️gem-namespace]: https://github.com/oauth-xx/version_gem/blob/main/lib/version_gem.rb
+[⛳️namespace-img]: https://img.shields.io/badge/namespace-VersionGem-brightgreen.svg?style=flat&logo=ruby&logoColor=white
 [⛳️gem-name]: https://rubygems.org/gems/version_gem
-[⛳️name-img]: https://img.shields.io/badge/name-version__gem-brightgreen.svg?style=flat
-[🚎blog]: http://www.railsbling.com/tags/version_gem
-[🚎blog-img]: https://img.shields.io/badge/blog-railsbling-brightgreen.svg?style=flat
+[⛳️name-img]: https://img.shields.io/badge/name-version__gem-brightgreen.svg?style=flat&logo=rubygems&logoColor=red
+[🚂bdfl-blog]: http://www.railsbling.com/tags/version_gem
+[🚂bdfl-blog-img]: https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&logo=rubyonrails&logoColor=orange
+[🚂bdfl-contact]: http://www.railsbling.com/contact
+[🚂bdfl-contact-img]: https://img.shields.io/badge/Contact-BDFL-0093D0.svg?style=flat&logo=rubyonrails&logoColor=red
 [💖🖇linkedin]: http://www.linkedin.com/in/peterboling
-[💖🖇linkedin-img]: https://img.shields.io/badge/PeterBoling-blue?style=plastic&logo=linkedin
+[💖🖇linkedin-img]: https://img.shields.io/badge/PeterBoling-LinkedIn-0B66C2?style=flat&logo=newjapanprowrestling
 [💖✌️wellfound]: https://angel.co/u/peter-boling
-[💖✌️wellfound-img]: https://img.shields.io/badge/peter--boling-orange?style=plastic&logo=wellfound
+[💖✌️wellfound-img]: https://img.shields.io/badge/peter--boling-orange?style=flat&logo=wellfound
 [💖💲crunchbase]: https://www.crunchbase.com/person/peter-boling
-[💖💲crunchbase-img]: https://img.shields.io/badge/peter--boling-purple?style=plastic&logo=crunchbase
+[💖💲crunchbase-img]: https://img.shields.io/badge/peter--boling-purple?style=flat&logo=crunchbase
 [💖🐘ruby-mast]: https://ruby.social/@galtzo
-[💖🐘ruby-mast-img]: https://img.shields.io/mastodon/follow/109447111526622197?domain=https%3A%2F%2Fruby.social&style=plastic&logo=mastodon&label=Ruby%20%40galtzo
+[💖🐘ruby-mast-img]: https://img.shields.io/mastodon/follow/109447111526622197?domain=https%3A%2F%2Fruby.social&style=flat&logo=mastodon&label=Ruby%20%40galtzo
+[💖🦋bluesky]: https://galtzo.bsky.social
+[💖🦋bluesky-img]: https://img.shields.io/badge/@galtzo.bsky.social-0285FF?style=flat&logo=bluesky&logoColor=white
 [💖🌳linktree]: https://linktr.ee/galtzo
-[💖🌳linktree-img]: https://img.shields.io/badge/galtzo-purple?style=plastic&logo=linktree
+[💖🌳linktree-img]: https://img.shields.io/badge/galtzo-purple?style=flat&logo=linktree
 [💖💁🏼‍♂️devto]: https://dev.to/galtzo
-[💖💁🏼‍♂️devto-img]: https://img.shields.io/badge/dev.to-0A0A0A?style=plastic&logo=devdotto&logoColor=white
+[💖💁🏼‍♂️devto-img]: https://img.shields.io/badge/dev.to-0A0A0A?style=flat&logo=devdotto&logoColor=white
 [💖💁🏼‍♂️aboutme]: https://about.me/peter.boling
 [👨🏼‍🏫expsup-upwork]: https://www.upwork.com/freelancers/~014942e9b056abdf86?mp_source=share
-[👨🏼‍🏫expsup-upwork-img]: https://img.shields.io/badge/UpWork-6FDA44?style=for-the-badge&logo=Upwork&logoColor=white
+[👨🏼‍🏫expsup-upwork-img]: https://img.shields.io/badge/UpWork-13544E?style=for-the-badge&logo=Upwork&logoColor=white
 [👨🏼‍🏫expsup-codementor]: https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github
-[👨🏼‍🏫expsup-codementor-img]: https://img.shields.io/badge/CodeMentor-Get%20Help-1abc9c?style=for-the-badge&logo=CodeMentor&logoColor=white
+[👨🏼‍🏫expsup-codementor-img]: https://img.shields.io/badge/CodeMentor-Get_Help-1abc9c?style=for-the-badge&logo=CodeMentor&logoColor=white
 [🏙️entsup-tidelift]: https://tidelift.com/
-[🏙️entsup-tidelift-img]: https://img.shields.io/badge/TideLift-Enterprise%20Support-1abc9c?style=for-the-badge&logo=TideLift&logoColor=white
+[🏙️entsup-tidelift-img]: https://img.shields.io/badge/Tidelift_and_Sonar-Enterprise_Support-FD3456?style=for-the-badge&logo=sonar&logoColor=white
 [🏙️entsup-tidelift-sonar]: https://blog.tidelift.com/tidelift-joins-sonar
 [💁🏼‍♂️peterboling]: http://www.peterboling.com
-[💁🏼‍♂️railsbling]: http://www.railsbling.com
-[📜docs-gh-img]: https://img.shields.io/badge/Github-6FDA44?style=for-the-badge&logo=Github&logoColor=white
-[📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current%20Release-6FDA44?style=for-the-badge&logo=RubyDoc&logoColor=white
-[📜docs-head-rd-img]: https://img.shields.io/badge/RubyDoc-HEAD-6FDA44?style=for-the-badge&logo=RubyDoc&logoColor=white
+[🚂railsbling]: http://www.railsbling.com
+[📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
+[📜src-gl]: https://gitlab.com/oauth-xx/version_gem/
+[📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=Github&logoColor=green
+[📜src-gh]: https://github.com/oauth-xx/version_gem
+[📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
+[📜docs-head-rd-img]: https://img.shields.io/badge/RubyDoc-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜wiki]: https://gitlab.com/oauth-xx/version_gem/-/wikis/home
-[📜wiki-img]: https://img.shields.io/badge/wiki-examples-brightgreen.svg?style=flat
+[📜wiki-img]: https://img.shields.io/badge/wiki-examples-943CD2.svg?style=for-the-badge&logo=Wiki&logoColor=white
 [👽dl-rank]: https://rubygems.org/gems/version_gem
 [👽dl-ranki]: https://img.shields.io/gem/rd/version_gem.svg
 [👽oss-help]: https://www.codetriage.com/oauth-xx/version_gem
@@ -447,7 +465,7 @@ or one of the others at the head of this README.
 [🖇sponsor]: https://github.com/sponsors/pboling
 [🖇polar-img]: https://polar.sh/embed/seeks-funding-shield.svg?org=pboling
 [🖇polar]: https://polar.sh/pboling
-[🖇kofi-img]: https://img.shields.io/badge/buy%20me%20coffee-donate-yellow.svg
+[🖇kofi-img]: https://img.shields.io/badge/buy_me_coffee-donate-yellow.svg
 [🖇kofi]: https://ko-fi.com/O5O86SNP4
 [🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
 [🖇patreon]: https://patreon.com/galtzo
@@ -476,14 +494,15 @@ or one of the others at the head of this README.
 [🤝issues]: https://github.com/oauth-xx/version_gem/issues
 [🤝pulls]: https://github.com/oauth-xx/version_gem/pulls
 [🤝contributing]: CONTRIBUTING.md
-[🔑codecov-g]: https://codecov.io/gh/oauth-xx/version_gem/graphs/tree.svg?token=cc6UdZCpAL
+[🔑codecov-g♻️]: https://codecov.io/gh/oauth-xx/version_gem/graphs/tree.svg?token=cc6UdZCpAL
 [🖐contrib-rocks]: https://contrib.rocks
 [🖐contributors]: https://github.com/oauth-xx/version_gem/graphs/contributors
 [🖐contributors-img]: https://contrib.rocks/image?repo=oauth-xx/version_gem
 [🚎contributors-gl]: https://gitlab.com/oauth-xx/version_gem/-/graphs/main
 [🪇conduct]: CODE_OF_CONDUCT.md
+[🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-4baaaa.svg
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
-[📌semver]: http://semver.org/
+[📌semver]: https://semver.org/spec/v2.0.0.html
 [📌semver-img]: https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat
 [📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
 [📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
@@ -491,7 +510,7 @@ or one of the others at the head of this README.
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.077-FFDD67.svg?style=flat
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.077-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-brightgreen.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
@@ -500,12 +519,8 @@ or one of the others at the head of this README.
 [📄license-img]: https://img.shields.io/badge/License-MIT-green.svg
 [📄ilo-declaration]: https://www.ilo.org/declaration/lang--en/index.htm
 [📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-brightgreen.svg?style=flat
-[railsbling]: http://www.railsbling.com
-[peterboling]: http://www.peterboling.com
-[bundle-group-pattern]: https://gist.github.com/pboling/4564780
 [🚎yard-current]: http://rubydoc.info/gems/version_gem
 [🚎yard-head]: https://rubydoc.info/github/oauth-xx/version_gem/main
-[homepage]: https://github.com/oauth-xx/version_gem
 [🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
 [🖇buyme]: https://www.buymeacoffee.com/pboling
 [🖇buyme-small-img]: https://img.shields.io/badge/Buy--Me--A--Coffee-✓-brightgreen.svg?style=flat
