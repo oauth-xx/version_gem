@@ -8,6 +8,14 @@ GIT
       rake (>= 10)
       thor (>= 0.14.0)
 
+GIT
+  remote: https://github.com/pboling/gem_checksums
+  revision: 5ae91cf8cbf741c76254272c8dac09b2afac22c7
+  branch: feat/docs
+  specs:
+    gem_checksums (1.0.0)
+      version_gem (>= 1.1.5, < 3)
+
 PATH
   remote: .
   specs:
@@ -233,6 +241,7 @@ DEPENDENCIES
   benchmark (~> 0.4)
   bundler-audit (~> 0.9.2)
   debug (>= 1.0.0)
+  gem_checksums!
   github-markup (~> 5.0, >= 5.0.1)
   kettle-soup-cover (~> 1.0, >= 1.0.4)
   pry (~> 0.14)

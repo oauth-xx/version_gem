@@ -68,5 +68,14 @@ rescue LoadError
   task(coverage: :spec)
 end
 
+begin
+  require "gem_checksums"
+  GemChecksums.install_tasks
+rescue LoadError
+  task("build:checksums") do
+    warn("gem_checksums is not available")
+  end
+end
+
 # coverage task will open coverage in browser locally
 task default: %i[coverage rubocop_gradual:autocorrect yard yard:junk]

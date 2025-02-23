@@ -17,7 +17,7 @@ gemspec
 
 platform :mri do
   # Debugging - Ensure ENV["DEBUG"] == "true" to use debuggers within spec suite
-  if ruby_version < Gem::Version.new("2.7")
+  if ruby_version < Gem::Version.create("2.7")
     # Use byebug in code
     gem "byebug", ">= 11"
   else
@@ -49,3 +49,5 @@ eval_gemfile "gemfiles/modular/style.gemfile"
 eval_gemfile "gemfiles/modular/documentation.gemfile"
 
 gem "appraisal", github: "pboling/appraisal", branch: "galtzo"
+
+gem "gem_checksums", github: "pboling/gem_checksums", branch: "feat/docs"

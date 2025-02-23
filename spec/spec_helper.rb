@@ -1,48 +1,27 @@
 # frozen_string_literal: true
 
-begin
-  # This does not require "simplecov",
-  #   because that has a side-effect of running `.simplecov`
-  # Avoid loading version_gem via "kettle-soup-cover":
-  require "kettle/soup/cover"
-rescue LoadError
-  puts "Not running code coverage"
-end
-
 DEBUG = ENV.fetch("DEBUG", nil) == "true"
 DEBUG_IDE = ENV.fetch("DEBUG_IDE", "false") == "true"
 
-# Ruby Helpers from this gem.
-# - Not requiring because we want line coverage
-# - Not loading because we don't want to manage the constant re-definition
-module VersionGem
-  # Helpers for library CI integration against many different versions of Ruby
-  module Faux
-    RUBY_VER = ::Gem::Version.new(RUBY_VERSION)
-
-    def gte_minimum_version?(version, engine = "ruby")
-      RUBY_VER >= ::Gem::Version.new(version) && ::RUBY_ENGINE == engine
-    end
-    module_function :gte_minimum_version?
-
-    def actual_minor_version?(major, minor, engine = "ruby")
-      major.to_i == RUBY_VER.segments[0] &&
-        minor.to_i == RUBY_VER.segments[1] &&
-        ::RUBY_ENGINE == engine
-    end
-    module_function :actual_minor_version?
-  end
-end
-
 # RSpec Configs
+require_relative "config/byebug"
 require_relative "config/rspec/rspec_core"
 require_relative "config/rspec/rspec_block_is_expected"
 
 # RSpec Helpers which do not depend on gem internals
-# NONE
+require_relative "helpers/faux"
 
 # Last thing before this gem is code coverage:
-require "simplecov" if defined?(Kettle) && Kettle::Soup::Cover::DO_COV
+begin
+  # kettle-soup-cover does not require "simplecov", but
+  #   we do that next, and that has a side effect of running `.simplecov`
+  # Also, we must avoid loading "version_gem" (this gem) via "kettle-soup-cover",
+  #   so instead of the normal kettle-soup-cover we use kettle/soup/cover.
+  require "kettle/soup/cover"
+  require "simplecov" if defined?(Kettle) && Kettle::Soup::Cover::DO_COV
+rescue LoadError
+  nil
+end
 
 # This gem
 require "version_gem"
