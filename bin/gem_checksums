@@ -24,4 +24,4 @@ end
 require "rubygems"
 require "bundler/setup"
 
-load Gem.bin_path("gem_checksums", "gem_checksums")
+load Gem.bin_path("stone_checksums", "gem_checksums")
