@@ -12,6 +12,7 @@ Gem::Specification.new do |spec|
   #   and securely certify them independently via alternate package management systems.
   # Ref: https://gitlab.com/oauth-xx/version_gem/-/issues/3
   # Hence, only enable signing if the cert_file is present.
+  # See CONTRIBUTING.md
   cert_file = ENV.fetch("GEM_CERT_PATH", "certs/#{ENV.fetch("GEM_CERT_USER", ENV["USER"])}.pem")
   if cert_file && File.exist?(File.join(__dir__, cert_file))
     spec.cert_chain = [ENV.fetch("GEM_CERT_PATH", "certs/#{ENV.fetch("GEM_CERT_USER", ENV["USER"])}.pem")]
