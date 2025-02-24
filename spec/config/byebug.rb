@@ -1,4 +1,4 @@
-if ENV.fetch("DEBUG", "false").casecmp?("true")
+if ENV.fetch("DEBUG", "false").casecmp("true") == 0
   ruby_version = Gem::Version.create(RUBY_VERSION)
   if ruby_version < Gem::Version.create("2.7")
     # Use byebug in code
