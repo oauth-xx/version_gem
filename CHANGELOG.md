@@ -1,8 +1,20 @@
 # Changelog
+
+[![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]
+
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog][📗keep-changelog],
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html),
+and [yes][📌major-versions-not-sacred], platform and engine support are part of the [public API][📌semver-breaking].
+Please file a bug if you notice a violation of semantic versioning.
+
+[📌semver]: https://semver.org/spec/v2.0.0.html
+[📌semver-img]: https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat
+[📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
+[📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
+[📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
+[📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 
 ## [Unreleased]
 ### Added
@@ -10,20 +22,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [1.1.5] 2025-02-21 ([tag][1.1.5t])
+## [1.1.6] 2025-02-24 ([tag][1.1.6t])
 - Line Coverage: 100.0% (77 / 77)
 - Branch Coverage: 100.0% (2 / 2)
 - 77.78% documented
 ### Added
-- Document approach to get code coverage on your gem's version.rb file
-- More documentation, and yard task for documentation
-- Documentation of Ruby version and SemVer support
+- Support for JRuby 9.1, 9.2, 9.3, 9.4, and head (@pboling)
+- Support for Truffle Ruby 22.3, 23.0, 23.1, 24.1, and head (@pboling)
+- Evergreen current latest engine release workflow (@pboling)
+  - Runs ruby, truffleruby, and jruby, always latest release
+- Improved developer experience for contributors (@pboling)
+- More documentation (@pboling)
+- Switch to stone_checksums for checksum generation (@pboling)
+### Changed
+- Code of Conduct updated - Contributor Covenant v2.0 => v2.1 (@pboling)
+
+## [1.1.5] 2025-02-22 ([tag][1.1.5t])
+- Line Coverage: 100.0% (77 / 77)
+- Branch Coverage: 100.0% (2 / 2)
+- 77.78% documented
+### Added
+- Document approach to get code coverage on your gem's version.rb file (@pboling)
+- More documentation, and yard task for documentation (@pboling)
+- Documentation of Ruby version and SemVer support (@pboling)
 ### Fixed
-- [#3](https://gitlab.com/oauth-xx/version_gem/-/issues/3) - Allow packaging without signing
+- [#3](https://gitlab.com/oauth-xx/version_gem/-/issues/3) - Allow packaging without signing (@pboling)
   - to support secure linux distros which have alternate means of signing packages within their package managers
-- Code coverage tracking
-- Documentation of usage in gemspec via `Kernel.load`
-- Improved gemspec config
+- Code coverage tracking (@pboling)
+- Documentation of usage in gemspec via `Kernel.load` (@pboling)
+- Improved gemspec config (@pboling)
 
 ## [1.1.4] 2024-03-21 ([tag][1.1.4t])
 ### Added
@@ -70,10 +97,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Gem releases are now cryptographically signed (@pboling)
 
 ## [1.1.0] - 2022-06-24 ([tag][1.1.0t])
-### Fixed
-- to_a uses same type casting as major, minor, patch, and pre (@pboling)
 ### Added
 - RSpec Matchers and Shared Example (@pboling)
+### Fixed
+- `to_a` uses same type casting as major, minor, patch, and pre (@pboling)
 
 ## [1.0.2] - 2022-06-23 ([tag][1.0.2t])
 ### Added
@@ -90,7 +117,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release, with basic version parsing API (@pboling)
 
-[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.5...main
+[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.6...main
+[1.1.6]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.5...v1.1.6
+[1.1.6t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.6
 [1.1.5]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.4...v1.1.5
 [1.1.5t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.5
 [1.1.4]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.3...v1.1.4
