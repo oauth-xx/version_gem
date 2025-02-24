@@ -49,5 +49,3 @@ eval_gemfile "gemfiles/modular/style.gemfile"
 eval_gemfile "gemfiles/modular/documentation.gemfile"
 
 gem "appraisal", github: "pboling/appraisal", branch: "galtzo"
-
-gem "gem_checksums", github: "pboling/gem_checksums", branch: "feat/docs"

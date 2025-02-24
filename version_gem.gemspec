@@ -72,8 +72,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")  # ruby >= 1.8.7
 
   # Development Tasks
-  spec.add_development_dependency("gem_checksums", "~> 1.0")            # ruby >= 2.2
   spec.add_development_dependency("rake", "~> 13.0")                    # ruby >= 2.2
+  spec.add_development_dependency("stone_checksums", "~> 1.0")          # ruby >= 2.2
 
   # Linting - rubocop-lts v8 is a rubocop wrapper for Ruby >= 2.2,
   #   and should only be bumped when dropping old Ruby support
