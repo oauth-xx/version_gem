@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 RSpec.describe(VersionGem::Error) do
-  it "is a standard error" do
-    expect(described_class).to be_a(StandardError)
+  it "is a runtime error" do
+    expect(described_class.new).to be_a(RuntimeError)
   end
 
   describe "raise" do
