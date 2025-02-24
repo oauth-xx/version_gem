@@ -7,7 +7,7 @@ RSpec.describe(VersionGem::Ruby) do
   let(:engine) { RUBY_ENGINE }
 
   it "is a module" do
-    expect(described_class).is_a?(Module)
+    expect(described_class).to be_a(Module)
   end
 
   describe "#gte_minimum_version?" do

@@ -2,7 +2,7 @@
 
 RSpec.describe(VersionGem::Error) do
   it "is a standard error" do
-    expect(described_class).is_a?(StandardError)
+    expect(described_class).to be_a(StandardError)
   end
 
   describe "raise" do
