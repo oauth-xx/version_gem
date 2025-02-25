@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.2"
 
-  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["homepage_uri"] = "https://railsbling.com/tags/#{spec.name}/"
   spec.metadata["source_code_uri"] = "#{spec.homepage}/-/tree/v#{spec.version}"
   spec.metadata["changelog_uri"] = "#{spec.homepage}/-/blob/v#{spec.version}/CHANGELOG.md"
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/-/issues"
