@@ -72,7 +72,7 @@ begin
   require "gem_checksums"
   GemChecksums.install_tasks
 rescue LoadError
-  task("build:checksums") do
+  task("build:generate_checksums") do
     warn("gem_checksums is not available")
   end
 end
