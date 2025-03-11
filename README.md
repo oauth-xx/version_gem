@@ -162,7 +162,7 @@ end
 
 Your `version.rb` file now abides the Ruby convention of directory / path matching the namespace / class!
 
-### Zietwerk
+### Zeitwerk
 
 The pattern of `version.rb` breaking the ruby convention of directory / path matching the namespace / class
 is so entrenched that the `zeitwerk` library has a special carve-out for it. 🥺
