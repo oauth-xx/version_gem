@@ -17,7 +17,6 @@
 [![CI Legacy][🚎4-lg-wfi]][🚎4-lg-wf]
 [![CI Unsupported][🚎7-us-wfi]][🚎7-us-wf]
 [![CI Ancient][🚎1-an-wfi]][🚎1-an-wf]
-[![CI Hoary][🚎8-ho-wfi]][🚎8-ho-wf]
 [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf]
 [![CI Style][🚎5-st-wfi]][🚎5-st-wf]
 
