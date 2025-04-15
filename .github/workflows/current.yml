@@ -54,7 +54,7 @@ jobs:
             rubygems: default
             bundler: default
 
-          # jruby-9.4 (targets Ruby 3.1 compatibility)
+          # jruby-10.0 (targets Ruby 3.4 compatibility)
           - ruby: "jruby"
             appraisal: "current"
             exec_cmd: "rake spec"
