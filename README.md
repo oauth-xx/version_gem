@@ -39,7 +39,7 @@ This gem has a very niche purpose, which is:
 3. allowing 100% test coverage of Ruby code, including the `Version` module.
 
 As proof in the pudding, this gem achieves 100% test coverage for lines and branches,
-all 77 and 2 of them, respectively; coverage enabled in part by patterns from this library.
+all 117 and 4 of them, respectively; coverage enabled in part by patterns from this library.
 You can make it happen for your library too!
 
 If this isn't **precisely** your use case you may be better off looking at
@@ -607,7 +607,7 @@ or one of the others at the head of this README.
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.077-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.117-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-brightgreen.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
