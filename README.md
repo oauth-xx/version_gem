@@ -162,7 +162,7 @@ end
 
 Your `version.rb` file now abides the Ruby convention of directory / path matching the namespace / class!
 
-## Epoch Usage (Epoch Semantic Versioning)
+## Epoch Usage (Epoch Semantic Versioning, as of version 1.1.7)
 
 In the standard `bundle gem my_lib` code you get the following in `lib/my_lib/version.rb`:
 
@@ -182,6 +182,12 @@ module MyLib
 end
 ```
 
+The Epoch and Major versions are derived from the formula:
+
+```
+{EPOCH * 1000 + MAJOR}.MINOR.PATCH
+```
+
 This will start your library with the following version segments:
 
 * `epoch = 0`
@@ -189,12 +195,6 @@ This will start your library with the following version segments:
 * `minor = 1`
 * `patch = 0`
 * `pre = nil`
-
-The Epoch and Major versions are derived from the formula:
-
-```
-{EPOCH * 1000 + MAJOR}.MINOR.PATCH
-```
 
 And the segments are defined as:
 
@@ -205,7 +205,7 @@ MINOR: Increment when you add functionality in a backwards-compatible manner.
 PATCH: Increment when you make backwards-compatible bug fixes.
 ```
 
-Therefore if you set your version number to:
+Therefore, if you set your version number to:
 
 ```ruby
 VERSION = "27016.42.86-pre.7"
@@ -215,11 +215,11 @@ You will get the following version segments:
 
 ```
 {
-    epoch: 27,
-    major: 16,
-    minor: 42,
-    patch:  86,
-    pre: "pre-7",
+  epoch: 27,
+  major: 16,
+  minor: 42,
+  patch: 86,
+  pre: "pre-7",
 }
 ```
 
@@ -349,9 +349,11 @@ RSpec.describe(MyLib::Version) do
     expect(described_class).to(have_version_as_string)
     expect(described_class.to_s).to(be_a(String))
     expect(described_class).to(have_major_as_integer)
+    expect(described_class).to(have_epoch_as_integer)
     expect(described_class).to(have_minor_as_integer)
     expect(described_class).to(have_patch_as_integer)
     expect(described_class).to(have_pre_as_nil_or_string)
+    # This would be %i[epoch major minor patch pre] for epoch version schemes
     expect(described_class.to_h.keys).to(match_array(%i[major minor patch pre]))
     expect(described_class.to_a).to(be_a(Array))
   end
@@ -405,7 +407,8 @@ This Library adheres to [![Epoch Semantic Versioning][📌semver-img]][📌semve
 Violations of this scheme should be reported as bugs.
 Specifically, if a minor or patch version is released that breaks backward compatibility,
 a new version should be immediately released that restores compatibility.
-Breaking changes to the public API, including dropping a supported platform (i.e. minor version of Ruby), will only be introduced with new major versions.
+Breaking changes to the public API, including dropping a supported platform (i.e. minor version of Ruby),
+will only be introduced with new major versions.
 Epoch will only be bumped if there are dramatic changes, and that is not expected to happen ever.
 
 ### 📌 Is "Platform Support" part of the public API?
