@@ -58,6 +58,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Raw `bundle` will use the BUNDLE_GEMFILE set to matrix.gemfile (i.e. Appraisal.root)
+      # We need to do this first to get appraisal installed.
+      # NOTE: This does not use the main Gemfile at all.
       - name: Setup Ruby & RubyGems
         uses: ruby/setup-ruby@v1
         with:
@@ -71,11 +74,6 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         continue-on-error: ${{ matrix.experimental != 'false' }}
 
-      # Raw `bundle` will use the BUNDLE_GEMFILE set to matrix.gemfile (i.e. Appraisal.root)
-      # We need to do this first to get appraisal installed.
-      # NOTE: This does not use the main Gemfile at all.
-      - name: Install Root Appraisal
-        run: bundle
       - name: Appraisal for ${{ matrix.appraisal }}
         run: bundle exec appraisal ${{ matrix.appraisal }} bundle
       - name: Tests for ${{ matrix.ruby }}@current via ${{ matrix.exec_cmd }}
@@ -98,7 +96,7 @@ jobs:
           hide_complexity: true
           indicators: true
           output: both
-          thresholds: '69 80'
+          thresholds: '100 100'
         continue-on-error: ${{ matrix.experimental != 'false' }}
 
       - name: Add Coverage PR Comment
@@ -109,13 +107,22 @@ jobs:
           path: code-coverage-results.md
         continue-on-error: ${{ matrix.experimental != 'false' }}
 
-      - name: Coveralls
+      - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: ${{ matrix.experimental != 'false' }}
 
-      - name: Upload results to Codecov
+      - name: Upload coverage to QLTY
+        uses: qltysh/qlty-action/coverage@main
+        with:
+          coverage-token: ${{secrets.QLTY_COVERAGE_TOKEN}}
+          files: coverage/.resultset.json
+        continue-on-error: ${{ matrix.experimental != 'false' }}
+
+      - name: Upload coverage to CodeCov
         uses: codecov/codecov-action@v5
         with:
+          fail_ci_if_error: true # optional (default = false)
           token: ${{ secrets.CODECOV_TOKEN }}
+          verbose: true # optional (default = false)
