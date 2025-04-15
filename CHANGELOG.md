@@ -22,6 +22,19 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 ### Removed
 
+## [1.1.7] 2025-04-15 ([tag][1.1.7t])
+- Line Coverage: 100.0% (117 / 117)
+- Branch Coverage: 100.0% (4 / 4)
+-  76.92% documented
+### Added
+- Support for Epoch Semantic Versioning
+  - `extend VersionGem::Epoch` in your library's `MyLib::Version` module
+- Support for JRuby 10 (@pboling)
+- More documentation (@pboling)
+### Removed
+- Ruby 2.2 removed from CI, though technically still supported
+  - can't run directly in GHA anymore
+
 ## [1.1.6] 2025-02-24 ([tag][1.1.6t])
 - Line Coverage: 100.0% (77 / 77)
 - Branch Coverage: 100.0% (2 / 2)
@@ -117,7 +130,9 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Added
 - Initial release, with basic version parsing API (@pboling)
 
-[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.6...main
+[Unreleased]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.7...main
+[1.1.7]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.6...v1.1.7
+[1.1.7t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.7
 [1.1.6]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.5...v1.1.6
 [1.1.6t]: https://gitlab.com/oauth-xx/oauth2/-/tags/v1.1.6
 [1.1.5]: https://gitlab.com/oauth-xx/version_gem/-/compare/v1.1.4...v1.1.5
