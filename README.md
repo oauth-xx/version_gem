@@ -177,9 +177,50 @@ Change it to a nested `Version` namespace (the one implied by the path => namesp
 ```ruby
 module MyLib
   module Version
-    VERSION = "1024.3.8"
+    VERSION = "0.1.0"
   end
 end
+```
+
+This will start your library with the following version segments:
+
+* `epoch = 0`
+* `major = 0`
+* `minor = 1`
+* `patch = 0`
+* `pre = nil`
+
+The Epoch and Major versions are derived from the formula:
+
+```
+{EPOCH * 1000 + MAJOR}.MINOR.PATCH
+```
+
+And the segments are defined as:
+
+```
+EPOCH: Increment when you make significant or groundbreaking changes.
+MAJOR: Increment when you make minor incompatible API changes.
+MINOR: Increment when you add functionality in a backwards-compatible manner.
+PATCH: Increment when you make backwards-compatible bug fixes.
+```
+
+Therefore if you set your version number to:
+
+```ruby
+VERSION = "27016.42.86-pre.7"
+```
+
+You will get the following version segments:
+
+```
+{
+    epoch: 27,
+    major: 16,
+    minor: 42,
+    patch:  86,
+    pre: "pre-7",
+}
 ```
 
 Now add the following near the top of the file the manages requiring external libraries.
@@ -475,10 +516,10 @@ or one of the others at the head of this README.
 [👽oss-helpi]: https://www.codetriage.com/oauth-xx/version_gem/badges/users.svg
 [👽version]: https://rubygems.org/gems/version_gem
 [👽versioni]: https://img.shields.io/gem/v/version_gem.svg
-[🔑cc-mnt]: https://codeclimate.com/github/oauth-xx/version_gem/maintainability
-[🔑cc-mnti♻️]: https://api.codeclimate.com/v1/badges/e26c543320ca0d14e871/maintainability
-[🔑cc-cov]: https://codeclimate.com/github/oauth-xx/version_gem/test_coverage
-[🔑cc-covi♻️]: https://api.codeclimate.com/v1/badges/e26c543320ca0d14e871/test_coverage
+[🔑cc-mnt]: https://qlty.sh/gh/rubocop-lts/projects/standard-rubocop-lts
+[🔑cc-mnti♻️]: https://qlty.sh/badges/19404e90-9168-451a-8dac-882382cb768d/maintainability.svg
+[🔑cc-cov]: https://qlty.sh/gh/rubocop-lts/projects/standard-rubocop-lts
+[🔑cc-covi♻️]: https://qlty.sh/badges/19404e90-9168-451a-8dac-882382cb768d/test_coverage.svg
 [🔑codecov]: https://codecov.io/gh/oauth-xx/version_gem
 [🔑codecovi♻️]: https://codecov.io/gh/oauth-xx/version_gem/branch/main/graph/badge.svg?token=cc6UdZCpAL
 [🔑coveralls]: https://coveralls.io/github/oauth-xx/version_gem?branch=main
