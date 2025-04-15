@@ -39,7 +39,7 @@ This gem has a very niche purpose, which is:
 3. allowing 100% test coverage of Ruby code, including the `Version` module.
 
 As proof in the pudding, this gem achieves 100% test coverage for lines and branches,
-all 77 and 2 of them, respectively; coverage enabled in part by patterns from this library.
+all 117 and 4 of them, respectively; coverage enabled in part by patterns from this library.
 You can make it happen for your library too!
 
 If this isn't **precisely** your use case you may be better off looking at
@@ -70,10 +70,10 @@ This gem has no runtime dependencies.
 
 | Tokens to Remember      | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                                                                                                                          |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Works with JRuby        | [![JRuby 9.1 Compat][💎jruby-9.1i]][🚎10-j-wf] [![JRuby 9.2 Compat][💎jruby-9.2i]][🚎10-j-wf] [![JRuby 9.3 Compat][💎jruby-9.3i]][🚎10-j-wf] [![JRuby 9.4 Compat][💎jruby-c-i]][🚎11-c-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]                                                                                                                                                                                                                         |
+| Works with JRuby        | [![JRuby 9.1 Compat][💎jruby-9.1i]][🚎10-j-wf] [![JRuby 9.2 Compat][💎jruby-9.2i]][🚎10-j-wf] [![JRuby 9.3 Compat][💎jruby-9.3i]][🚎10-j-wf] [![JRuby 9.4 Compat][💎jruby-9.4i]][🚎10-j-wf] [![JRuby 10.0 Compat][💎jruby-c-i]][🚎11-c-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]                                                                                                                                                                         |
 | Works with Truffle Ruby | [![Truffle Ruby 22.3 Compat][💎truby-22.3i]][🚎9-t-wf] [![Truffle Ruby 23.0 Compat][💎truby-23.0i]][🚎9-t-wf] [![Truffle Ruby 23.1 Compat][💎truby-23.1i]][🚎9-t-wf] [![Truffle Ruby 24.1 Compat][💎truby-c-i]][🚎11-c-wf] [![Truffle Ruby HEAD Compat][💎truby-headi]][🚎3-hd-wf]                                                                                                                                                                                  |
 | Works with MRI Ruby 3   | [![Ruby 3.0 Compat][💎ruby-3.0i]][🚎4-lg-wf] [![Ruby 3.1 Compat][💎ruby-3.1i]][🚎6-s-wf] [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]                                                                                                                                                                                         |
-| Works with MRI Ruby 2   | [![Ruby 2.2 Compat][💎ruby-2.2i]][🚎8-ho-wf] [![Ruby 2.3 Compat][💎ruby-2.3i]][🚎1-an-wf] [![Ruby 2.4 Compat][💎ruby-2.4i]][🚎1-an-wf] [![Ruby 2.5 Compat][💎ruby-2.5i]][🚎1-an-wf] [![Ruby 2.6 Compat][💎ruby-2.6i]][🚎7-us-wf] [![Ruby 2.7 Compat][💎ruby-2.7i]][🚎7-us-wf]                                                                                                                                                                                       |
+| Works with MRI Ruby 2   | [![Ruby 2.3 Compat][💎ruby-2.3i]][🚎1-an-wf] [![Ruby 2.4 Compat][💎ruby-2.4i]][🚎1-an-wf] [![Ruby 2.5 Compat][💎ruby-2.5i]][🚎1-an-wf] [![Ruby 2.6 Compat][💎ruby-2.6i]][🚎7-us-wf] [![Ruby 2.7 Compat][💎ruby-2.7i]][🚎7-us-wf]                                                                                                                                                                                                                                    |
 | Source                  | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on Github.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                                                                                                                                                                                                                             |
 | Documentation           | [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] [![HEAD on RubyDoc.info][📜docs-head-rd-img]][🚎yard-head] [![BDFL Blog][🚂bdfl-blog-img]][🚂bdfl-blog] [![Wiki][📜wiki-img]][📜wiki]                                                                                                                                                                                                                                                        |
 | Compliance              | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]                                                                                                            |
@@ -162,7 +162,7 @@ end
 
 Your `version.rb` file now abides the Ruby convention of directory / path matching the namespace / class!
 
-## Epoch Usage (Epoch Semantic Versioning)
+## Epoch Usage (Epoch Semantic Versioning, as of version 1.1.7)
 
 In the standard `bundle gem my_lib` code you get the following in `lib/my_lib/version.rb`:
 
@@ -177,9 +177,50 @@ Change it to a nested `Version` namespace (the one implied by the path => namesp
 ```ruby
 module MyLib
   module Version
-    VERSION = "1024.3.8"
+    VERSION = "0.1.0"
   end
 end
+```
+
+The Epoch and Major versions are derived from the formula:
+
+```
+{EPOCH * 1000 + MAJOR}.MINOR.PATCH
+```
+
+This will start your library with the following version segments:
+
+* `epoch = 0`
+* `major = 0`
+* `minor = 1`
+* `patch = 0`
+* `pre = nil`
+
+And the segments are defined as:
+
+```
+EPOCH: Increment when you make significant or groundbreaking changes.
+MAJOR: Increment when you make minor incompatible API changes.
+MINOR: Increment when you add functionality in a backwards-compatible manner.
+PATCH: Increment when you make backwards-compatible bug fixes.
+```
+
+Therefore, if you set your version number to:
+
+```ruby
+VERSION = "27016.42.86-pre.7"
+```
+
+You will get the following version segments:
+
+```
+{
+  epoch: 27,
+  major: 16,
+  minor: 42,
+  patch: 86,
+  pre: "pre-7",
+}
 ```
 
 Now add the following near the top of the file the manages requiring external libraries.
@@ -308,9 +349,11 @@ RSpec.describe(MyLib::Version) do
     expect(described_class).to(have_version_as_string)
     expect(described_class.to_s).to(be_a(String))
     expect(described_class).to(have_major_as_integer)
+    expect(described_class).to(have_epoch_as_integer)
     expect(described_class).to(have_minor_as_integer)
     expect(described_class).to(have_patch_as_integer)
     expect(described_class).to(have_pre_as_nil_or_string)
+    # This would be %i[epoch major minor patch pre] for epoch version schemes
     expect(described_class.to_h.keys).to(match_array(%i[major minor patch pre]))
     expect(described_class.to_a).to(be_a(Array))
   end
@@ -364,7 +407,8 @@ This Library adheres to [![Epoch Semantic Versioning][📌semver-img]][📌semve
 Violations of this scheme should be reported as bugs.
 Specifically, if a minor or patch version is released that breaks backward compatibility,
 a new version should be immediately released that restores compatibility.
-Breaking changes to the public API, including dropping a supported platform (i.e. minor version of Ruby), will only be introduced with new major versions.
+Breaking changes to the public API, including dropping a supported platform (i.e. minor version of Ruby),
+will only be introduced with new major versions.
 Epoch will only be bumped if there are dramatic changes, and that is not expected to happen ever.
 
 ### 📌 Is "Platform Support" part of the public API?
@@ -475,10 +519,10 @@ or one of the others at the head of this README.
 [👽oss-helpi]: https://www.codetriage.com/oauth-xx/version_gem/badges/users.svg
 [👽version]: https://rubygems.org/gems/version_gem
 [👽versioni]: https://img.shields.io/gem/v/version_gem.svg
-[🔑cc-mnt]: https://codeclimate.com/github/oauth-xx/version_gem/maintainability
-[🔑cc-mnti♻️]: https://api.codeclimate.com/v1/badges/e26c543320ca0d14e871/maintainability
-[🔑cc-cov]: https://codeclimate.com/github/oauth-xx/version_gem/test_coverage
-[🔑cc-covi♻️]: https://api.codeclimate.com/v1/badges/e26c543320ca0d14e871/test_coverage
+[🔑cc-mnt]: https://qlty.sh/gh/rubocop-lts/projects/standard-rubocop-lts
+[🔑cc-mnti♻️]: https://qlty.sh/badges/19404e90-9168-451a-8dac-882382cb768d/maintainability.svg
+[🔑cc-cov]: https://qlty.sh/gh/rubocop-lts/projects/standard-rubocop-lts
+[🔑cc-covi♻️]: https://qlty.sh/badges/19404e90-9168-451a-8dac-882382cb768d/test_coverage.svg
 [🔑codecov]: https://codecov.io/gh/oauth-xx/version_gem
 [🔑codecovi♻️]: https://codecov.io/gh/oauth-xx/version_gem/branch/main/graph/badge.svg?token=cc6UdZCpAL
 [🔑coveralls]: https://coveralls.io/github/oauth-xx/version_gem?branch=main
@@ -501,8 +545,6 @@ or one of the others at the head of this README.
 [🚎6-s-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/supported.yml/badge.svg
 [🚎7-us-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/unsupported.yml
 [🚎7-us-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/unsupported.yml/badge.svg
-[🚎8-ho-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/hoary.yml
-[🚎8-ho-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/hoary.yml/badge.svg
 [🚎9-t-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/truffle.yml
 [🚎9-t-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/truffle.yml/badge.svg
 [🚎10-j-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/jruby.yml
@@ -522,7 +564,6 @@ or one of the others at the head of this README.
 [🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
 [🖇buyme]: https://www.buymeacoffee.com/pboling
 [🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-✓-yellow.svg?style=flat
-[💎ruby-2.2i]: https://img.shields.io/badge/Ruby-2.2-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.3i]: https://img.shields.io/badge/Ruby-2.3-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.4i]: https://img.shields.io/badge/Ruby-2.4-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.5i]: https://img.shields.io/badge/Ruby-2.5-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
@@ -542,6 +583,7 @@ or one of the others at the head of this README.
 [💎jruby-9.1i]: https://img.shields.io/badge/JRuby-9.1-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-9.2i]: https://img.shields.io/badge/JRuby-9.2-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-9.3i]: https://img.shields.io/badge/JRuby-9.3-FBE742?style=for-the-badge&logo=ruby&logoColor=red
+[💎jruby-9.4i]: https://img.shields.io/badge/JRuby-9.4-FBE742?style=for-the-badge&logo=ruby&logoColor=red
 [💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
 [💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
 [🤝issues]: https://github.com/oauth-xx/version_gem/issues
@@ -563,7 +605,7 @@ or one of the others at the head of this README.
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.077-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.117-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-brightgreen.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
