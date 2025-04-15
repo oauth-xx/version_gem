@@ -36,8 +36,8 @@ jobs:
             appraisal: "ruby-2-2"
             exec_cmd: "rake spec"
             gemfile: "Appraisal.root"
-            rubygems: default
-            bundler: default
+            rubygems: "2.7.11"
+            bundler: "1.17.3"
 
     steps:
       - name: Checkout
