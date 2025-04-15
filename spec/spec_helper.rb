@@ -31,3 +31,4 @@ require "version_gem/rspec"
 
 # RSpec Helpers which depend on gem internals
 require_relative "helpers/under_test"
+require_relative "helpers/epoch_test"
