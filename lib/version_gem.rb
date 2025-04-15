@@ -2,6 +2,7 @@
 
 require_relative "version_gem/version"
 require_relative "version_gem/basic"
+require_relative "version_gem/epoch"
 
 # Namespace of this library
 module VersionGem

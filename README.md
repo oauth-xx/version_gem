@@ -26,7 +26,7 @@
 [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay]
 [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor]
 [![Buy me a coffee][🖇buyme-small-img]][🖇buyme]
-[![Polar Shield][🖇polar-img]][🖇polar]
+[![Donate on Polar][🖇polar-img]][🖇polar]
 [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi]
 [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
@@ -92,7 +92,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
     $ gem install version_gem
 
-## Usage
+## Basic Usage
 
 In the standard `bundle gem my_lib` code you get the following in `lib/my_lib/version.rb`:
 
@@ -162,7 +162,55 @@ end
 
 Your `version.rb` file now abides the Ruby convention of directory / path matching the namespace / class!
 
-### Zeitwerk
+## Epoch Usage (Epoch Semantic Versioning)
+
+In the standard `bundle gem my_lib` code you get the following in `lib/my_lib/version.rb`:
+
+```ruby
+module MyLib
+  VERSION = "0.1.0"
+end
+```
+
+Change it to a nested `Version` namespace (the one implied by the path => namespace convention):
+
+```ruby
+module MyLib
+  module Version
+    VERSION = "1024.3.8"
+  end
+end
+```
+
+Now add the following near the top of the file the manages requiring external libraries.
+Using the same example of `bundle gem my_lib`, this would be `lib/my_lib.rb`.
+
+```ruby
+require "version_gem"
+```
+
+Then, add the following wherever you want in the same file (recommend the bottom).
+
+```ruby
+MyLib::Version.class_eval do
+  extend VersionGem::Epoch
+end
+```
+
+And now you have some version introspection methods available:
+
+```ruby
+MyLib::Version.to_s # => "1024.3.8"
+MyLib::Version.epoch # => 1
+MyLib::Version.major # => 24
+MyLib::Version.minor # => 3
+MyLib::Version.patch # => 8
+MyLib::Version.pre # => ""
+MyLib::Version.to_a # => [1, 24, 3, 8]
+MyLib::Version.to_h # => { epoch: 1, major: 24, minor: 3, patch: 8, pre: "" }
+```
+
+## Usage with Zeitwerk
 
 The pattern of `version.rb` breaking the ruby convention of directory / path matching the namespace / class
 is so entrenched that the `zeitwerk` library has a special carve-out for it. 🥺
@@ -312,11 +360,12 @@ Also see GitLab Contributors: [https://gitlab.com/oauth-xx/version_gem/-/graphs/
 
 ## 📌 Versioning
 
-This Library adheres to [![Semantic Versioning 2.0.0][📌semver-img]][📌semver].
+This Library adheres to [![Epoch Semantic Versioning][📌semver-img]][📌semver].
 Violations of this scheme should be reported as bugs.
 Specifically, if a minor or patch version is released that breaks backward compatibility,
 a new version should be immediately released that restores compatibility.
-Breaking changes to the public API will only be introduced with new major versions.
+Breaking changes to the public API, including dropping a supported platform (i.e. minor version of Ruby), will only be introduced with new major versions.
+Epoch will only be bumped if there are dramatic changes, and that is not expected to happen ever.
 
 ### 📌 Is "Platform Support" part of the public API?
 
@@ -464,12 +513,15 @@ or one of the others at the head of this README.
 [⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
-[🖇polar-img]: https://polar.sh/embed/seeks-funding-shield.svg?org=pboling
+[🖇polar-img]: https://img.shields.io/badge/polar-donate-yellow.svg
 [🖇polar]: https://polar.sh/pboling
-[🖇kofi-img]: https://img.shields.io/badge/buy_me_coffee-donate-yellow.svg
+[🖇kofi-img]: https://img.shields.io/badge/a_more_different_coffee-✓-yellow.svg
 [🖇kofi]: https://ko-fi.com/O5O86SNP4
 [🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
 [🖇patreon]: https://patreon.com/galtzo
+[🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
+[🖇buyme]: https://www.buymeacoffee.com/pboling
+[🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-✓-yellow.svg?style=flat
 [💎ruby-2.2i]: https://img.shields.io/badge/Ruby-2.2-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.3i]: https://img.shields.io/badge/Ruby-2.3-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-2.4i]: https://img.shields.io/badge/Ruby-2.4-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
@@ -503,8 +555,8 @@ or one of the others at the head of this README.
 [🪇conduct]: CODE_OF_CONDUCT.md
 [🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-4baaaa.svg
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
-[📌semver]: https://semver.org/spec/v2.0.0.html
-[📌semver-img]: https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat
+[📌semver]: https://antfu.me/posts/epoch-semver
+[📌semver-img]: https://img.shields.io/badge/epoch-semver-FFDD67.svg?style=flat
 [📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
 [📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
 [📌changelog]: CHANGELOG.md
@@ -522,6 +574,3 @@ or one of the others at the head of this README.
 [📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-brightgreen.svg?style=flat
 [🚎yard-current]: http://rubydoc.info/gems/version_gem
 [🚎yard-head]: https://rubydoc.info/github/oauth-xx/version_gem/main
-[🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
-[🖇buyme]: https://www.buymeacoffee.com/pboling
-[🖇buyme-small-img]: https://img.shields.io/badge/Buy--Me--A--Coffee-✓-brightgreen.svg?style=flat
