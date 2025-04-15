@@ -521,7 +521,7 @@ or one of the others at the head of this README.
 [🔑cc-mnt]: https://codeclimate.com/github/oauth-xx/version_gem/maintainability
 [🔑cc-mnti♻️]: https://qlty.sh/badges/19404e90-9168-451a-8dac-882382cb768d/maintainability.svg
 [🔑cc-cov]: https://codeclimate.com/github/oauth-xx/version_gem/test_coverage
-[🔑cc-covi♻️]: https://qlty.sh/badges/19404e90-9168-451a-8dac-882382cb768d/maintainability.svg
+[🔑cc-covi♻️]: https://qlty.sh/badges/19404e90-9168-451a-8dac-882382cb768d/test_coverage.svg
 [🔑codecov]: https://codecov.io/gh/oauth-xx/version_gem
 [🔑codecovi♻️]: https://codecov.io/gh/oauth-xx/version_gem/branch/main/graph/badge.svg?token=cc6UdZCpAL
 [🔑coveralls]: https://coveralls.io/github/oauth-xx/version_gem?branch=main
