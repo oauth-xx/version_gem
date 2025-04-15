@@ -476,9 +476,9 @@ or one of the others at the head of this README.
 [👽version]: https://rubygems.org/gems/version_gem
 [👽versioni]: https://img.shields.io/gem/v/version_gem.svg
 [🔑cc-mnt]: https://codeclimate.com/github/oauth-xx/version_gem/maintainability
-[🔑cc-mnti♻️]: https://api.codeclimate.com/v1/badges/e26c543320ca0d14e871/maintainability
+[🔑cc-mnti♻️]: https://qlty.sh/badges/19404e90-9168-451a-8dac-882382cb768d/maintainability.svg
 [🔑cc-cov]: https://codeclimate.com/github/oauth-xx/version_gem/test_coverage
-[🔑cc-covi♻️]: https://api.codeclimate.com/v1/badges/e26c543320ca0d14e871/test_coverage
+[🔑cc-covi♻️]: https://qlty.sh/badges/19404e90-9168-451a-8dac-882382cb768d/maintainability.svg
 [🔑codecov]: https://codecov.io/gh/oauth-xx/version_gem
 [🔑codecovi♻️]: https://codecov.io/gh/oauth-xx/version_gem/branch/main/graph/badge.svg?token=cc6UdZCpAL
 [🔑coveralls]: https://coveralls.io/github/oauth-xx/version_gem?branch=main
