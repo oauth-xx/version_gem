@@ -1,7 +1,9 @@
 spec/helpers/faux.rb -- 1 warning:
-  [14, 15]:DuplicateMethodCall: VersionGem::Faux#actual_minor_version? calls 'RUBY_VER.segments' 2 times [https://github.com/troessner/reek/blob/v6.4.0/docs/Duplicate-Method-Call.md]
+  [14, 15]:DuplicateMethodCall: VersionGem::Faux#actual_minor_version? calls 'RUBY_VER.segments' 2 times [https://github.com/troessner/reek/blob/v6.5.0/docs/Duplicate-Method-Call.md]
+lib/version_gem/epoch.rb -- 1 warning:
+  [21]:IrresponsibleModule: VersionGem::Epoch::OverloadApiForEpoch has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
 lib/version_gem/error.rb -- 1 warning:
-  [4]:IrresponsibleModule: VersionGem::Error has no descriptive comment [https://github.com/troessner/reek/blob/v6.4.0/docs/Irresponsible-Module.md]
+  [4]:IrresponsibleModule: VersionGem::Error has no descriptive comment [https://github.com/troessner/reek/blob/v6.5.0/docs/Irresponsible-Module.md]
 lib/version_gem/ruby.rb -- 1 warning:
-  [14, 15]:DuplicateMethodCall: VersionGem::Ruby#actual_minor_version? calls 'RUBY_VER.segments' 2 times [https://github.com/troessner/reek/blob/v6.4.0/docs/Duplicate-Method-Call.md]
-3 total warnings
+  [14, 15]:DuplicateMethodCall: VersionGem::Ruby#actual_minor_version? calls 'RUBY_VER.segments' 2 times [https://github.com/troessner/reek/blob/v6.5.0/docs/Duplicate-Method-Call.md]
+4 total warnings
