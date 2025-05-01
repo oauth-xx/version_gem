@@ -47,7 +47,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir[
     # Files (alphabetical)
-    "lib/**/*",
+    "lib/**/*"
   ]
   # Automatically included with gem package, no need to list again in files.
   spec.extra_rdoc_files = Dir[
