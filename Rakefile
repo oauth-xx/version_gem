@@ -98,23 +98,16 @@ rescue LoadError
   end
 end
 
+# Setup RuboCop-LTS
 begin
-  require "rubocop/gradual/rake_task"
+  require "rubocop/lts"
 
-  RuboCop::Gradual::RakeTask.new
-
+  Rubocop::Lts.install_tasks
   defaults << "rubocop_gradual"
-
-  namespace(:rubocop_gradual) do
-    desc("dogfood internal rubocop configs")
-    task(:dogfood) do
-      %x(bin/rubocop-gradual -c .rubocop-dogfood.yml)
-    end
-  end
 rescue LoadError
   desc("(stub) rubocop_gradual is unavailable")
   task(:rubocop_gradual) do
-    warn("NOTE: rubocop-gradual isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+    warn("NOTE: rubocop-lts isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
 end
 
