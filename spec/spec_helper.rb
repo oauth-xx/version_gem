@@ -16,9 +16,14 @@ begin
   # kettle-soup-cover does not require "simplecov", but
   #   we do that next, and that has a side effect of running `.simplecov`
   # Also, we must avoid loading "version_gem" (this gem) via "kettle-soup-cover",
-  #   so instead of the normal kettle-soup-cover we use kettle/soup/cover.
-  require "kettle/soup/cover"
-  require "simplecov" if defined?(Kettle) && Kettle::Soup::Cover::DO_COV
+  #   so instead of the normal kettle-soup-cover, or kettle/soup/cover,
+  #   we do some proper hacking around the internals. Fortunately 2 gems, one author!
+  # require "kettle/soup/cover"
+  require "kettle/change"
+  require "kettle/soup/cover/version"
+  require "kettle/soup/cover/loaders"
+  require "kettle/soup/cover/constants"
+  require "simplecov" if Kettle::Soup::Cover::Constants::DO_COV
 rescue LoadError
   nil
 end
