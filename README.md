@@ -389,6 +389,10 @@ RSpec.describe(MyLib::Version) do
 end
 ```
 
+### 🚀 Release Instructions
+
+See [CONTRIBUTING.md][🤝contributing].
+
 ## 🔐 Security
 
 See [SECURITY.md][🔐security].
