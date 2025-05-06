@@ -1,12 +1,5 @@
 # frozen_string_literal: true
 
-# Get the GEMFILE_VERSION without *require* "my_gem/version", for code coverage accuracy
-# See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-2630782358
-# Kernel.load because load is overloaded in RubyGems during gemspec evaluation
-Kernel.load("lib/version_gem/version.rb")
-gem_version = VersionGem::Version::VERSION
-VersionGem::Version.send(:remove_const, :VERSION)
-
 Gem::Specification.new do |spec|
   # Linux distros may package ruby gems differently,
   #   and securely certify them independently via alternate package management systems.
@@ -26,6 +19,9 @@ Gem::Specification.new do |spec|
 
   spec.name = "version_gem"
   spec.version = gem_version
+  # Loading version into an anonymous module allows version.rb to get code coverage from SimpleCov!
+  # See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-2630782358
+  spec.version = Module.new.tap { |mod| Kernel.load("lib/version_gem/version.rb", mod) }::VersionGem::Version::VERSION
   spec.authors = ["Peter Boling"]
   spec.email = ["peter.boling@gmail.com", "oauth-ruby@googlegroups.com"]
 
