@@ -84,10 +84,13 @@ Also see GitLab Contributors: [https://gitlab.com/oauth-xx/version_gem/-/graphs/
 
 ### One-time, Per-maintainer, Setup
 
-**IMPORTANT**: Your public key for signing gems will need to be picked up by the line in the
-`gemspec` defining the `spec.cert_chain` (check the relevant ENV variables there),
-in order to sign the new release.
+**IMPORTANT**: If you want to sign the build you create,
+your public key for signing gems will need to be picked up by the line in the
+`gemspec` defining the `spec.cert_chain` (check the relevant ENV variables there).
+All releases to RubyGems.org will be signed.
 See: [RubyGems Security Guide][🔒️rubygems-security-guide]
+
+NOTE: To build without signing the gem you must set `SKIP_GEM_SIGNING` to some value in your environment.
 
 ### To release a new version:
 

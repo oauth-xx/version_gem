@@ -6,7 +6,8 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
 #### IMPORTANT #######################################################
-# Gemfile is for local development ONLY; Gemfile is NOT loaded in CI #
+# Gemfile is for local development and GitLab CI                     #
+# Gemfile is NOT loaded in GitHub Actions CI                         #
 ####################################################### IMPORTANT ####
 
 # For Ruby version specific dependencies
@@ -27,8 +28,6 @@ platform :mri do
 
   # Dev Console - Binding.pry - Irb replacement
   gem "pry", "~> 0.14"                     # ruby >= 2.0
-
-  gem "reek", "~> 6.4"
 end
 
 # Security Audit

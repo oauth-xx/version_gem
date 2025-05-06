@@ -18,6 +18,7 @@ module VersionGem
       end
     end
 
+    # Tweak the basic API so it will support Epoch Semantic Versioning
     module OverloadApiForEpoch
       # *** OVERLOAD METHODS FROM API ***
       #

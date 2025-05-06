@@ -59,6 +59,7 @@ RSpec.shared_examples_for("a Version module") do |version_mod|
   end
 end
 
+# This one is more Epoch ;)
 RSpec.shared_examples_for("an Epoch Version module") do |version_mod|
   it "is introspectable" do
     aggregate_failures "introspectable api" do
