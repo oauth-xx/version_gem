@@ -99,7 +99,7 @@ by following the instructions below.
 Add my public key (if you haven’t already, expires 2045-04-29) as a trusted certificate:
 
 ```shell
-gem cert --add <(curl -Ls https://raw.github.com/oauth-xx/version_gem/master/certs/pboling.pem)
+gem cert --add <(curl -Ls https://raw.github.com/oauth-xx/version_gem/main/certs/pboling.pem)
 ```
 
 You only need to do that once.  Then proceed to install with:
