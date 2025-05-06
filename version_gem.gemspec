@@ -18,7 +18,6 @@ Gem::Specification.new do |spec|
   end
 
   spec.name = "version_gem"
-  spec.version = gem_version
   # Loading version into an anonymous module allows version.rb to get code coverage from SimpleCov!
   # See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-2630782358
   spec.version = Module.new.tap { |mod| Kernel.load("lib/version_gem/version.rb", mod) }::VersionGem::Version::VERSION
