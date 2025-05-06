@@ -16,5 +16,7 @@
 
 # Packaging Artifacts
 *.gem
+
+# gemfile locks for CI
 gemfiles/*.gemfile.lock
 Appraisal.*.gemfile.lock

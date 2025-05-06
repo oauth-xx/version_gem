@@ -72,12 +72,6 @@ appraise "ruby-3-3" do
   remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
 end
 
-appraise "ruby-3-4" do
-  gem "mutex_m", "~> 0.2"
-  gem "stringio", "~> 3.0"
-  remove_gem "appraisal" # only present because it must be in the gemfile because we target a git branch
-end
-
 # Only run security audit on latest Ruby version
 appraise "audit" do
   gem "mutex_m", "~> 0.2"
