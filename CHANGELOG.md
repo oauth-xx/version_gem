@@ -23,8 +23,8 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Removed
 
 ## [1.1.8] 2025-05-06 ([tag][1.1.8t])
-- Line Coverage: 100.0% (117 / 117)
-- Branch Coverage: 100.0% (4 / 4)
+- COVERAGE: 100.00% -- 118/118 lines in 8 files
+- BRANCH COVERAGE: 100.00% -- 4/4 branches in 8 files
 - 84.62% documented
 ### Added
 - CITATION.cff (@pboling)
