@@ -93,7 +93,8 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ### 🔒 Secure Installation
 
-`version_gem` is cryptographically signed. Be sure the gem you install hasn’t been tampered with
+`version_gem` is cryptographically signed, and with verifiable [SHA-256 and SHA-512][💎SHA_checksums] checksums by
+[stone_checksums][💎stone_checksums]. Be sure the gem you install hasn’t been tampered with
 by following the instructions below.
 
 Add my public key (if you haven’t already, expires 2045-04-29) as a trusted certificate:
@@ -650,3 +651,5 @@ or one of the others at the head of this README.
 [📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-brightgreen.svg?style=flat
 [🚎yard-current]: http://rubydoc.info/gems/version_gem
 [🚎yard-head]: https://rubydoc.info/github/oauth-xx/version_gem/main
+[💎stone_checksums]: https://github.com/pboling/stone_checksums
+[💎SHA_checksums]: https://gitlab.com/oauth-xx/version_gem/-/tree/main/checksums
