@@ -1,4 +1,4 @@
-# VersionGem
+# 🔖 VersionGem
 
 [![Version][👽versioni]][👽version]
 [![License: MIT][📄license-img]][📄license-ref]
@@ -29,7 +29,7 @@
 [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi]
 [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
-## Alternatives
+## 🧐 Alternatives
 
 This gem has a very niche purpose, which is:
 
@@ -47,7 +47,7 @@ gem from the Alchemists, or _[version_sorter](https://rubygems.org/gems/version_
 
 For more discussion about this [see issue #2](https://gitlab.com/oauth-xx/version_gem/-/issues/2)
 
-## Still here?
+## 🚀 Still here?
 
 Give your next library an introspectable `Version` module without breaking your Gemspec.
 
@@ -65,7 +65,7 @@ This library was extracted from the gem _[oauth2](https://gitlab.com/oauth-xx/oa
 
 This gem has no runtime dependencies.
 
-## Info you can shake a stick at
+## 💡 Info you can shake a stick at
 
 | Tokens to Remember      | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                                                                                                                          |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -79,9 +79,9 @@ This gem has no runtime dependencies.
 | Expert 1:1 Support      | [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] `or` [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                                                                                                                                                                                                                                                                    |
 | Enterprise Support      | [![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]<br/>💡Subscribe for support guarantees covering _all_ FLOSS dependencies!<br/>💡Tidelift is part of [Sonar][🏙️entsup-tidelift-sonar]!<br/>💡Tidelift pays maintainers to maintain the software you depend on!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] subscription is "[never gonna let you down][🧮kloc]", and *supports* open source maintainers! |
 | Comrade BDFL 🎖️        | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact BDFL][🚂bdfl-contact-img]][🚂bdfl-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto]                                                                                                                                                              |
-| `...` 💖                | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![More About Me][💖💁🏼‍♂️aboutme-img]][💖💁🏼‍♂️aboutme]                                                                                                                                                                                                                             |
+| `...` 💖                | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![More About Me][💖💁🏼‍♂️aboutme-img]][💖💁🏼‍♂️aboutme] [🧊][💖🧊berg] [🐙][💖🐙hub]  [🛖][💖🛖hut] [🧪][💖🧪lab]                                                                                                                                                                   |
 
-## Installation
+## ✨ Installation
 
 Install the gem and add to the application's Gemfile by executing:
 
@@ -91,7 +91,36 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
     $ gem install version_gem
 
-## Basic Usage
+### 🔒 Secure Installation
+
+`version_gem` is cryptographically signed. Be sure the gem you install hasn’t been tampered with
+by following the instructions below.
+
+Add my public key (if you haven’t already, expires 2045-04-29) as a trusted certificate:
+
+```shell
+gem cert --add <(curl -Ls https://raw.github.com/oauth-xx/version_gem/master/certs/pboling.pem)
+```
+
+You only need to do that once.  Then proceed to install with:
+
+```shell
+gem install version_gem -P MediumSecurity
+```
+
+The `MediumSecurity` trust profile will verify signed gems, but allow the installation of unsigned dependencies.
+
+This is necessary because not all of `version_gem`’s dependencies are signed, so we cannot use `HighSecurity`.
+
+If you want to up your security game full-time:
+
+```shell
+bundle config set --global trust-policy MediumSecurity
+```
+
+NOTE: Be prepared to track down certs for signed gems and add them the same way you added mine.
+
+## 🔧 Basic Usage
 
 In the standard `bundle gem my_lib` code you get the following in `lib/my_lib/version.rb`:
 
@@ -250,7 +279,7 @@ MyLib::Version.to_a # => [1, 24, 3, 8]
 MyLib::Version.to_h # => { epoch: 1, major: 24, minor: 3, patch: 8, pre: "" }
 ```
 
-## Usage with Zeitwerk
+### Usage with Zeitwerk
 
 The pattern of `version.rb` breaking the ruby convention of directory / path matching the namespace / class
 is so entrenched that the `zeitwerk` library has a special carve-out for it. 🥺
@@ -420,7 +449,7 @@ It is obvious to many, but not all, and since the spec is silent, the bike shedd
 
 > dropping support for a platform is both obviously and objectively a breaking change
 
-- Jordan Harband (@ljharb) [in SemVer issue 716][📌semver-breaking]
+- Jordan Harband (@ljharb, maintainer of SemVer) [in SemVer issue 716][📌semver-breaking]
 
 To get a better understanding of how SemVer is intended to work over a project's lifetime,
 read this article from the creator of SemVer:
@@ -487,14 +516,18 @@ or one of the others at the head of this README.
 [💖💲crunchbase-img]: https://img.shields.io/badge/peter--boling-purple?style=flat&logo=crunchbase
 [💖🐘ruby-mast]: https://ruby.social/@galtzo
 [💖🐘ruby-mast-img]: https://img.shields.io/mastodon/follow/109447111526622197?domain=https%3A%2F%2Fruby.social&style=flat&logo=mastodon&label=Ruby%20%40galtzo
-[💖🦋bluesky]: https://galtzo.bsky.social
-[💖🦋bluesky-img]: https://img.shields.io/badge/@galtzo.bsky.social-0285FF?style=flat&logo=bluesky&logoColor=white
+[💖🦋bluesky]: https://bsky.app/profile/galtzo.com
+[💖🦋bluesky-img]: https://img.shields.io/badge/@galtzo.com-0285FF?style=flat&logo=bluesky&logoColor=white
 [💖🌳linktree]: https://linktr.ee/galtzo
 [💖🌳linktree-img]: https://img.shields.io/badge/galtzo-purple?style=flat&logo=linktree
 [💖💁🏼‍♂️devto]: https://dev.to/galtzo
 [💖💁🏼‍♂️devto-img]: https://img.shields.io/badge/dev.to-0A0A0A?style=flat&logo=devdotto&logoColor=white
 [💖💁🏼‍♂️aboutme]: https://about.me/peter.boling
 [💖💁🏼‍♂️aboutme-img]: https://img.shields.io/badge/about.me-0A0A0A?style=flat&logo=aboutme&logoColor=white
+[💖🧊berg]: https://codeberg.org/pboling
+[💖🐙hub]: https://github.org/pboling
+[💖🛖hut]: https://sr.ht/~galtzo/
+[💖🧪lab]: https://gitlab.com/pboling
 [👨🏼‍🏫expsup-upwork]: https://www.upwork.com/freelancers/~014942e9b056abdf86?mp_source=share
 [👨🏼‍🏫expsup-upwork-img]: https://img.shields.io/badge/UpWork-13544E?style=for-the-badge&logo=Upwork&logoColor=white
 [👨🏼‍🏫expsup-codementor]: https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github
@@ -550,7 +583,7 @@ or one of the others at the head of this README.
 [🚎10-j-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/jruby.yml/badge.svg
 [🚎11-c-wf]: https://github.com/oauth-xx/version_gem/actions/workflows/current.yml
 [🚎11-c-wfi]: https://github.com/oauth-xx/version_gem/actions/workflows/current.yml/badge.svg
-[⛳liberapay-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
+[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay
 [⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
