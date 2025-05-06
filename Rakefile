@@ -42,7 +42,7 @@ begin
 
   RSpec::Core::RakeTask.new(:spec)
   # This takes the place of `coverage` task when running as CI=true
-  defaults << "spec" if Kettle::Soup::Cover::IS_CI
+  defaults << "spec" if !defined(Kettle::Soup::Cover) || Kettle::Soup::Cover::IS_CI
 rescue LoadError
   desc("spec task stub")
   task(:spec) do
