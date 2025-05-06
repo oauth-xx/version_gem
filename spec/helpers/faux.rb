@@ -11,8 +11,9 @@ module VersionGem
     module_function :gte_minimum_version?
 
     def actual_minor_version?(major, minor, engine = "ruby")
-      major.to_i == RUBY_VER.segments[0] &&
-        minor.to_i == RUBY_VER.segments[1] &&
+      segs = RUBY_VER.segments
+      major.to_i == segs[0] &&
+        minor.to_i == segs[1] &&
         ::RUBY_ENGINE == engine
     end
     module_function :actual_minor_version?
