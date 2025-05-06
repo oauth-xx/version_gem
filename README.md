@@ -105,18 +105,18 @@ gem cert --add <(curl -Ls https://raw.github.com/oauth-xx/version_gem/main/certs
 You only need to do that once.  Then proceed to install with:
 
 ```shell
-gem install version_gem -P MediumSecurity
+gem install version_gem -P HighSecurity
 ```
 
-The `MediumSecurity` trust profile will verify signed gems, but allow the installation of unsigned dependencies.
-
-This is necessary because not all of `version_gem`’s dependencies are signed, so we cannot use `HighSecurity`.
+The `HighSecurity` trust profile will verify signed gems, and not allow the installation of unsigned dependencies.
 
 If you want to up your security game full-time:
 
 ```shell
 bundle config set --global trust-policy MediumSecurity
 ```
+
+`MediumSecurity` instead of `HighSecurity` is necessary if not all the gems you use are signed.
 
 NOTE: Be prepared to track down certs for signed gems and add them the same way you added mine.
 
