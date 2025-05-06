@@ -6,7 +6,8 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 
 #### IMPORTANT #######################################################
-# Gemfile is for local development ONLY; Gemfile is NOT loaded in CI #
+# Gemfile is for local development and GitLab CI                     #
+# Gemfile is NOT loaded in GitHub Actions CI                         #
 ####################################################### IMPORTANT ####
 
 # For Ruby version specific dependencies
