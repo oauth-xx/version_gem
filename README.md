@@ -505,7 +505,7 @@ or one of the others at the head of this README.
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
 [🏘chat]: https://gitter.im/oauth-xx/version_gem
 [🏘chat-img]: https://img.shields.io/gitter/room/oauth-xx/version_gem.svg
-[⛳️gem-namespace]: https://github.com/oauth-xx/version_gem/blob/main/lib/version_gem.rb
+[⛳️gem-namespace]: https://github.com/oauth-xx/version_gem
 [⛳️namespace-img]: https://img.shields.io/badge/namespace-VersionGem-brightgreen.svg?style=flat&logo=ruby&logoColor=white
 [⛳️gem-name]: https://rubygems.org/gems/version_gem
 [⛳️name-img]: https://img.shields.io/badge/name-version__gem-brightgreen.svg?style=flat&logo=rubygems&logoColor=red
