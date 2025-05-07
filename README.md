@@ -93,7 +93,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ### 🔒 Secure Installation
 
-`version_gem` is cryptographically signed, and with verifiable [SHA-256 and SHA-512][💎SHA_checksums] checksums by
+`version_gem` is cryptographically signed, and has verifiable [SHA-256 and SHA-512][💎SHA_checksums] checksums by
 [stone_checksums][💎stone_checksums]. Be sure the gem you install hasn’t been tampered with
 by following the instructions below.
 
